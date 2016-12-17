@@ -12,7 +12,7 @@
         <!--写真検索-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController storyboardIdentifier="PhotoListViewController" id="BYZ-38-t0r" customClass="PhotoListViewController" customModule="ios_flicr_api_demo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PhotoListViewController" id="BYZ-38-t0r" customClass="PhotoListViewController" customModule="ios_flickr_api_demo" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -37,7 +37,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="PhotoListCollectionViewCell" reuseIdentifier="PhotoListCollectionViewCell" id="NyL-Yj-dta" customClass="PhotoListCollectionViewCell" customModule="ios_flicr_api_demo" customModuleProvider="target">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="PhotoListCollectionViewCell" reuseIdentifier="PhotoListCollectionViewCell" id="NyL-Yj-dta" customClass="PhotoListCollectionViewCell" customModule="ios_flickr_api_demo" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -88,11 +88,36 @@
                     <navigationItem key="navigationItem" title="写真検索" id="BOq-pA-mt2"/>
                     <connections>
                         <outlet property="collectionView" destination="hnq-VG-4Mb" id="Weg-iV-mcM"/>
+                        <outlet property="noDataView" destination="RpT-TE-cP9" id="R5H-jV-lkT"/>
                         <outlet property="searchButton" destination="iyo-tQ-CC8" id="lLU-oV-7ro"/>
                         <outlet property="tagsTextField" destination="UWC-uy-qR8" id="oqK-g0-MWZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <view contentMode="scaleToFill" id="RpT-TE-cP9">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="557"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="R87-LB-QKC">
+                            <rect key="frame" x="16" y="138.5" width="343" height="60"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="60" id="PTA-SC-0dK"/>
+                            </constraints>
+                            <string key="text">該当する写真がありません。
+検索ワードを変更してお試しください。</string>
+                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                        </textView>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="R87-LB-QKC" firstAttribute="leading" secondItem="RpT-TE-cP9" secondAttribute="leading" constant="16" id="Nkv-V6-fXb"/>
+                        <constraint firstAttribute="trailing" secondItem="R87-LB-QKC" secondAttribute="trailing" constant="16" id="Xze-xU-p7m"/>
+                        <constraint firstItem="R87-LB-QKC" firstAttribute="centerX" secondItem="RpT-TE-cP9" secondAttribute="centerX" id="jqT-l7-5HK"/>
+                        <constraint firstItem="R87-LB-QKC" firstAttribute="centerY" secondItem="RpT-TE-cP9" secondAttribute="centerY" constant="-110" id="orp-1u-o06"/>
+                    </constraints>
+                </view>
             </objects>
             <point key="canvasLocation" x="1079.2" y="138.98050974512745"/>
         </scene>
