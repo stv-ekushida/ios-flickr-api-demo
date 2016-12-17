@@ -120,11 +120,7 @@ extension PhotoListViewController: PhotoSearchLoadable {
 
         switch status {
         case .noData:
-
-            dataSource.add(photos: [])
-            noDataView.frame = self.view.frame
-            noDataView.center = self.view.center
-            self.collectionView.addSubview(noDataView)
+            addNoDataView()
             break
 
         case .done:
@@ -143,6 +139,13 @@ extension PhotoListViewController: PhotoSearchLoadable {
         page.updatePages(pages: result.pages)
         appendPhoto(photos: result.photo.map {$0})
         scrollToTop()
+    }
+
+    fileprivate func addNoDataView() {
+        dataSource.add(photos: [])
+        noDataView.frame = self.view.frame
+        noDataView.center = self.view.center
+        self.collectionView.addSubview(noDataView)
     }
 
     fileprivate func appendPhoto(photos: [Photo]) {
