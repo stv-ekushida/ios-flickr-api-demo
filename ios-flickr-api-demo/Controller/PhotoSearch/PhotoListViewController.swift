@@ -17,6 +17,7 @@ final class PhotoListViewController: UIViewController {
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var tagsTextField: UITextField!
     @IBOutlet weak var searchButton: UIButton!
+    @IBOutlet var noDataView: UIView!
 
     fileprivate var photos = PhotoSearchResult() {
         didSet {
@@ -52,6 +53,7 @@ final class PhotoListViewController: UIViewController {
     fileprivate func resetPage() {
         photos.photo = []
         page.resetPage()
+        noDataView.removeFromSuperview()
     }
 
     fileprivate func loadPhotoSearch(tags: String) {
@@ -118,6 +120,11 @@ extension PhotoListViewController: PhotoSearchLoadable {
 
         switch status {
         case .noData:
+
+            dataSource.add(photos: [])
+            noDataView.frame = self.view.frame
+            noDataView.center = self.view.center
+            self.collectionView.addSubview(noDataView)
             break
 
         case .done:
