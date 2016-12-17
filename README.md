@@ -6,3 +6,5 @@
 | XCode | 8.1 |
 | Cocoa Pods | 1.1.1 |
 | iOS | 10.0〜 |
+
+（※）cloneしたあとに、pod updateしてください。
