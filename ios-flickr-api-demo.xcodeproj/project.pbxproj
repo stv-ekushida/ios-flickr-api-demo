@@ -29,6 +29,7 @@
 		C5552BB11E05500E0003488F /* PhotoListCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5552B9E1E05500E0003488F /* PhotoListCollectionView.swift */; };
 		C5552BB21E05500E0003488F /* PhotoListCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5552B9F1E05500E0003488F /* PhotoListCollectionViewCell.swift */; };
 		C5552BB41E06161C0003488F /* Photos.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5552BB31E06161C0003488F /* Photos.swift */; };
+		C5552BB61E061B4E0003488F /* UICollectionView+ScrollToTop.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5552BB51E061B4E0003488F /* UICollectionView+ScrollToTop.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +72,7 @@
 		C5552B9E1E05500E0003488F /* PhotoListCollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoListCollectionView.swift; sourceTree = "<group>"; };
 		C5552B9F1E05500E0003488F /* PhotoListCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoListCollectionViewCell.swift; sourceTree = "<group>"; };
 		C5552BB31E06161C0003488F /* Photos.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Photos.swift; sourceTree = "<group>"; };
+		C5552BB51E061B4E0003488F /* UICollectionView+ScrollToTop.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UICollectionView+ScrollToTop.swift"; sourceTree = "<group>"; };
 		D467FC04403381E09F260028 /* Pods-ios-flickr-api-demoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ios-flickr-api-demoTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ios-flickr-api-demoTests/Pods-ios-flickr-api-demoTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -238,6 +240,7 @@
 			children = (
 				C5552B9E1E05500E0003488F /* PhotoListCollectionView.swift */,
 				C5552B9F1E05500E0003488F /* PhotoListCollectionViewCell.swift */,
+				C5552BB51E061B4E0003488F /* UICollectionView+ScrollToTop.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -461,6 +464,7 @@
 				C5552BA41E05500E0003488F /* Photo.swift in Sources */,
 				C5552BA81E05500E0003488F /* PhotoSearchLoadable.swift in Sources */,
 				C5552BA61E05500E0003488F /* PhotoListPage.swift in Sources */,
+				C5552BB61E061B4E0003488F /* UICollectionView+ScrollToTop.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
