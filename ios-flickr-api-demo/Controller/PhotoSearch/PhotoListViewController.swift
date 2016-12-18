@@ -7,59 +7,60 @@
 //
 
 import UIKit
-import SVProgressHUD
 
 final class PhotoListViewController: UIViewController {
 
-    fileprivate let photoSearchAPI = PhotoSearchAPI()
-    fileprivate let dataSource = PhotoListCollectionView()
+    let photoSearchAPI = PhotoSearchAPI()
+    let dataSource = PhotoListCollectionView()
 
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var tagsTextField: UITextField!
     @IBOutlet weak var searchButton: UIButton!
-    @IBOutlet var noDataView: UIView!
 
-    fileprivate var photos: [Photo] = [] {
+    var photos: [Photo] = [] {
         didSet {
             collectionView.reloadData()
         }
     }
-    
-    fileprivate var page = PhotoListPage()
-    fileprivate var tags = ""
+    var photoListStatusType: PhotoSearchStatusType?
+    var page = PhotoListPage()
+    var tags = ""
 
     //MARK:-LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupStatus()
         setupView()
     }
 
     @IBAction func searchDidTap(_ sender: UIButton) {
-
         resetPage()
         loadPhotoSearch(tags: tagsTextField.text ?? "")
         tagsTextField.resignFirstResponder()
-        SVProgressHUD.show()
     }
 
     //MARK:-Private
+    fileprivate func setupStatus() {
+        photoListStatusType = PhotoListNone()
+    }
+
     fileprivate func setupView() {
         collectionView.delegate = self
         collectionView.dataSource = dataSource
         tagsTextField.delegate = self
         searchButton.isEnabled = false
+        photoListStatusType?.updateView(result: nil, topOf: self)
     }
 
     fileprivate func resetPage() {
         photos = []
         page.resetPage()
-        noDataView.removeFromSuperview()
     }
 
     fileprivate func loadPhotoSearch(tags: String) {
-        photoSearchAPI.loadable = self
 
         self.tags = tags
+        photoSearchAPI.loadable = self
         photoSearchAPI.load(tags: tags, page: page.currentPage())
     }
 }
@@ -69,24 +70,42 @@ extension PhotoListViewController: UICollectionViewDelegate {
 
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
 
+        guard hasExsistPhotoList() else{
+            return
+        }
+        updatePage()
+    }
+
+    fileprivate func hasExsistPhotoList() -> Bool{
+
         if collectionView.contentOffset.y >=
             (collectionView.contentSize.height - collectionView.bounds.size.height) {
 
             if photoSearchAPI.waiting(){
-                return
+                return false
             }
 
             if page.total() > page.currentPage() * PhotoSearchParamsBuilder.perPage {
-                updatePage()
+                return true
             }
         }
+        return false
     }
 
     fileprivate func updatePage() {
-
         page.incementPage()
         photoSearchAPI.load(tags: tags, page: page.currentPage())
-        print("\(page.currentPage())ページ目読みます")
+    }
+}
+
+//MARK:- UICollectionViewDelegateFlowLayout
+extension PhotoListViewController: UICollectionViewDelegateFlowLayout {
+
+    func collectionView(_ collectionView: UICollectionView,
+                        layout collectionViewLayout: UICollectionViewLayout,
+                        sizeForItemAt indexPath: IndexPath) -> CGSize {
+
+        return photoListStatusType?.cellSize(topOf: self) ?? PhotoListNone().cellSize(topOf: self)
     }
 }
 
@@ -97,11 +116,7 @@ extension PhotoListViewController: UITextFieldDelegate {
                    shouldChangeCharactersIn range: NSRange,
                    replacementString string: String) -> Bool {
 
-        if let text = textField.text {
-            searchButton.isEnabled = (text + string).characters.count > 1
-        } else {
-            fatalError("入力文字列が取得できない")
-        }
+        searchButton.isEnabled = (textField.text ?? "" + string).characters.count > 1
         return true
     }
 
@@ -114,54 +129,8 @@ extension PhotoListViewController: UITextFieldDelegate {
 //MARK:- PhotoSearchLoadable
 extension PhotoListViewController: PhotoSearchLoadable {
 
-    func setStatus(status: PhotoSearchStatus) {
-
-        SVProgressHUD.dismiss()
-
-        switch status {
-        case .noData:
-            addNoDataView()
-            break
-
-        case .done:
-            break
-
-        case .offline:
-            break
-
-        case .error:
-            print("通信エラーが発生しました。")
-        }
-    }
-
-    func completed(result: PhotoSearchResult) {
-
-        if let pages = result.photos?.pages, let photos = result.photos {
-            page.updatePages(pages: pages)
-            appendPhoto(photos: photos.photo.map {$0})
-        }
-        scrollToTop()
-    }
-
-    fileprivate func addNoDataView() {
-        dataSource.add(photos: [])
-        noDataView.frame = self.view.frame
-        noDataView.center = self.view.center
-        self.collectionView.addSubview(noDataView)
-    }
-
-    fileprivate func appendPhoto(photos: [Photo]) {
-
-        _ = photos.map {
-            self.photos.append($0)
-        }
-        dataSource.add(photos: self.photos)
-    }
-
-    fileprivate func scrollToTop() {
-
-        if page.currentPage() == 1 {
-            collectionView.scrollToTop()
-        }
+    func setStatus(status: PhotoSearchStatus, result: PhotoSearchResult?) {
+        photoListStatusType = status.type()
+        photoListStatusType?.updateView(result: result, topOf: self)
     }
 }

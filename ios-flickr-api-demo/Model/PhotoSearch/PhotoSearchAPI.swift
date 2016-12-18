@@ -19,6 +19,11 @@ final class PhotoSearchAPI {
 
     func load(tags: String, page: Int) {
 
+        guard NetworkManager.isAvailable() else {
+            self.loadable?.setStatus(status: .offline, result: nil)
+            return
+        }
+        
         isLoading = true
 
         APIClient<PhotoSearchResult>().photosSearch(
@@ -28,12 +33,11 @@ final class PhotoSearchAPI {
             switch response {
             case .Success(let result):
 
-                let status = self?.hasData(result: result) ?? PhotoSearchStatus.noData
-                self?.loadable?.setStatus(status: status)
-                self?.loadable?.completed(result: result)
+                let status = self?.hasData(result: result)
+                self?.loadable?.setStatus(status: status!, result: result)
 
             case .Failure( _):
-                self?.loadable?.setStatus(status: .error)
+                self?.loadable?.setStatus(status: .error, result: nil)
             }
             self?.isLoading = false
         }
@@ -42,6 +46,6 @@ final class PhotoSearchAPI {
     fileprivate func hasData(result: PhotoSearchResult) -> PhotoSearchStatus{
 
         return (result.photos?.photo.count == 0) ?
-            PhotoSearchStatus.noData : PhotoSearchStatus.done
+            PhotoSearchStatus.noData : PhotoSearchStatus.normal
     }
 }

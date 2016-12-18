@@ -36,6 +36,11 @@
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
+                                <view key="backgroundView" contentMode="scaleToFill" id="RpT-TE-cP9">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="557"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </view>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="PhotoListCollectionViewCell" reuseIdentifier="PhotoListCollectionViewCell" id="NyL-Yj-dta" customClass="PhotoListCollectionViewCell" customModule="ios_flickr_api_demo" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
@@ -58,6 +63,31 @@
                                         </constraints>
                                         <connections>
                                             <outlet property="photoImageView" destination="l8d-Qk-5BO" id="7PA-tt-op9"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="PhotoListIllegalCollectionViewCel" reuseIdentifier="PhotoListIllegalCollectionViewCel" id="F63-qc-CRe" customClass="PhotoListIllegalCollectionViewCel" customModule="ios_flickr_api_demo" customModuleProvider="target">
+                                        <rect key="frame" x="247" y="0.0" width="128" height="128"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="ユーザへのメッセージ" translatesAutoresizingMaskIntoConstraints="NO" id="rQb-nE-r27">
+                                                    <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                </textView>
+                                            </subviews>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstItem="rQb-nE-r27" firstAttribute="leading" secondItem="F63-qc-CRe" secondAttribute="leading" id="4qa-Yv-GUn"/>
+                                            <constraint firstItem="rQb-nE-r27" firstAttribute="top" secondItem="F63-qc-CRe" secondAttribute="top" id="BGz-4a-CMW"/>
+                                            <constraint firstAttribute="trailing" secondItem="rQb-nE-r27" secondAttribute="trailing" id="Pbc-Sm-TSL"/>
+                                            <constraint firstAttribute="bottom" secondItem="rQb-nE-r27" secondAttribute="bottom" id="ewj-ne-ebN"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="messageTextView" destination="rQb-nE-r27" id="tQY-N9-gaO"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -88,36 +118,11 @@
                     <navigationItem key="navigationItem" title="写真検索" id="BOq-pA-mt2"/>
                     <connections>
                         <outlet property="collectionView" destination="hnq-VG-4Mb" id="Weg-iV-mcM"/>
-                        <outlet property="noDataView" destination="RpT-TE-cP9" id="R5H-jV-lkT"/>
                         <outlet property="searchButton" destination="iyo-tQ-CC8" id="lLU-oV-7ro"/>
                         <outlet property="tagsTextField" destination="UWC-uy-qR8" id="oqK-g0-MWZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-                <view contentMode="scaleToFill" id="RpT-TE-cP9">
-                    <rect key="frame" x="0.0" y="0.0" width="375" height="557"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <subviews>
-                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="R87-LB-QKC">
-                            <rect key="frame" x="16" y="138.5" width="343" height="60"/>
-                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            <constraints>
-                                <constraint firstAttribute="height" constant="60" id="PTA-SC-0dK"/>
-                            </constraints>
-                            <string key="text">該当する写真がありません。
-検索ワードを変更してお試しください。</string>
-                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                        </textView>
-                    </subviews>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    <constraints>
-                        <constraint firstItem="R87-LB-QKC" firstAttribute="leading" secondItem="RpT-TE-cP9" secondAttribute="leading" constant="16" id="Nkv-V6-fXb"/>
-                        <constraint firstAttribute="trailing" secondItem="R87-LB-QKC" secondAttribute="trailing" constant="16" id="Xze-xU-p7m"/>
-                        <constraint firstItem="R87-LB-QKC" firstAttribute="centerX" secondItem="RpT-TE-cP9" secondAttribute="centerX" id="jqT-l7-5HK"/>
-                        <constraint firstItem="R87-LB-QKC" firstAttribute="centerY" secondItem="RpT-TE-cP9" secondAttribute="centerY" constant="-110" id="orp-1u-o06"/>
-                    </constraints>
-                </view>
             </objects>
             <point key="canvasLocation" x="1079.2" y="138.98050974512745"/>
         </scene>

@@ -1,0 +1,12 @@
+/* 
+  Localizable.strings.strings
+  ios-flickr-api-demo
+
+  Created by Eiji Kushida on 2016/12/18.
+  Copyright © 2016年 Eiji Kushida. All rights reserved.
+*/
+
+
+"MSG_NONE" = "キーワードを入力し、写真を検索してみましょう！";
+"MSG_NODATA" = "該当する写真がありません。\n検索ワードを変更してお試しください。";
+"MSG_OFFLINE" = "ネットワーク環境の良い環境で再度お試しください。";

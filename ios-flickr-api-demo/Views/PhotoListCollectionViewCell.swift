@@ -25,8 +25,6 @@ final class PhotoListCollectionViewCell: UICollectionViewCell{
 
             if let photo = photo {
                 self.photoURL = PhotoImageURLBuilder.create(photo: photo)
-            } else {
-                fatalError("写真がセットされていない")
             }
         }
     }

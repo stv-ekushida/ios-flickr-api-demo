@@ -30,6 +30,14 @@
 		C5552BB21E05500E0003488F /* PhotoListCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5552B9F1E05500E0003488F /* PhotoListCollectionViewCell.swift */; };
 		C5552BB41E06161C0003488F /* Photos.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5552BB31E06161C0003488F /* Photos.swift */; };
 		C5552BB61E061B4E0003488F /* UICollectionView+ScrollToTop.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5552BB51E061B4E0003488F /* UICollectionView+ScrollToTop.swift */; };
+		C5552BB81E061DB10003488F /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5552BB71E061DB10003488F /* NetworkManager.swift */; };
+		C5552BBD1E0624B10003488F /* PhotoListIllegalCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5552BBC1E0624B10003488F /* PhotoListIllegalCollectionViewCell.swift */; };
+		C5552BBF1E0625610003488F /* PhotoSearchStatusType.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5552BBE1E0625610003488F /* PhotoSearchStatusType.swift */; };
+		C5552BC11E06342F0003488F /* PhotoListNormal.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5552BC01E06342F0003488F /* PhotoListNormal.swift */; };
+		C5552BC31E0634E00003488F /* PhotoListNone.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5552BC21E0634E00003488F /* PhotoListNone.swift */; };
+		C5552BC51E06351E0003488F /* PhotoListNoData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5552BC41E06351E0003488F /* PhotoListNoData.swift */; };
+		C5552BC71E06354F0003488F /* PhotoListOffline.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5552BC61E06354F0003488F /* PhotoListOffline.swift */; };
+		C5552BD01E06492E0003488F /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = C5552BD21E06492E0003488F /* Localizable.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +81,14 @@
 		C5552B9F1E05500E0003488F /* PhotoListCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoListCollectionViewCell.swift; sourceTree = "<group>"; };
 		C5552BB31E06161C0003488F /* Photos.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Photos.swift; sourceTree = "<group>"; };
 		C5552BB51E061B4E0003488F /* UICollectionView+ScrollToTop.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UICollectionView+ScrollToTop.swift"; sourceTree = "<group>"; };
+		C5552BB71E061DB10003488F /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NetworkManager.swift; path = ../Model/Common/NetworkManager.swift; sourceTree = "<group>"; };
+		C5552BBC1E0624B10003488F /* PhotoListIllegalCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoListIllegalCollectionViewCell.swift; sourceTree = "<group>"; };
+		C5552BBE1E0625610003488F /* PhotoSearchStatusType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoSearchStatusType.swift; sourceTree = "<group>"; };
+		C5552BC01E06342F0003488F /* PhotoListNormal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoListNormal.swift; sourceTree = "<group>"; };
+		C5552BC21E0634E00003488F /* PhotoListNone.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoListNone.swift; sourceTree = "<group>"; };
+		C5552BC41E06351E0003488F /* PhotoListNoData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoListNoData.swift; sourceTree = "<group>"; };
+		C5552BC61E06354F0003488F /* PhotoListOffline.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoListOffline.swift; sourceTree = "<group>"; };
+		C5552BD31E0649350003488F /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
 		D467FC04403381E09F260028 /* Pods-ios-flickr-api-demoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ios-flickr-api-demoTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ios-flickr-api-demoTests/Pods-ios-flickr-api-demoTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -222,6 +238,7 @@
 			children = (
 				C5552B981E05500E0003488F /* AppDelegate.swift */,
 				C5552B991E05500E0003488F /* Assets.xcassets */,
+				C5552BD21E06492E0003488F /* Localizable.strings */,
 			);
 			path = Ohter;
 			sourceTree = "<group>";
@@ -229,6 +246,7 @@
 		C5552B9A1E05500E0003488F /* Util */ = {
 			isa = PBXGroup;
 			children = (
+				C5552BB71E061DB10003488F /* NetworkManager.swift */,
 				C5552B9B1E05500E0003488F /* APIClient.swift */,
 				C5552B9C1E05500E0003488F /* Router.swift */,
 			);
@@ -238,11 +256,41 @@
 		C5552B9D1E05500E0003488F /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				C5552B9E1E05500E0003488F /* PhotoListCollectionView.swift */,
-				C5552B9F1E05500E0003488F /* PhotoListCollectionViewCell.swift */,
-				C5552BB51E061B4E0003488F /* UICollectionView+ScrollToTop.swift */,
+				C5552BBB1E0622C60003488F /* PhotoSearch */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		C5552BBB1E0622C60003488F /* PhotoSearch */ = {
+			isa = PBXGroup;
+			children = (
+				C5552BC91E0642D60003488F /* CollectionView */,
+				C5552BC81E0642A80003488F /* Status */,
+			);
+			name = PhotoSearch;
+			sourceTree = "<group>";
+		};
+		C5552BC81E0642A80003488F /* Status */ = {
+			isa = PBXGroup;
+			children = (
+				C5552BBE1E0625610003488F /* PhotoSearchStatusType.swift */,
+				C5552BC01E06342F0003488F /* PhotoListNormal.swift */,
+				C5552BC21E0634E00003488F /* PhotoListNone.swift */,
+				C5552BC41E06351E0003488F /* PhotoListNoData.swift */,
+				C5552BC61E06354F0003488F /* PhotoListOffline.swift */,
+			);
+			name = Status;
+			sourceTree = "<group>";
+		};
+		C5552BC91E0642D60003488F /* CollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				C5552B9E1E05500E0003488F /* PhotoListCollectionView.swift */,
+				C5552B9F1E05500E0003488F /* PhotoListCollectionViewCell.swift */,
+				C5552BBC1E0624B10003488F /* PhotoListIllegalCollectionViewCell.swift */,
+				C5552BB51E061B4E0003488F /* UICollectionView+ScrollToTop.swift */,
+			);
+			name = CollectionView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -336,6 +384,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C5552BA01E05500E0003488F /* PhotoListViewController.storyboard in Resources */,
+				C5552BD01E06492E0003488F /* Localizable.strings in Resources */,
 				C5552BA21E05500E0003488F /* LaunchScreen.storyboard in Resources */,
 				C5552BAE1E05500E0003488F /* Assets.xcassets in Resources */,
 			);
@@ -449,20 +498,27 @@
 			buildActionMask = 2147483647;
 			files = (
 				C5552BA51E05500E0003488F /* PhotoImageURLBuilder.swift in Sources */,
+				C5552BC71E06354F0003488F /* PhotoListOffline.swift in Sources */,
 				C5552BB21E05500E0003488F /* PhotoListCollectionViewCell.swift in Sources */,
 				C5552BAC1E05500E0003488F /* PhotoSearchStatus.swift in Sources */,
+				C5552BBF1E0625610003488F /* PhotoSearchStatusType.swift in Sources */,
 				C5552BA71E05500E0003488F /* PhotoSearchAPI.swift in Sources */,
 				C5552BB41E06161C0003488F /* Photos.swift in Sources */,
+				C5552BC11E06342F0003488F /* PhotoListNormal.swift in Sources */,
 				C5552BAD1E05500E0003488F /* AppDelegate.swift in Sources */,
 				C5552BA91E05500E0003488F /* PhotoSearchParamsBuilder.swift in Sources */,
 				C5552BB11E05500E0003488F /* PhotoListCollectionView.swift in Sources */,
 				C5552BAB1E05500E0003488F /* PhotoSearchResult.swift in Sources */,
 				C5552BB01E05500E0003488F /* Router.swift in Sources */,
+				C5552BC51E06351E0003488F /* PhotoListNoData.swift in Sources */,
 				C5552BAF1E05500E0003488F /* APIClient.swift in Sources */,
 				C5552BA31E05500E0003488F /* Result.swift in Sources */,
 				C5552BA11E05500E0003488F /* PhotoListViewController.swift in Sources */,
+				C5552BC31E0634E00003488F /* PhotoListNone.swift in Sources */,
+				C5552BBD1E0624B10003488F /* PhotoListIllegalCollectionViewCell.swift in Sources */,
 				C5552BA41E05500E0003488F /* Photo.swift in Sources */,
 				C5552BA81E05500E0003488F /* PhotoSearchLoadable.swift in Sources */,
+				C5552BB81E061DB10003488F /* NetworkManager.swift in Sources */,
 				C5552BA61E05500E0003488F /* PhotoListPage.swift in Sources */,
 				C5552BB61E061B4E0003488F /* UICollectionView+ScrollToTop.swift in Sources */,
 			);
@@ -503,6 +559,14 @@
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
+		C5552BD21E06492E0003488F /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C5552BD31E0649350003488F /* Base */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
@@ -510,6 +574,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -559,6 +624,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";

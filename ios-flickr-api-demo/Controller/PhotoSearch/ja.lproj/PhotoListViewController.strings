@@ -1,0 +1,12 @@
+
+/* Class = "UINavigationItem"; title = "写真検索"; ObjectID = "BOq-pA-mt2"; */
+"BOq-pA-mt2.title" = "写真検索";
+
+/* Class = "UITextField"; placeholder = "キーワードを入力してください"; ObjectID = "UWC-uy-qR8"; */
+"UWC-uy-qR8.placeholder" = "キーワードを入力してください";
+
+/* Class = "UIButton"; normalTitle = "検索"; ObjectID = "iyo-tQ-CC8"; */
+"iyo-tQ-CC8.normalTitle" = "検索";
+
+/* Class = "UITextView"; text = "イリーガルメッセージ"; ObjectID = "rQb-nE-r27"; */
+"rQb-nE-r27.text" = "イリーガルメッセージ";
