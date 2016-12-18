@@ -9,11 +9,11 @@
 
 import Foundation
 import Alamofire
-import SwiftyJSON
+import ObjectMapper
 
 final class APIClient<T> {
 
-    func buildParams() -> [String: Any] {
+    func buildFlickrBaseParams() -> [String: Any] {
 
         return [
             "method" : "flickr.photos.search",
@@ -25,18 +25,19 @@ final class APIClient<T> {
     func photosSearch(params : [String: Any],
                       completionHandler: @escaping (Result<T>) -> () = {_ in}) {
 
-        Alamofire.request(Router.PhotosSearch(params))
-            .validate()
-            .responseJSON {response in
-                if response.result.isSuccess {
 
-                    let resp = response.result.value as! [String: Any]
-                    let result = PhotoSearchParser.parse(json: JSON(resp["photos"] ?? []))
-                    completionHandler(Result<T>.Success((result as? T)!))
-
-                } else {
-                    completionHandler(Result<T>.Failure(response.result.error!))
+        Alamofire.request(Router.PhotosSearch(params)).responseJSON  { response in
+            switch response.result {
+            case .success(let value):
+                if let resp = Mapper<PhotoSearchResult>().map(JSONObject: value) {
+                    completionHandler(Result<T>.Success((resp as? T)!))
                 }
+                break
+
+            case .failure:
+                completionHandler(Result<T>.Failure(response.result.error!))
+                break
+            }
         }
     }
 }

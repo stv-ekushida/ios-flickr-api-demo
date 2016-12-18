@@ -7,11 +7,17 @@
 //
 
 import UIKit
-import SwiftyJSON
+import ObjectMapper
 
-struct PhotoSearchResult {
-    var page = 0
-    var pages = 0
-    var perpage = 0
-    var photo: [Photo] = []
+struct PhotoSearchResult: Mappable {
+
+    var stat = ""
+    var photos: Photos?
+
+    init?(map: Map) {}
+
+    mutating func mapping(map: Map) {
+        stat <- map["stat"]
+        photos <- map["photos"]
+    }
 }

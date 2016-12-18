@@ -3,7 +3,7 @@ use_frameworks!
 
 target 'ios-flickr-api-demo' do
 pod 'Alamofire'
-pod 'SwiftyJSON'
+pod 'ObjectMapper', '~> 2.2'
 pod 'AlamofireImage'
 pod 'SVProgressHUD'
 end

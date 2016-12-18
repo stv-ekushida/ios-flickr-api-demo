@@ -20,7 +20,6 @@
 		C5552BA71E05500E0003488F /* PhotoSearchAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5552B911E05500E0003488F /* PhotoSearchAPI.swift */; };
 		C5552BA81E05500E0003488F /* PhotoSearchLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5552B921E05500E0003488F /* PhotoSearchLoadable.swift */; };
 		C5552BA91E05500E0003488F /* PhotoSearchParamsBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5552B931E05500E0003488F /* PhotoSearchParamsBuilder.swift */; };
-		C5552BAA1E05500E0003488F /* PhotoSearchParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5552B941E05500E0003488F /* PhotoSearchParser.swift */; };
 		C5552BAB1E05500E0003488F /* PhotoSearchResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5552B951E05500E0003488F /* PhotoSearchResult.swift */; };
 		C5552BAC1E05500E0003488F /* PhotoSearchStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5552B961E05500E0003488F /* PhotoSearchStatus.swift */; };
 		C5552BAD1E05500E0003488F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5552B981E05500E0003488F /* AppDelegate.swift */; };
@@ -29,6 +28,7 @@
 		C5552BB01E05500E0003488F /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5552B9C1E05500E0003488F /* Router.swift */; };
 		C5552BB11E05500E0003488F /* PhotoListCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5552B9E1E05500E0003488F /* PhotoListCollectionView.swift */; };
 		C5552BB21E05500E0003488F /* PhotoListCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5552B9F1E05500E0003488F /* PhotoListCollectionViewCell.swift */; };
+		C5552BB41E06161C0003488F /* Photos.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5552BB31E06161C0003488F /* Photos.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,7 +62,6 @@
 		C5552B911E05500E0003488F /* PhotoSearchAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoSearchAPI.swift; sourceTree = "<group>"; };
 		C5552B921E05500E0003488F /* PhotoSearchLoadable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoSearchLoadable.swift; sourceTree = "<group>"; };
 		C5552B931E05500E0003488F /* PhotoSearchParamsBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoSearchParamsBuilder.swift; sourceTree = "<group>"; };
-		C5552B941E05500E0003488F /* PhotoSearchParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoSearchParser.swift; sourceTree = "<group>"; };
 		C5552B951E05500E0003488F /* PhotoSearchResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoSearchResult.swift; sourceTree = "<group>"; };
 		C5552B961E05500E0003488F /* PhotoSearchStatus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoSearchStatus.swift; sourceTree = "<group>"; };
 		C5552B981E05500E0003488F /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -71,6 +70,7 @@
 		C5552B9C1E05500E0003488F /* Router.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		C5552B9E1E05500E0003488F /* PhotoListCollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoListCollectionView.swift; sourceTree = "<group>"; };
 		C5552B9F1E05500E0003488F /* PhotoListCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoListCollectionViewCell.swift; sourceTree = "<group>"; };
+		C5552BB31E06161C0003488F /* Photos.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Photos.swift; sourceTree = "<group>"; };
 		D467FC04403381E09F260028 /* Pods-ios-flickr-api-demoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ios-flickr-api-demoTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ios-flickr-api-demoTests/Pods-ios-flickr-api-demoTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -205,10 +205,10 @@
 				C5552B8E1E05500E0003488F /* Photo.swift */,
 				C5552B8F1E05500E0003488F /* PhotoImageURLBuilder.swift */,
 				C5552B901E05500E0003488F /* PhotoListPage.swift */,
+				C5552BB31E06161C0003488F /* Photos.swift */,
 				C5552B911E05500E0003488F /* PhotoSearchAPI.swift */,
 				C5552B921E05500E0003488F /* PhotoSearchLoadable.swift */,
 				C5552B931E05500E0003488F /* PhotoSearchParamsBuilder.swift */,
-				C5552B941E05500E0003488F /* PhotoSearchParser.swift */,
 				C5552B951E05500E0003488F /* PhotoSearchResult.swift */,
 				C5552B961E05500E0003488F /* PhotoSearchStatus.swift */,
 			);
@@ -449,6 +449,7 @@
 				C5552BB21E05500E0003488F /* PhotoListCollectionViewCell.swift in Sources */,
 				C5552BAC1E05500E0003488F /* PhotoSearchStatus.swift in Sources */,
 				C5552BA71E05500E0003488F /* PhotoSearchAPI.swift in Sources */,
+				C5552BB41E06161C0003488F /* Photos.swift in Sources */,
 				C5552BAD1E05500E0003488F /* AppDelegate.swift in Sources */,
 				C5552BA91E05500E0003488F /* PhotoSearchParamsBuilder.swift in Sources */,
 				C5552BB11E05500E0003488F /* PhotoListCollectionView.swift in Sources */,
@@ -460,7 +461,6 @@
 				C5552BA41E05500E0003488F /* Photo.swift in Sources */,
 				C5552BA81E05500E0003488F /* PhotoSearchLoadable.swift in Sources */,
 				C5552BA61E05500E0003488F /* PhotoListPage.swift in Sources */,
-				C5552BAA1E05500E0003488F /* PhotoSearchParser.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

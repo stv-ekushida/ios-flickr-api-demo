@@ -7,10 +7,20 @@
 //
 
 import Foundation
+import ObjectMapper
 
-struct Photo {
+struct Photo: Mappable {
     var farm = 0
     var server = ""
     var id = ""
     var secret = ""
+
+    init?(map: Map){}
+
+    mutating func mapping(map: Map) {
+        farm    <- map["farm"]
+        server  <- map["server"]
+        id      <- map["id"]
+        secret  <- map["secret"]
+    }
 }

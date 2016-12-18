@@ -14,7 +14,7 @@ final class PhotoSearchParamsBuilder {
 
     static func create(tags: String, page: Int) -> [String: Any]{
 
-        var params = APIClient<PhotoSearchResult>().buildParams()
+        var params = APIClient<PhotoSearchResult>().buildFlickrBaseParams()
 
         params["method"] = "flickr.photos.search"
         params["page"] = "\(page)"
