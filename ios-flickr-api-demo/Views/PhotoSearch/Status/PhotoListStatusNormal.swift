@@ -1,5 +1,5 @@
 //
-//  PhotoListNormal.swift
+//  PhotoListStatusNormal.swift
 //  ios-flickr-api-demo
 //
 //  Created by Eiji Kushida on 2016/12/18.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-final class PhotoListNormal: PhotoSearchStatusType {
+final class PhotoListStatusNormal: PhotoListStatusable {
 
     func numberOfItemsInSection(photos: [Photo]) -> Int {
         return photos.count
@@ -53,7 +53,7 @@ final class PhotoListNormal: PhotoSearchStatusType {
         _ = photos.map {
             topOf.photos.append($0)
         }
-        topOf.dataSource.add(photoSearchStatusType: self, photos: topOf.photos)
+        topOf.dataSource.add(photoSearchStatusable: self, photos: topOf.photos)
     }
 
     fileprivate func scrollToTop(topOf: PhotoListViewController) {

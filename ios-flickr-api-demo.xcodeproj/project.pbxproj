@@ -1,1796 +1,766 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
-<plist version="1.0">
-<dict>
-	<key>archiveVersion</key>
-	<string>1</string>
-	<key>classes</key>
-	<dict/>
-	<key>objectVersion</key>
-	<string>46</string>
-	<key>objects</key>
-	<dict>
-		<key>0819E4BF96E63D8E34460FE6</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>inputPaths</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXShellScriptBuildPhase</string>
-			<key>name</key>
-			<string>[CP] Embed Pods Frameworks</string>
-			<key>outputPaths</key>
-			<array/>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-			<key>shellPath</key>
-			<string>/bin/sh</string>
-			<key>shellScript</key>
-			<string>"${SRCROOT}/Pods/Target Support Files/Pods-ios-flickr-api-demo/Pods-ios-flickr-api-demo-frameworks.sh"
-</string>
-			<key>showEnvVarsInLog</key>
-			<string>0</string>
-		</dict>
-		<key>1AA7993E701D915F502E7CE4</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>wrapper.framework</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>Pods_ios_flickr_api_demoTests.framework</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>24B794104EE089C115174616</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>inputPaths</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXShellScriptBuildPhase</string>
-			<key>name</key>
-			<string>[CP] Check Pods Manifest.lock</string>
-			<key>outputPaths</key>
-			<array/>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-			<key>shellPath</key>
-			<string>/bin/sh</string>
-			<key>shellScript</key>
-			<string>diff "${PODS_ROOT}/../Podfile.lock" "${PODS_ROOT}/Manifest.lock" &gt; /dev/null
-if [ $? != 0 ] ; then
-    # print error to STDERR
-    echo "error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation." &gt;&amp;2
-    exit 1
-fi
-</string>
-			<key>showEnvVarsInLog</key>
-			<string>0</string>
-		</dict>
-		<key>284167D4ADED6465E7A795CC</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>inputPaths</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXShellScriptBuildPhase</string>
-			<key>name</key>
-			<string>[CP] Copy Pods Resources</string>
-			<key>outputPaths</key>
-			<array/>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-			<key>shellPath</key>
-			<string>/bin/sh</string>
-			<key>shellScript</key>
-			<string>"${SRCROOT}/Pods/Target Support Files/Pods-ios-flickr-api-demo/Pods-ios-flickr-api-demo-resources.sh"
-</string>
-			<key>showEnvVarsInLog</key>
-			<string>0</string>
-		</dict>
-		<key>41D7965D8B2286B026C4FA97</key>
-		<dict>
-			<key>fileRef</key>
-			<string>1AA7993E701D915F502E7CE4</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>46E872D252F8714A2808F658</key>
-		<dict>
-			<key>fileRef</key>
-			<string>5EA7893CB2D5EFBEDF683711</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>5EA7893CB2D5EFBEDF683711</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>wrapper.framework</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>Pods_ios_flickr_api_demo.framework</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>630661FD3A6E9EA761DBC730</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>name</key>
-			<string>Pods-ios-flickr-api-demoTests.release.xcconfig</string>
-			<key>path</key>
-			<string>Pods/Target Support Files/Pods-ios-flickr-api-demoTests/Pods-ios-flickr-api-demoTests.release.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>74C6190DC7A0F91140BF47AE</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>name</key>
-			<string>Pods-ios-flickr-api-demo.release.xcconfig</string>
-			<key>path</key>
-			<string>Pods/Target Support Files/Pods-ios-flickr-api-demo/Pods-ios-flickr-api-demo.release.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>838CF5D0AD381C6CA2648C1F</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>name</key>
-			<string>Pods-ios-flickr-api-demo.debug.xcconfig</string>
-			<key>path</key>
-			<string>Pods/Target Support Files/Pods-ios-flickr-api-demo/Pods-ios-flickr-api-demo.debug.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>A2E40E9A3564D6282E928582</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>838CF5D0AD381C6CA2648C1F</string>
-				<string>74C6190DC7A0F91140BF47AE</string>
-				<string>D467FC04403381E09F260028</string>
-				<string>630661FD3A6E9EA761DBC730</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Pods</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>B8F94DB0D208BC7FDA349ABC</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>inputPaths</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXShellScriptBuildPhase</string>
-			<key>name</key>
-			<string>[CP] Embed Pods Frameworks</string>
-			<key>outputPaths</key>
-			<array/>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-			<key>shellPath</key>
-			<string>/bin/sh</string>
-			<key>shellScript</key>
-			<string>"${SRCROOT}/Pods/Target Support Files/Pods-ios-flickr-api-demoTests/Pods-ios-flickr-api-demoTests-frameworks.sh"
-</string>
-			<key>showEnvVarsInLog</key>
-			<string>0</string>
-		</dict>
-		<key>BB7C672E0C9063FDE18BCC7A</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>5EA7893CB2D5EFBEDF683711</string>
-				<string>1AA7993E701D915F502E7CE4</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Frameworks</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>C45B42AD6AA8EEE191BA19DC</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>inputPaths</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXShellScriptBuildPhase</string>
-			<key>name</key>
-			<string>[CP] Check Pods Manifest.lock</string>
-			<key>outputPaths</key>
-			<array/>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-			<key>shellPath</key>
-			<string>/bin/sh</string>
-			<key>shellScript</key>
-			<string>diff "${PODS_ROOT}/../Podfile.lock" "${PODS_ROOT}/Manifest.lock" &gt; /dev/null
-if [ $? != 0 ] ; then
-    # print error to STDERR
-    echo "error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation." &gt;&amp;2
-    exit 1
-fi
-</string>
-			<key>showEnvVarsInLog</key>
-			<string>0</string>
-		</dict>
-		<key>C5552B561E054FE30003488F</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>BB7C672E0C9063FDE18BCC7A</string>
-				<string>A2E40E9A3564D6282E928582</string>
-				<string>C5552B601E054FE30003488F</string>
-				<string>C5552B611E054FE30003488F</string>
-				<string>C5552B761E054FE30003488F</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>C5552B571E054FE30003488F</key>
-		<dict>
-			<key>attributes</key>
-			<dict>
-				<key>LastSwiftUpdateCheck</key>
-				<string>0810</string>
-				<key>LastUpgradeCheck</key>
-				<string>0810</string>
-				<key>ORGANIZATIONNAME</key>
-				<string>Eiji Kushida</string>
-				<key>TargetAttributes</key>
-				<dict>
-					<key>C5552B5E1E054FE30003488F</key>
-					<dict>
-						<key>CreatedOnToolsVersion</key>
-						<string>8.1</string>
-						<key>DevelopmentTeam</key>
-						<string>UE5DCQPTRB</string>
-						<key>ProvisioningStyle</key>
-						<string>Automatic</string>
-					</dict>
-					<key>C5552B721E054FE30003488F</key>
-					<dict>
-						<key>CreatedOnToolsVersion</key>
-						<string>8.1</string>
-						<key>ProvisioningStyle</key>
-						<string>Automatic</string>
-						<key>TestTargetID</key>
-						<string>C5552B5E1E054FE30003488F</string>
-					</dict>
-				</dict>
-			</dict>
-			<key>buildConfigurationList</key>
-			<string>C5552B5A1E054FE30003488F</string>
-			<key>compatibilityVersion</key>
-			<string>Xcode 3.2</string>
-			<key>developmentRegion</key>
-			<string>English</string>
-			<key>hasScannedForEncodings</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXProject</string>
-			<key>knownRegions</key>
-			<array>
-				<string>en</string>
-				<string>Base</string>
-			</array>
-			<key>mainGroup</key>
-			<string>C5552B561E054FE30003488F</string>
-			<key>productRefGroup</key>
-			<string>C5552B601E054FE30003488F</string>
-			<key>projectDirPath</key>
-			<string></string>
-			<key>projectReferences</key>
-			<array/>
-			<key>projectRoot</key>
-			<string></string>
-			<key>targets</key>
-			<array>
-				<string>C5552B5E1E054FE30003488F</string>
-				<string>C5552B721E054FE30003488F</string>
-			</array>
-		</dict>
-		<key>C5552B5A1E054FE30003488F</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>C5552B7A1E054FE30003488F</string>
-				<string>C5552B7B1E054FE30003488F</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>defaultConfigurationName</key>
-			<string>Release</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>C5552B5B1E054FE30003488F</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>C5552BA51E05500E0003488F</string>
-				<string>C5552BC71E06354F0003488F</string>
-				<string>C5552BB21E05500E0003488F</string>
-				<string>C5552BAC1E05500E0003488F</string>
-				<string>C5552BBF1E0625610003488F</string>
-				<string>C5552BA71E05500E0003488F</string>
-				<string>C5552BB41E06161C0003488F</string>
-				<string>C5552BC11E06342F0003488F</string>
-				<string>C5552BAD1E05500E0003488F</string>
-				<string>C5552BA91E05500E0003488F</string>
-				<string>C5552BB11E05500E0003488F</string>
-				<string>C5552BAB1E05500E0003488F</string>
-				<string>C5552BB01E05500E0003488F</string>
-				<string>C5552BC51E06351E0003488F</string>
-				<string>C5552BAF1E05500E0003488F</string>
-				<string>C5552BA31E05500E0003488F</string>
-				<string>C5552BA11E05500E0003488F</string>
-				<string>C5552BC31E0634E00003488F</string>
-				<string>C5552BBD1E0624B10003488F</string>
-				<string>C5552BA41E05500E0003488F</string>
-				<string>C5552BA81E05500E0003488F</string>
-				<string>C5552BB81E061DB10003488F</string>
-				<string>C5552BA61E05500E0003488F</string>
-				<string>C5552BB61E061B4E0003488F</string>
-			</array>
-			<key>isa</key>
-			<string>PBXSourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>C5552B5C1E054FE30003488F</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>46E872D252F8714A2808F658</string>
-			</array>
-			<key>isa</key>
-			<string>PBXFrameworksBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>C5552B5D1E054FE30003488F</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>C5552BA01E05500E0003488F</string>
-				<string>C5552BD01E06492E0003488F</string>
-				<string>C5552BA21E05500E0003488F</string>
-				<string>C5552BAE1E05500E0003488F</string>
-			</array>
-			<key>isa</key>
-			<string>PBXResourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>C5552B5E1E054FE30003488F</key>
-		<dict>
-			<key>buildConfigurationList</key>
-			<string>C5552B7C1E054FE30003488F</string>
-			<key>buildPhases</key>
-			<array>
-				<string>C45B42AD6AA8EEE191BA19DC</string>
-				<string>C5552B5B1E054FE30003488F</string>
-				<string>C5552B5C1E054FE30003488F</string>
-				<string>C5552B5D1E054FE30003488F</string>
-				<string>0819E4BF96E63D8E34460FE6</string>
-				<string>284167D4ADED6465E7A795CC</string>
-			</array>
-			<key>buildRules</key>
-			<array/>
-			<key>dependencies</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXNativeTarget</string>
-			<key>name</key>
-			<string>ios-flickr-api-demo</string>
-			<key>productName</key>
-			<string>ios-flickr-api-demo</string>
-			<key>productReference</key>
-			<string>C5552B5F1E054FE30003488F</string>
-			<key>productType</key>
-			<string>com.apple.product-type.application</string>
-		</dict>
-		<key>C5552B5F1E054FE30003488F</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>wrapper.application</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>ios-flickr-api-demo.app</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>C5552B601E054FE30003488F</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>C5552B5F1E054FE30003488F</string>
-				<string>C5552B731E054FE30003488F</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Products</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>C5552B611E054FE30003488F</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>C5552B821E05500E0003488F</string>
-				<string>C5552B8A1E05500E0003488F</string>
-				<string>C5552B971E05500E0003488F</string>
-				<string>C5552B9A1E05500E0003488F</string>
-				<string>C5552B9D1E05500E0003488F</string>
-				<string>C5552B6E1E054FE30003488F</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>path</key>
-			<string>ios-flickr-api-demo</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>C5552B6E1E054FE30003488F</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.plist.xml</string>
-			<key>path</key>
-			<string>Info.plist</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>C5552B6F1E054FE30003488F</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>C5552B781E054FE30003488F</string>
-			</array>
-			<key>isa</key>
-			<string>PBXSourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>C5552B701E054FE30003488F</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>41D7965D8B2286B026C4FA97</string>
-			</array>
-			<key>isa</key>
-			<string>PBXFrameworksBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>C5552B711E054FE30003488F</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXResourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>C5552B721E054FE30003488F</key>
-		<dict>
-			<key>buildConfigurationList</key>
-			<string>C5552B7F1E054FE30003488F</string>
-			<key>buildPhases</key>
-			<array>
-				<string>24B794104EE089C115174616</string>
-				<string>C5552B6F1E054FE30003488F</string>
-				<string>C5552B701E054FE30003488F</string>
-				<string>C5552B711E054FE30003488F</string>
-				<string>B8F94DB0D208BC7FDA349ABC</string>
-				<string>D21C25D2D00B457D232E4028</string>
-			</array>
-			<key>buildRules</key>
-			<array/>
-			<key>dependencies</key>
-			<array>
-				<string>C5552B751E054FE30003488F</string>
-			</array>
-			<key>isa</key>
-			<string>PBXNativeTarget</string>
-			<key>name</key>
-			<string>ios-flickr-api-demoTests</string>
-			<key>productName</key>
-			<string>ios-flickr-api-demoTests</string>
-			<key>productReference</key>
-			<string>C5552B731E054FE30003488F</string>
-			<key>productType</key>
-			<string>com.apple.product-type.bundle.unit-test</string>
-		</dict>
-		<key>C5552B731E054FE30003488F</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>wrapper.cfbundle</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>ios-flickr-api-demoTests.xctest</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>C5552B741E054FE30003488F</key>
-		<dict>
-			<key>containerPortal</key>
-			<string>C5552B571E054FE30003488F</string>
-			<key>isa</key>
-			<string>PBXContainerItemProxy</string>
-			<key>proxyType</key>
-			<string>1</string>
-			<key>remoteGlobalIDString</key>
-			<string>C5552B5E1E054FE30003488F</string>
-			<key>remoteInfo</key>
-			<string>ios-flickr-api-demo</string>
-		</dict>
-		<key>C5552B751E054FE30003488F</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXTargetDependency</string>
-			<key>target</key>
-			<string>C5552B5E1E054FE30003488F</string>
-			<key>targetProxy</key>
-			<string>C5552B741E054FE30003488F</string>
-		</dict>
-		<key>C5552B761E054FE30003488F</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>C5552B791E054FE30003488F</string>
-				<string>C5552B771E054FE30003488F</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>path</key>
-			<string>ios-flickr-api-demoTests</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>C5552B771E054FE30003488F</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>ios_flickr_api_demoTests.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>C5552B781E054FE30003488F</key>
-		<dict>
-			<key>fileRef</key>
-			<string>C5552B771E054FE30003488F</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>C5552B791E054FE30003488F</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.plist.xml</string>
-			<key>path</key>
-			<string>Info.plist</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>C5552B7A1E054FE30003488F</key>
-		<dict>
-			<key>buildSettings</key>
-			<dict>
-				<key>ALWAYS_SEARCH_USER_PATHS</key>
-				<string>NO</string>
-				<key>CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED</key>
-				<string>YES</string>
-				<key>CLANG_ANALYZER_NONNULL</key>
-				<string>YES</string>
-				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
-				<string>gnu++0x</string>
-				<key>CLANG_CXX_LIBRARY</key>
-				<string>libc++</string>
-				<key>CLANG_ENABLE_MODULES</key>
-				<string>YES</string>
-				<key>CLANG_ENABLE_OBJC_ARC</key>
-				<string>YES</string>
-				<key>CLANG_WARN_BOOL_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_CONSTANT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_DIRECT_OBJC_ISA_USAGE</key>
-				<string>YES_ERROR</string>
-				<key>CLANG_WARN_DOCUMENTATION_COMMENTS</key>
-				<string>YES</string>
-				<key>CLANG_WARN_EMPTY_BODY</key>
-				<string>YES</string>
-				<key>CLANG_WARN_ENUM_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_INFINITE_RECURSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_INT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_OBJC_ROOT_CLASS</key>
-				<string>YES_ERROR</string>
-				<key>CLANG_WARN_SUSPICIOUS_MOVES</key>
-				<string>YES</string>
-				<key>CLANG_WARN_UNREACHABLE_CODE</key>
-				<string>YES</string>
-				<key>CLANG_WARN__DUPLICATE_METHOD_MATCH</key>
-				<string>YES</string>
-				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
-				<string>iPhone Developer</string>
-				<key>COPY_PHASE_STRIP</key>
-				<string>NO</string>
-				<key>DEBUG_INFORMATION_FORMAT</key>
-				<string>dwarf</string>
-				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
-				<string>YES</string>
-				<key>ENABLE_TESTABILITY</key>
-				<string>YES</string>
-				<key>GCC_C_LANGUAGE_STANDARD</key>
-				<string>gnu99</string>
-				<key>GCC_DYNAMIC_NO_PIC</key>
-				<string>NO</string>
-				<key>GCC_NO_COMMON_BLOCKS</key>
-				<string>YES</string>
-				<key>GCC_OPTIMIZATION_LEVEL</key>
-				<string>0</string>
-				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
-				<array>
-					<string>DEBUG=1</string>
-					<string>$(inherited)</string>
-				</array>
-				<key>GCC_WARN_64_TO_32_BIT_CONVERSION</key>
-				<string>YES</string>
-				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
-				<string>YES_ERROR</string>
-				<key>GCC_WARN_UNDECLARED_SELECTOR</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
-				<string>YES_AGGRESSIVE</string>
-				<key>GCC_WARN_UNUSED_FUNCTION</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNUSED_VARIABLE</key>
-				<string>YES</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>10.1</string>
-				<key>MTL_ENABLE_DEBUG_INFO</key>
-				<string>YES</string>
-				<key>ONLY_ACTIVE_ARCH</key>
-				<string>YES</string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-				<key>SWIFT_ACTIVE_COMPILATION_CONDITIONS</key>
-				<string>DEBUG</string>
-				<key>SWIFT_OPTIMIZATION_LEVEL</key>
-				<string>-Onone</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
-		</dict>
-		<key>C5552B7B1E054FE30003488F</key>
-		<dict>
-			<key>buildSettings</key>
-			<dict>
-				<key>ALWAYS_SEARCH_USER_PATHS</key>
-				<string>NO</string>
-				<key>CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED</key>
-				<string>YES</string>
-				<key>CLANG_ANALYZER_NONNULL</key>
-				<string>YES</string>
-				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
-				<string>gnu++0x</string>
-				<key>CLANG_CXX_LIBRARY</key>
-				<string>libc++</string>
-				<key>CLANG_ENABLE_MODULES</key>
-				<string>YES</string>
-				<key>CLANG_ENABLE_OBJC_ARC</key>
-				<string>YES</string>
-				<key>CLANG_WARN_BOOL_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_CONSTANT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_DIRECT_OBJC_ISA_USAGE</key>
-				<string>YES_ERROR</string>
-				<key>CLANG_WARN_DOCUMENTATION_COMMENTS</key>
-				<string>YES</string>
-				<key>CLANG_WARN_EMPTY_BODY</key>
-				<string>YES</string>
-				<key>CLANG_WARN_ENUM_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_INFINITE_RECURSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_INT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_OBJC_ROOT_CLASS</key>
-				<string>YES_ERROR</string>
-				<key>CLANG_WARN_SUSPICIOUS_MOVES</key>
-				<string>YES</string>
-				<key>CLANG_WARN_UNREACHABLE_CODE</key>
-				<string>YES</string>
-				<key>CLANG_WARN__DUPLICATE_METHOD_MATCH</key>
-				<string>YES</string>
-				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
-				<string>iPhone Developer</string>
-				<key>COPY_PHASE_STRIP</key>
-				<string>NO</string>
-				<key>DEBUG_INFORMATION_FORMAT</key>
-				<string>dwarf-with-dsym</string>
-				<key>ENABLE_NS_ASSERTIONS</key>
-				<string>NO</string>
-				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
-				<string>YES</string>
-				<key>GCC_C_LANGUAGE_STANDARD</key>
-				<string>gnu99</string>
-				<key>GCC_NO_COMMON_BLOCKS</key>
-				<string>YES</string>
-				<key>GCC_WARN_64_TO_32_BIT_CONVERSION</key>
-				<string>YES</string>
-				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
-				<string>YES_ERROR</string>
-				<key>GCC_WARN_UNDECLARED_SELECTOR</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
-				<string>YES_AGGRESSIVE</string>
-				<key>GCC_WARN_UNUSED_FUNCTION</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNUSED_VARIABLE</key>
-				<string>YES</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>10.1</string>
-				<key>MTL_ENABLE_DEBUG_INFO</key>
-				<string>NO</string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-				<key>SWIFT_OPTIMIZATION_LEVEL</key>
-				<string>-Owholemodule</string>
-				<key>VALIDATE_PRODUCT</key>
-				<string>YES</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
-		<key>C5552B7C1E054FE30003488F</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>C5552B7D1E054FE30003488F</string>
-				<string>C5552B7E1E054FE30003488F</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>defaultConfigurationName</key>
-			<string>Release</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>C5552B7D1E054FE30003488F</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>838CF5D0AD381C6CA2648C1F</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>ASSETCATALOG_COMPILER_APPICON_NAME</key>
-				<string>AppIcon</string>
-				<key>DEVELOPMENT_TEAM</key>
-				<string>UE5DCQPTRB</string>
-				<key>INFOPLIST_FILE</key>
-				<string>ios-flickr-api-demo/Info.plist</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>10.0</string>
-				<key>LD_RUNPATH_SEARCH_PATHS</key>
-				<string>$(inherited) @executable_path/Frameworks</string>
-				<key>PRODUCT_BUNDLE_IDENTIFIER</key>
-				<string>jp.st-ventures.ios-flickr-api-demo</string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>SWIFT_VERSION</key>
-				<string>3.0</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
-		</dict>
-		<key>C5552B7E1E054FE30003488F</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>74C6190DC7A0F91140BF47AE</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>ASSETCATALOG_COMPILER_APPICON_NAME</key>
-				<string>AppIcon</string>
-				<key>DEVELOPMENT_TEAM</key>
-				<string>UE5DCQPTRB</string>
-				<key>INFOPLIST_FILE</key>
-				<string>ios-flickr-api-demo/Info.plist</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>10.0</string>
-				<key>LD_RUNPATH_SEARCH_PATHS</key>
-				<string>$(inherited) @executable_path/Frameworks</string>
-				<key>PRODUCT_BUNDLE_IDENTIFIER</key>
-				<string>jp.st-ventures.ios-flickr-api-demo</string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>SWIFT_VERSION</key>
-				<string>3.0</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
-		<key>C5552B7F1E054FE30003488F</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>C5552B801E054FE30003488F</string>
-				<string>C5552B811E054FE30003488F</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>defaultConfigurationName</key>
-			<string>Release</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>C5552B801E054FE30003488F</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>D467FC04403381E09F260028</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES</key>
-				<string>YES</string>
-				<key>BUNDLE_LOADER</key>
-				<string>$(TEST_HOST)</string>
-				<key>INFOPLIST_FILE</key>
-				<string>ios-flickr-api-demoTests/Info.plist</string>
-				<key>LD_RUNPATH_SEARCH_PATHS</key>
-				<string>$(inherited) @executable_path/Frameworks @loader_path/Frameworks</string>
-				<key>PRODUCT_BUNDLE_IDENTIFIER</key>
-				<string>jp.st-ventures.ios-flickr-api-demoTests</string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>SWIFT_VERSION</key>
-				<string>3.0</string>
-				<key>TEST_HOST</key>
-				<string>$(BUILT_PRODUCTS_DIR)/ios-flickr-api-demo.app/ios-flickr-api-demo</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
-		</dict>
-		<key>C5552B811E054FE30003488F</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>630661FD3A6E9EA761DBC730</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES</key>
-				<string>YES</string>
-				<key>BUNDLE_LOADER</key>
-				<string>$(TEST_HOST)</string>
-				<key>INFOPLIST_FILE</key>
-				<string>ios-flickr-api-demoTests/Info.plist</string>
-				<key>LD_RUNPATH_SEARCH_PATHS</key>
-				<string>$(inherited) @executable_path/Frameworks @loader_path/Frameworks</string>
-				<key>PRODUCT_BUNDLE_IDENTIFIER</key>
-				<string>jp.st-ventures.ios-flickr-api-demoTests</string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>SWIFT_VERSION</key>
-				<string>3.0</string>
-				<key>TEST_HOST</key>
-				<string>$(BUILT_PRODUCTS_DIR)/ios-flickr-api-demo.app/ios-flickr-api-demo</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
-		<key>C5552B821E05500E0003488F</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>C5552B831E05500E0003488F</string>
-				<string>C5552B871E05500E0003488F</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>path</key>
-			<string>Controller</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>C5552B831E05500E0003488F</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>C5552B841E05500E0003488F</string>
-				<string>C5552B861E05500E0003488F</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>path</key>
-			<string>PhotoSearch</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>C5552B841E05500E0003488F</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>C5552B851E05500E0003488F</string>
-			</array>
-			<key>isa</key>
-			<string>PBXVariantGroup</string>
-			<key>name</key>
-			<string>PhotoListViewController.storyboard</string>
-			<key>path</key>
-			<string>.</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>C5552B851E05500E0003488F</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>file.storyboard</string>
-			<key>name</key>
-			<string>Base</string>
-			<key>path</key>
-			<string>Base.lproj/PhotoListViewController.storyboard</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>C5552B861E05500E0003488F</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>PhotoListViewController.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>C5552B871E05500E0003488F</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>C5552B881E05500E0003488F</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>path</key>
-			<string>Startup</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>C5552B881E05500E0003488F</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>C5552B891E05500E0003488F</string>
-			</array>
-			<key>isa</key>
-			<string>PBXVariantGroup</string>
-			<key>name</key>
-			<string>LaunchScreen.storyboard</string>
-			<key>path</key>
-			<string>.</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>C5552B891E05500E0003488F</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>file.storyboard</string>
-			<key>name</key>
-			<string>Base</string>
-			<key>path</key>
-			<string>Base.lproj/LaunchScreen.storyboard</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>C5552B8A1E05500E0003488F</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>C5552B8B1E05500E0003488F</string>
-				<string>C5552B8D1E05500E0003488F</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>path</key>
-			<string>Model</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>C5552B8B1E05500E0003488F</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>C5552B8C1E05500E0003488F</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>path</key>
-			<string>Common</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>C5552B8C1E05500E0003488F</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>Result.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>C5552B8D1E05500E0003488F</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>C5552B8E1E05500E0003488F</string>
-				<string>C5552B8F1E05500E0003488F</string>
-				<string>C5552B901E05500E0003488F</string>
-				<string>C5552B911E05500E0003488F</string>
-				<string>C5552B921E05500E0003488F</string>
-				<string>C5552B931E05500E0003488F</string>
-				<string>C5552B951E05500E0003488F</string>
-				<string>C5552B961E05500E0003488F</string>
-				<string>C5552BB31E06161C0003488F</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>path</key>
-			<string>PhotoSearch</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>C5552B8E1E05500E0003488F</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>Photo.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>C5552B8F1E05500E0003488F</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>PhotoImageURLBuilder.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>C5552B901E05500E0003488F</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>PhotoListPage.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>C5552B911E05500E0003488F</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>PhotoSearchAPI.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>C5552B921E05500E0003488F</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>PhotoSearchLoadable.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>C5552B931E05500E0003488F</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>PhotoSearchParamsBuilder.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>C5552B951E05500E0003488F</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>PhotoSearchResult.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>C5552B961E05500E0003488F</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>PhotoSearchStatus.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>C5552B971E05500E0003488F</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>C5552B981E05500E0003488F</string>
-				<string>C5552B991E05500E0003488F</string>
-				<string>C5552BD21E06492E0003488F</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>path</key>
-			<string>Ohter</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>C5552B981E05500E0003488F</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>AppDelegate.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>C5552B991E05500E0003488F</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>folder.assetcatalog</string>
-			<key>path</key>
-			<string>Assets.xcassets</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>C5552B9A1E05500E0003488F</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>C5552B9B1E05500E0003488F</string>
-				<string>C5552BB71E061DB10003488F</string>
-				<string>C5552B9C1E05500E0003488F</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>path</key>
-			<string>Util</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>C5552B9B1E05500E0003488F</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>APIClient.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>C5552B9C1E05500E0003488F</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>Router.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>C5552B9D1E05500E0003488F</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>C5552BBB1E0622C60003488F</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>path</key>
-			<string>Views</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>C5552B9E1E05500E0003488F</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>PhotoListCollectionView.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>C5552B9F1E05500E0003488F</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>PhotoListCollectionViewCell.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>C5552BA01E05500E0003488F</key>
-		<dict>
-			<key>fileRef</key>
-			<string>C5552B841E05500E0003488F</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>C5552BA11E05500E0003488F</key>
-		<dict>
-			<key>fileRef</key>
-			<string>C5552B861E05500E0003488F</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>C5552BA21E05500E0003488F</key>
-		<dict>
-			<key>fileRef</key>
-			<string>C5552B881E05500E0003488F</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>C5552BA31E05500E0003488F</key>
-		<dict>
-			<key>fileRef</key>
-			<string>C5552B8C1E05500E0003488F</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>C5552BA41E05500E0003488F</key>
-		<dict>
-			<key>fileRef</key>
-			<string>C5552B8E1E05500E0003488F</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>C5552BA51E05500E0003488F</key>
-		<dict>
-			<key>fileRef</key>
-			<string>C5552B8F1E05500E0003488F</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>C5552BA61E05500E0003488F</key>
-		<dict>
-			<key>fileRef</key>
-			<string>C5552B901E05500E0003488F</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>C5552BA71E05500E0003488F</key>
-		<dict>
-			<key>fileRef</key>
-			<string>C5552B911E05500E0003488F</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>C5552BA81E05500E0003488F</key>
-		<dict>
-			<key>fileRef</key>
-			<string>C5552B921E05500E0003488F</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>C5552BA91E05500E0003488F</key>
-		<dict>
-			<key>fileRef</key>
-			<string>C5552B931E05500E0003488F</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>C5552BAB1E05500E0003488F</key>
-		<dict>
-			<key>fileRef</key>
-			<string>C5552B951E05500E0003488F</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>C5552BAC1E05500E0003488F</key>
-		<dict>
-			<key>fileRef</key>
-			<string>C5552B961E05500E0003488F</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>C5552BAD1E05500E0003488F</key>
-		<dict>
-			<key>fileRef</key>
-			<string>C5552B981E05500E0003488F</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>C5552BAE1E05500E0003488F</key>
-		<dict>
-			<key>fileRef</key>
-			<string>C5552B991E05500E0003488F</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>C5552BAF1E05500E0003488F</key>
-		<dict>
-			<key>fileRef</key>
-			<string>C5552B9B1E05500E0003488F</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>C5552BB01E05500E0003488F</key>
-		<dict>
-			<key>fileRef</key>
-			<string>C5552B9C1E05500E0003488F</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>C5552BB11E05500E0003488F</key>
-		<dict>
-			<key>fileRef</key>
-			<string>C5552B9E1E05500E0003488F</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>C5552BB21E05500E0003488F</key>
-		<dict>
-			<key>fileRef</key>
-			<string>C5552B9F1E05500E0003488F</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>C5552BB31E06161C0003488F</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>Photos.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>C5552BB41E06161C0003488F</key>
-		<dict>
-			<key>fileRef</key>
-			<string>C5552BB31E06161C0003488F</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>C5552BB51E061B4E0003488F</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>UICollectionView+ScrollToTop.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>C5552BB61E061B4E0003488F</key>
-		<dict>
-			<key>fileRef</key>
-			<string>C5552BB51E061B4E0003488F</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>C5552BB71E061DB10003488F</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>name</key>
-			<string>NetworkManager.swift</string>
-			<key>path</key>
-			<string>NetworkManager.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>C5552BB81E061DB10003488F</key>
-		<dict>
-			<key>fileRef</key>
-			<string>C5552BB71E061DB10003488F</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>C5552BBB1E0622C60003488F</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>C5552BC91E0642D60003488F</string>
-				<string>C5552BC81E0642A80003488F</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>PhotoSearch</string>
-			<key>path</key>
-			<string>PhotoSearch</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>C5552BBC1E0624B10003488F</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>PhotoListIllegalCollectionViewCell.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>C5552BBD1E0624B10003488F</key>
-		<dict>
-			<key>fileRef</key>
-			<string>C5552BBC1E0624B10003488F</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>C5552BBE1E0625610003488F</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>PhotoSearchStatusType.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>C5552BBF1E0625610003488F</key>
-		<dict>
-			<key>fileRef</key>
-			<string>C5552BBE1E0625610003488F</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>C5552BC01E06342F0003488F</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>PhotoListNormal.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>C5552BC11E06342F0003488F</key>
-		<dict>
-			<key>fileRef</key>
-			<string>C5552BC01E06342F0003488F</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>C5552BC21E0634E00003488F</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>PhotoListNone.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>C5552BC31E0634E00003488F</key>
-		<dict>
-			<key>fileRef</key>
-			<string>C5552BC21E0634E00003488F</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>C5552BC41E06351E0003488F</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>PhotoListNoData.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>C5552BC51E06351E0003488F</key>
-		<dict>
-			<key>fileRef</key>
-			<string>C5552BC41E06351E0003488F</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>C5552BC61E06354F0003488F</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>PhotoListOffline.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>C5552BC71E06354F0003488F</key>
-		<dict>
-			<key>fileRef</key>
-			<string>C5552BC61E06354F0003488F</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>C5552BC81E0642A80003488F</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>C5552BC41E06351E0003488F</string>
-				<string>C5552BC21E0634E00003488F</string>
-				<string>C5552BC01E06342F0003488F</string>
-				<string>C5552BC61E06354F0003488F</string>
-				<string>C5552BBE1E0625610003488F</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Status</string>
-			<key>path</key>
-			<string>Status</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>C5552BC91E0642D60003488F</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>C5552B9E1E05500E0003488F</string>
-				<string>C5552B9F1E05500E0003488F</string>
-				<string>C5552BBC1E0624B10003488F</string>
-				<string>C5552BB51E061B4E0003488F</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>CollectionView</string>
-			<key>path</key>
-			<string>CollectionView</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>C5552BD01E06492E0003488F</key>
-		<dict>
-			<key>fileRef</key>
-			<string>C5552BD21E06492E0003488F</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>C5552BD21E06492E0003488F</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>C5552BD31E0649350003488F</string>
-			</array>
-			<key>isa</key>
-			<string>PBXVariantGroup</string>
-			<key>name</key>
-			<string>Localizable.strings</string>
-			<key>path</key>
-			<string>.</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>C5552BD31E0649350003488F</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.plist.strings</string>
-			<key>name</key>
-			<string>Base</string>
-			<key>path</key>
-			<string>Base.lproj/Localizable.strings</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>D21C25D2D00B457D232E4028</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>inputPaths</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXShellScriptBuildPhase</string>
-			<key>name</key>
-			<string>[CP] Copy Pods Resources</string>
-			<key>outputPaths</key>
-			<array/>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-			<key>shellPath</key>
-			<string>/bin/sh</string>
-			<key>shellScript</key>
-			<string>"${SRCROOT}/Pods/Target Support Files/Pods-ios-flickr-api-demoTests/Pods-ios-flickr-api-demoTests-resources.sh"
-</string>
-			<key>showEnvVarsInLog</key>
-			<string>0</string>
-		</dict>
-		<key>D467FC04403381E09F260028</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>name</key>
-			<string>Pods-ios-flickr-api-demoTests.debug.xcconfig</string>
-			<key>path</key>
-			<string>Pods/Target Support Files/Pods-ios-flickr-api-demoTests/Pods-ios-flickr-api-demoTests.debug.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-	</dict>
-	<key>rootObject</key>
-	<string>C5552B571E054FE30003488F</string>
-</dict>
-</plist>
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		41D7965D8B2286B026C4FA97 /* Pods_ios_flickr_api_demoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AA7993E701D915F502E7CE4 /* Pods_ios_flickr_api_demoTests.framework */; };
+		46E872D252F8714A2808F658 /* Pods_ios_flickr_api_demo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5EA7893CB2D5EFBEDF683711 /* Pods_ios_flickr_api_demo.framework */; };
+		C5552B781E054FE30003488F /* ios_flickr_api_demoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5552B771E054FE30003488F /* ios_flickr_api_demoTests.swift */; };
+		C5552BA01E05500E0003488F /* PhotoListViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C5552B841E05500E0003488F /* PhotoListViewController.storyboard */; };
+		C5552BA11E05500E0003488F /* PhotoListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5552B861E05500E0003488F /* PhotoListViewController.swift */; };
+		C5552BA21E05500E0003488F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C5552B881E05500E0003488F /* LaunchScreen.storyboard */; };
+		C5552BA31E05500E0003488F /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5552B8C1E05500E0003488F /* Result.swift */; };
+		C5552BA41E05500E0003488F /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5552B8E1E05500E0003488F /* Photo.swift */; };
+		C5552BA51E05500E0003488F /* PhotoImageURLBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5552B8F1E05500E0003488F /* PhotoImageURLBuilder.swift */; };
+		C5552BA61E05500E0003488F /* PhotoListPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5552B901E05500E0003488F /* PhotoListPage.swift */; };
+		C5552BA71E05500E0003488F /* PhotoSearchAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5552B911E05500E0003488F /* PhotoSearchAPI.swift */; };
+		C5552BA81E05500E0003488F /* PhotoSearchLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5552B921E05500E0003488F /* PhotoSearchLoadable.swift */; };
+		C5552BA91E05500E0003488F /* PhotoSearchParamsBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5552B931E05500E0003488F /* PhotoSearchParamsBuilder.swift */; };
+		C5552BAB1E05500E0003488F /* PhotoSearchResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5552B951E05500E0003488F /* PhotoSearchResult.swift */; };
+		C5552BAC1E05500E0003488F /* PhotoSearchStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5552B961E05500E0003488F /* PhotoSearchStatus.swift */; };
+		C5552BAD1E05500E0003488F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5552B981E05500E0003488F /* AppDelegate.swift */; };
+		C5552BAE1E05500E0003488F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C5552B991E05500E0003488F /* Assets.xcassets */; };
+		C5552BAF1E05500E0003488F /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5552B9B1E05500E0003488F /* APIClient.swift */; };
+		C5552BB01E05500E0003488F /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5552B9C1E05500E0003488F /* Router.swift */; };
+		C5552BB11E05500E0003488F /* PhotoListCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5552B9E1E05500E0003488F /* PhotoListCollectionView.swift */; };
+		C5552BB21E05500E0003488F /* PhotoListCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5552B9F1E05500E0003488F /* PhotoListCollectionViewCell.swift */; };
+		C5552BB41E06161C0003488F /* Photos.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5552BB31E06161C0003488F /* Photos.swift */; };
+		C5552BB61E061B4E0003488F /* UICollectionView+ScrollToTop.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5552BB51E061B4E0003488F /* UICollectionView+ScrollToTop.swift */; };
+		C5552BB81E061DB10003488F /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5552BB71E061DB10003488F /* NetworkManager.swift */; };
+		C5552BBD1E0624B10003488F /* PhotoListIllegalCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5552BBC1E0624B10003488F /* PhotoListIllegalCollectionViewCell.swift */; };
+		C5552BBF1E0625610003488F /* PhotoListStatusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5552BBE1E0625610003488F /* PhotoListStatusable.swift */; };
+		C5552BC11E06342F0003488F /* PhotoListStatusNormal.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5552BC01E06342F0003488F /* PhotoListStatusNormal.swift */; };
+		C5552BC31E0634E00003488F /* PhotoListStatusNone.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5552BC21E0634E00003488F /* PhotoListStatusNone.swift */; };
+		C5552BC51E06351E0003488F /* PhotoListStatusNoData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5552BC41E06351E0003488F /* PhotoListStatusNoData.swift */; };
+		C5552BC71E06354F0003488F /* PhotoListStatusOffline.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5552BC61E06354F0003488F /* PhotoListStatusOffline.swift */; };
+		C5552BD01E06492E0003488F /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = C5552BD21E06492E0003488F /* Localizable.strings */; };
+		C5552BD81E0654280003488F /* PhotoListStatusCommon.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5552BD71E0654280003488F /* PhotoListStatusCommon.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C5552B741E054FE30003488F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C5552B571E054FE30003488F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C5552B5E1E054FE30003488F;
+			remoteInfo = "ios-flickr-api-demo";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		1AA7993E701D915F502E7CE4 /* Pods_ios_flickr_api_demoTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ios_flickr_api_demoTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5EA7893CB2D5EFBEDF683711 /* Pods_ios_flickr_api_demo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ios_flickr_api_demo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		630661FD3A6E9EA761DBC730 /* Pods-ios-flickr-api-demoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ios-flickr-api-demoTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ios-flickr-api-demoTests/Pods-ios-flickr-api-demoTests.release.xcconfig"; sourceTree = "<group>"; };
+		74C6190DC7A0F91140BF47AE /* Pods-ios-flickr-api-demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ios-flickr-api-demo.release.xcconfig"; path = "Pods/Target Support Files/Pods-ios-flickr-api-demo/Pods-ios-flickr-api-demo.release.xcconfig"; sourceTree = "<group>"; };
+		838CF5D0AD381C6CA2648C1F /* Pods-ios-flickr-api-demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ios-flickr-api-demo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ios-flickr-api-demo/Pods-ios-flickr-api-demo.debug.xcconfig"; sourceTree = "<group>"; };
+		C5552B5F1E054FE30003488F /* ios-flickr-api-demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ios-flickr-api-demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C5552B6E1E054FE30003488F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C5552B731E054FE30003488F /* ios-flickr-api-demoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ios-flickr-api-demoTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C5552B771E054FE30003488F /* ios_flickr_api_demoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ios_flickr_api_demoTests.swift; sourceTree = "<group>"; };
+		C5552B791E054FE30003488F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C5552B851E05500E0003488F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/PhotoListViewController.storyboard; sourceTree = "<group>"; };
+		C5552B861E05500E0003488F /* PhotoListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoListViewController.swift; sourceTree = "<group>"; };
+		C5552B891E05500E0003488F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		C5552B8C1E05500E0003488F /* Result.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		C5552B8E1E05500E0003488F /* Photo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
+		C5552B8F1E05500E0003488F /* PhotoImageURLBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoImageURLBuilder.swift; sourceTree = "<group>"; };
+		C5552B901E05500E0003488F /* PhotoListPage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoListPage.swift; sourceTree = "<group>"; };
+		C5552B911E05500E0003488F /* PhotoSearchAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoSearchAPI.swift; sourceTree = "<group>"; };
+		C5552B921E05500E0003488F /* PhotoSearchLoadable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoSearchLoadable.swift; sourceTree = "<group>"; };
+		C5552B931E05500E0003488F /* PhotoSearchParamsBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoSearchParamsBuilder.swift; sourceTree = "<group>"; };
+		C5552B951E05500E0003488F /* PhotoSearchResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoSearchResult.swift; sourceTree = "<group>"; };
+		C5552B961E05500E0003488F /* PhotoSearchStatus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoSearchStatus.swift; sourceTree = "<group>"; };
+		C5552B981E05500E0003488F /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		C5552B991E05500E0003488F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C5552B9B1E05500E0003488F /* APIClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
+		C5552B9C1E05500E0003488F /* Router.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		C5552B9E1E05500E0003488F /* PhotoListCollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoListCollectionView.swift; sourceTree = "<group>"; };
+		C5552B9F1E05500E0003488F /* PhotoListCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoListCollectionViewCell.swift; sourceTree = "<group>"; };
+		C5552BB31E06161C0003488F /* Photos.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Photos.swift; sourceTree = "<group>"; };
+		C5552BB51E061B4E0003488F /* UICollectionView+ScrollToTop.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UICollectionView+ScrollToTop.swift"; sourceTree = "<group>"; };
+		C5552BB71E061DB10003488F /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		C5552BBC1E0624B10003488F /* PhotoListIllegalCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoListIllegalCollectionViewCell.swift; sourceTree = "<group>"; };
+		C5552BBE1E0625610003488F /* PhotoListStatusable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoListStatusable.swift; sourceTree = "<group>"; };
+		C5552BC01E06342F0003488F /* PhotoListStatusNormal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoListStatusNormal.swift; sourceTree = "<group>"; };
+		C5552BC21E0634E00003488F /* PhotoListStatusNone.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoListStatusNone.swift; sourceTree = "<group>"; };
+		C5552BC41E06351E0003488F /* PhotoListStatusNoData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoListStatusNoData.swift; sourceTree = "<group>"; };
+		C5552BC61E06354F0003488F /* PhotoListStatusOffline.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoListStatusOffline.swift; sourceTree = "<group>"; };
+		C5552BD31E0649350003488F /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
+		C5552BD71E0654280003488F /* PhotoListStatusCommon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoListStatusCommon.swift; sourceTree = "<group>"; };
+		D467FC04403381E09F260028 /* Pods-ios-flickr-api-demoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ios-flickr-api-demoTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ios-flickr-api-demoTests/Pods-ios-flickr-api-demoTests.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C5552B5C1E054FE30003488F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				46E872D252F8714A2808F658 /* Pods_ios_flickr_api_demo.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C5552B701E054FE30003488F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				41D7965D8B2286B026C4FA97 /* Pods_ios_flickr_api_demoTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A2E40E9A3564D6282E928582 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				838CF5D0AD381C6CA2648C1F /* Pods-ios-flickr-api-demo.debug.xcconfig */,
+				74C6190DC7A0F91140BF47AE /* Pods-ios-flickr-api-demo.release.xcconfig */,
+				D467FC04403381E09F260028 /* Pods-ios-flickr-api-demoTests.debug.xcconfig */,
+				630661FD3A6E9EA761DBC730 /* Pods-ios-flickr-api-demoTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		BB7C672E0C9063FDE18BCC7A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5EA7893CB2D5EFBEDF683711 /* Pods_ios_flickr_api_demo.framework */,
+				1AA7993E701D915F502E7CE4 /* Pods_ios_flickr_api_demoTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C5552B561E054FE30003488F = {
+			isa = PBXGroup;
+			children = (
+				BB7C672E0C9063FDE18BCC7A /* Frameworks */,
+				A2E40E9A3564D6282E928582 /* Pods */,
+				C5552B601E054FE30003488F /* Products */,
+				C5552B611E054FE30003488F /* ios-flickr-api-demo */,
+				C5552B761E054FE30003488F /* ios-flickr-api-demoTests */,
+			);
+			sourceTree = "<group>";
+		};
+		C5552B601E054FE30003488F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C5552B5F1E054FE30003488F /* ios-flickr-api-demo.app */,
+				C5552B731E054FE30003488F /* ios-flickr-api-demoTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C5552B611E054FE30003488F /* ios-flickr-api-demo */ = {
+			isa = PBXGroup;
+			children = (
+				C5552B821E05500E0003488F /* Controller */,
+				C5552B8A1E05500E0003488F /* Model */,
+				C5552B971E05500E0003488F /* Ohter */,
+				C5552B9A1E05500E0003488F /* Util */,
+				C5552B9D1E05500E0003488F /* Views */,
+				C5552B6E1E054FE30003488F /* Info.plist */,
+			);
+			path = "ios-flickr-api-demo";
+			sourceTree = "<group>";
+		};
+		C5552B761E054FE30003488F /* ios-flickr-api-demoTests */ = {
+			isa = PBXGroup;
+			children = (
+				C5552B791E054FE30003488F /* Info.plist */,
+				C5552B771E054FE30003488F /* ios_flickr_api_demoTests.swift */,
+			);
+			path = "ios-flickr-api-demoTests";
+			sourceTree = "<group>";
+		};
+		C5552B821E05500E0003488F /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				C5552B831E05500E0003488F /* PhotoSearch */,
+				C5552B871E05500E0003488F /* Startup */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		C5552B831E05500E0003488F /* PhotoSearch */ = {
+			isa = PBXGroup;
+			children = (
+				C5552B841E05500E0003488F /* PhotoListViewController.storyboard */,
+				C5552B861E05500E0003488F /* PhotoListViewController.swift */,
+			);
+			path = PhotoSearch;
+			sourceTree = "<group>";
+		};
+		C5552B871E05500E0003488F /* Startup */ = {
+			isa = PBXGroup;
+			children = (
+				C5552B881E05500E0003488F /* LaunchScreen.storyboard */,
+			);
+			path = Startup;
+			sourceTree = "<group>";
+		};
+		C5552B8A1E05500E0003488F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C5552B8B1E05500E0003488F /* Common */,
+				C5552B8D1E05500E0003488F /* PhotoSearch */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		C5552B8B1E05500E0003488F /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				C5552B8C1E05500E0003488F /* Result.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		C5552B8D1E05500E0003488F /* PhotoSearch */ = {
+			isa = PBXGroup;
+			children = (
+				C5552B8E1E05500E0003488F /* Photo.swift */,
+				C5552B8F1E05500E0003488F /* PhotoImageURLBuilder.swift */,
+				C5552B901E05500E0003488F /* PhotoListPage.swift */,
+				C5552B911E05500E0003488F /* PhotoSearchAPI.swift */,
+				C5552B921E05500E0003488F /* PhotoSearchLoadable.swift */,
+				C5552B931E05500E0003488F /* PhotoSearchParamsBuilder.swift */,
+				C5552B951E05500E0003488F /* PhotoSearchResult.swift */,
+				C5552B961E05500E0003488F /* PhotoSearchStatus.swift */,
+				C5552BB31E06161C0003488F /* Photos.swift */,
+			);
+			path = PhotoSearch;
+			sourceTree = "<group>";
+		};
+		C5552B971E05500E0003488F /* Ohter */ = {
+			isa = PBXGroup;
+			children = (
+				C5552B981E05500E0003488F /* AppDelegate.swift */,
+				C5552B991E05500E0003488F /* Assets.xcassets */,
+				C5552BD21E06492E0003488F /* Localizable.strings */,
+			);
+			path = Ohter;
+			sourceTree = "<group>";
+		};
+		C5552B9A1E05500E0003488F /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				C5552B9B1E05500E0003488F /* APIClient.swift */,
+				C5552BB71E061DB10003488F /* NetworkManager.swift */,
+				C5552B9C1E05500E0003488F /* Router.swift */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
+		C5552B9D1E05500E0003488F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				C5552BBB1E0622C60003488F /* PhotoSearch */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		C5552BBB1E0622C60003488F /* PhotoSearch */ = {
+			isa = PBXGroup;
+			children = (
+				C5552BC91E0642D60003488F /* CollectionView */,
+				C5552BC81E0642A80003488F /* Status */,
+			);
+			path = PhotoSearch;
+			sourceTree = "<group>";
+		};
+		C5552BC81E0642A80003488F /* Status */ = {
+			isa = PBXGroup;
+			children = (
+				C5552BBE1E0625610003488F /* PhotoListStatusable.swift */,
+				C5552BD71E0654280003488F /* PhotoListStatusCommon.swift */,
+				C5552BC41E06351E0003488F /* PhotoListStatusNoData.swift */,
+				C5552BC21E0634E00003488F /* PhotoListStatusNone.swift */,
+				C5552BC01E06342F0003488F /* PhotoListStatusNormal.swift */,
+				C5552BC61E06354F0003488F /* PhotoListStatusOffline.swift */,
+			);
+			path = Status;
+			sourceTree = "<group>";
+		};
+		C5552BC91E0642D60003488F /* CollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				C5552B9E1E05500E0003488F /* PhotoListCollectionView.swift */,
+				C5552B9F1E05500E0003488F /* PhotoListCollectionViewCell.swift */,
+				C5552BBC1E0624B10003488F /* PhotoListIllegalCollectionViewCell.swift */,
+				C5552BB51E061B4E0003488F /* UICollectionView+ScrollToTop.swift */,
+			);
+			path = CollectionView;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C5552B5E1E054FE30003488F /* ios-flickr-api-demo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C5552B7C1E054FE30003488F /* Build configuration list for PBXNativeTarget "ios-flickr-api-demo" */;
+			buildPhases = (
+				C45B42AD6AA8EEE191BA19DC /* [CP] Check Pods Manifest.lock */,
+				C5552B5B1E054FE30003488F /* Sources */,
+				C5552B5C1E054FE30003488F /* Frameworks */,
+				C5552B5D1E054FE30003488F /* Resources */,
+				0819E4BF96E63D8E34460FE6 /* [CP] Embed Pods Frameworks */,
+				284167D4ADED6465E7A795CC /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "ios-flickr-api-demo";
+			productName = "ios-flickr-api-demo";
+			productReference = C5552B5F1E054FE30003488F /* ios-flickr-api-demo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		C5552B721E054FE30003488F /* ios-flickr-api-demoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C5552B7F1E054FE30003488F /* Build configuration list for PBXNativeTarget "ios-flickr-api-demoTests" */;
+			buildPhases = (
+				24B794104EE089C115174616 /* [CP] Check Pods Manifest.lock */,
+				C5552B6F1E054FE30003488F /* Sources */,
+				C5552B701E054FE30003488F /* Frameworks */,
+				C5552B711E054FE30003488F /* Resources */,
+				B8F94DB0D208BC7FDA349ABC /* [CP] Embed Pods Frameworks */,
+				D21C25D2D00B457D232E4028 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C5552B751E054FE30003488F /* PBXTargetDependency */,
+			);
+			name = "ios-flickr-api-demoTests";
+			productName = "ios-flickr-api-demoTests";
+			productReference = C5552B731E054FE30003488F /* ios-flickr-api-demoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C5552B571E054FE30003488F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0810;
+				LastUpgradeCheck = 0810;
+				ORGANIZATIONNAME = "Eiji Kushida";
+				TargetAttributes = {
+					C5552B5E1E054FE30003488F = {
+						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = UE5DCQPTRB;
+						ProvisioningStyle = Automatic;
+					};
+					C5552B721E054FE30003488F = {
+						CreatedOnToolsVersion = 8.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = C5552B5E1E054FE30003488F;
+					};
+				};
+			};
+			buildConfigurationList = C5552B5A1E054FE30003488F /* Build configuration list for PBXProject "ios-flickr-api-demo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C5552B561E054FE30003488F;
+			productRefGroup = C5552B601E054FE30003488F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C5552B5E1E054FE30003488F /* ios-flickr-api-demo */,
+				C5552B721E054FE30003488F /* ios-flickr-api-demoTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C5552B5D1E054FE30003488F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C5552BA01E05500E0003488F /* PhotoListViewController.storyboard in Resources */,
+				C5552BD01E06492E0003488F /* Localizable.strings in Resources */,
+				C5552BA21E05500E0003488F /* LaunchScreen.storyboard in Resources */,
+				C5552BAE1E05500E0003488F /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C5552B711E054FE30003488F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0819E4BF96E63D8E34460FE6 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ios-flickr-api-demo/Pods-ios-flickr-api-demo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		24B794104EE089C115174616 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		284167D4ADED6465E7A795CC /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ios-flickr-api-demo/Pods-ios-flickr-api-demo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B8F94DB0D208BC7FDA349ABC /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ios-flickr-api-demoTests/Pods-ios-flickr-api-demoTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C45B42AD6AA8EEE191BA19DC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		D21C25D2D00B457D232E4028 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ios-flickr-api-demoTests/Pods-ios-flickr-api-demoTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C5552B5B1E054FE30003488F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C5552BA51E05500E0003488F /* PhotoImageURLBuilder.swift in Sources */,
+				C5552BC71E06354F0003488F /* PhotoListStatusOffline.swift in Sources */,
+				C5552BB21E05500E0003488F /* PhotoListCollectionViewCell.swift in Sources */,
+				C5552BAC1E05500E0003488F /* PhotoSearchStatus.swift in Sources */,
+				C5552BBF1E0625610003488F /* PhotoListStatusable.swift in Sources */,
+				C5552BA71E05500E0003488F /* PhotoSearchAPI.swift in Sources */,
+				C5552BD81E0654280003488F /* PhotoListStatusCommon.swift in Sources */,
+				C5552BB41E06161C0003488F /* Photos.swift in Sources */,
+				C5552BC11E06342F0003488F /* PhotoListStatusNormal.swift in Sources */,
+				C5552BAD1E05500E0003488F /* AppDelegate.swift in Sources */,
+				C5552BA91E05500E0003488F /* PhotoSearchParamsBuilder.swift in Sources */,
+				C5552BB11E05500E0003488F /* PhotoListCollectionView.swift in Sources */,
+				C5552BAB1E05500E0003488F /* PhotoSearchResult.swift in Sources */,
+				C5552BB01E05500E0003488F /* Router.swift in Sources */,
+				C5552BC51E06351E0003488F /* PhotoListStatusNoData.swift in Sources */,
+				C5552BAF1E05500E0003488F /* APIClient.swift in Sources */,
+				C5552BA31E05500E0003488F /* Result.swift in Sources */,
+				C5552BA11E05500E0003488F /* PhotoListViewController.swift in Sources */,
+				C5552BC31E0634E00003488F /* PhotoListStatusNone.swift in Sources */,
+				C5552BBD1E0624B10003488F /* PhotoListIllegalCollectionViewCell.swift in Sources */,
+				C5552BA41E05500E0003488F /* Photo.swift in Sources */,
+				C5552BA81E05500E0003488F /* PhotoSearchLoadable.swift in Sources */,
+				C5552BB81E061DB10003488F /* NetworkManager.swift in Sources */,
+				C5552BA61E05500E0003488F /* PhotoListPage.swift in Sources */,
+				C5552BB61E061B4E0003488F /* UICollectionView+ScrollToTop.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C5552B6F1E054FE30003488F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C5552B781E054FE30003488F /* ios_flickr_api_demoTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C5552B751E054FE30003488F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C5552B5E1E054FE30003488F /* ios-flickr-api-demo */;
+			targetProxy = C5552B741E054FE30003488F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		C5552B841E05500E0003488F /* PhotoListViewController.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C5552B851E05500E0003488F /* Base */,
+			);
+			name = PhotoListViewController.storyboard;
+			path = .;
+			sourceTree = "<group>";
+		};
+		C5552B881E05500E0003488F /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C5552B891E05500E0003488F /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			path = .;
+			sourceTree = "<group>";
+		};
+		C5552BD21E06492E0003488F /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C5552BD31E0649350003488F /* Base */,
+			);
+			name = Localizable.strings;
+			path = .;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C5552B7A1E054FE30003488F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		C5552B7B1E054FE30003488F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C5552B7D1E054FE30003488F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 838CF5D0AD381C6CA2648C1F /* Pods-ios-flickr-api-demo.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = UE5DCQPTRB;
+				INFOPLIST_FILE = "ios-flickr-api-demo/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "jp.st-ventures.ios-flickr-api-demo";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		C5552B7E1E054FE30003488F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 74C6190DC7A0F91140BF47AE /* Pods-ios-flickr-api-demo.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = UE5DCQPTRB;
+				INFOPLIST_FILE = "ios-flickr-api-demo/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "jp.st-ventures.ios-flickr-api-demo";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		C5552B801E054FE30003488F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D467FC04403381E09F260028 /* Pods-ios-flickr-api-demoTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "ios-flickr-api-demoTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "jp.st-ventures.ios-flickr-api-demoTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ios-flickr-api-demo.app/ios-flickr-api-demo";
+			};
+			name = Debug;
+		};
+		C5552B811E054FE30003488F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 630661FD3A6E9EA761DBC730 /* Pods-ios-flickr-api-demoTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "ios-flickr-api-demoTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "jp.st-ventures.ios-flickr-api-demoTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ios-flickr-api-demo.app/ios-flickr-api-demo";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C5552B5A1E054FE30003488F /* Build configuration list for PBXProject "ios-flickr-api-demo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C5552B7A1E054FE30003488F /* Debug */,
+				C5552B7B1E054FE30003488F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C5552B7C1E054FE30003488F /* Build configuration list for PBXNativeTarget "ios-flickr-api-demo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C5552B7D1E054FE30003488F /* Debug */,
+				C5552B7E1E054FE30003488F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C5552B7F1E054FE30003488F /* Build configuration list for PBXNativeTarget "ios-flickr-api-demoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C5552B801E054FE30003488F /* Debug */,
+				C5552B811E054FE30003488F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C5552B571E054FE30003488F /* Project object */;
+}

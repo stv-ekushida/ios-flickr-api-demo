@@ -22,7 +22,7 @@ final class PhotoListViewController: UIViewController {
             collectionView.reloadData()
         }
     }
-    var photoListStatusType: PhotoSearchStatusType?
+    var photoListStatusType: PhotoListStatusable?
     var page = PhotoListPage()
     var tags = ""
 
@@ -41,7 +41,7 @@ final class PhotoListViewController: UIViewController {
 
     //MARK:-Private
     fileprivate func setupStatus() {
-        photoListStatusType = PhotoListNone()
+        photoListStatusType = PhotoListStatusNone()
     }
 
     fileprivate func setupView() {
@@ -105,7 +105,8 @@ extension PhotoListViewController: UICollectionViewDelegateFlowLayout {
                         layout collectionViewLayout: UICollectionViewLayout,
                         sizeForItemAt indexPath: IndexPath) -> CGSize {
 
-        return photoListStatusType?.cellSize(topOf: self) ?? PhotoListNone().cellSize(topOf: self)
+        return photoListStatusType?.cellSize(topOf: self) ??
+            PhotoListStatusNone().cellSize(topOf: self)
     }
 }
 

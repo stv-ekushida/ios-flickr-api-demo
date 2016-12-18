@@ -1,5 +1,5 @@
 //
-//  PhotoListNone.swift
+//  PhotoListStatusNone.swift
 //  ios-flickr-api-demo
 //
 //  Created by Eiji Kushida on 2016/12/18.
@@ -8,37 +8,30 @@
 
 import UIKit
 
-final class PhotoListNone: PhotoSearchStatusType {
+final class PhotoListStatusNone: PhotoListStatusable {
+
+    let commonStatusable = PhotoListStatusCommon()
 
     func numberOfItemsInSection(photos: [Photo]) -> Int {
-        return 1
+        return commonStatusable.numberOfItemsInSection(photos: photos)
     }
 
     func create(collectionView: UICollectionView,
                 indexPath: IndexPath,
                 photo: Photo?) -> UICollectionViewCell {
 
-
         let cell = collectionView.dequeueReusableCell(
-            withReuseIdentifier: PhotoListIllegalCollectionViewCel.identifier,
-            for: indexPath) as! PhotoListIllegalCollectionViewCel
+            withReuseIdentifier: PhotoListIllegalCollectionViewCell.identifier,
+            for: indexPath) as! PhotoListIllegalCollectionViewCell
         cell.message = NSLocalizedString("MSG_NONE", comment: "")
         return cell
     }
 
     func cellSize(topOf: PhotoListViewController) -> CGSize {
-
-        let topMargin = CGFloat(110)
-        let screenSize = UIScreen.main.bounds
-        let cellWidth = screenSize.width
-        let cellHeight = (screenSize.height - topMargin)
-
-        return CGSize(width: cellWidth, height: cellHeight)
+        return commonStatusable.cellSize(topOf: topOf)
     }
 
     func updateView(result: PhotoSearchResult?, topOf: PhotoListViewController) {
-
-        topOf.dataSource.add(photoSearchStatusType: self, photos: [])
-        topOf.collectionView.reloadData()
+        commonStatusable.updateView(result: result, topOf: topOf)
     }
 }
