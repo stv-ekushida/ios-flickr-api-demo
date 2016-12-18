@@ -23,7 +23,9 @@ final class PhotoListStatusNone: PhotoListStatusable {
         let cell = collectionView.dequeueReusableCell(
             withReuseIdentifier: PhotoListIllegalCollectionViewCell.identifier,
             for: indexPath) as! PhotoListIllegalCollectionViewCell
-        cell.message = NSLocalizedString("MSG_NONE", comment: "")
+        
+        cell.message = NSLocalizedString("MSG_NONE",
+                                         comment: "初回起動時のメッセージ")
         return cell
     }
 

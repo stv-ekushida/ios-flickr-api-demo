@@ -23,7 +23,9 @@ final class PhotoListStatusNoData: PhotoListStatusable {
         let cell = collectionView.dequeueReusableCell(
             withReuseIdentifier: PhotoListIllegalCollectionViewCell.identifier,
             for: indexPath) as! PhotoListIllegalCollectionViewCell
-        cell.message = NSLocalizedString("MSG_NODATA", comment: "")
+        
+        cell.message = NSLocalizedString("MSG_NODATA",
+                                         comment: "データが0件時のメッセージ")
         return cell
     }
 

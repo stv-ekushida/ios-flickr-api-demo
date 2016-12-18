@@ -23,7 +23,9 @@ final class PhotoListStatusOffline: PhotoListStatusable {
         let cell = collectionView.dequeueReusableCell(
             withReuseIdentifier: PhotoListIllegalCollectionViewCell.identifier,
             for: indexPath) as! PhotoListIllegalCollectionViewCell
-        cell.message = NSLocalizedString("MSG_OFFLINE", comment: "")
+
+        cell.message = NSLocalizedString("MSG_OFFLINE",
+                                         comment: "オフライン時のメッセージ")
         return cell
     }
 

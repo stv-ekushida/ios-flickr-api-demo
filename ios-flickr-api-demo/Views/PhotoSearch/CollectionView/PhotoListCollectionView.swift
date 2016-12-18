@@ -10,8 +10,8 @@ import UIKit
 
 final class PhotoListCollectionView: NSObject, UICollectionViewDataSource {
 
-    var photos: [Photo] = []
-    var photoSearchStatusable: PhotoListStatusable?
+    fileprivate var photos: [Photo] = []
+    fileprivate var photoSearchStatusable: PhotoListStatusable?
 
     func add(photoSearchStatusable: PhotoListStatusable, photos: [Photo]) {
         self.photoSearchStatusable = photoSearchStatusable

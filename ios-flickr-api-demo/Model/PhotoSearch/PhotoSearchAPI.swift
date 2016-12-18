@@ -33,8 +33,8 @@ final class PhotoSearchAPI {
             switch response {
             case .Success(let result):
 
-                let status = self?.hasData(result: result)
-                self?.loadable?.setStatus(status: status!, result: result)
+                let status = self?.hasPhotoList(result: result) ?? .none
+                self?.loadable?.setStatus(status: status, result: result)
 
             case .Failure( _):
                 self?.loadable?.setStatus(status: .error, result: nil)
@@ -43,7 +43,7 @@ final class PhotoSearchAPI {
         }
     }
 
-    fileprivate func hasData(result: PhotoSearchResult) -> PhotoSearchStatus{
+    fileprivate func hasPhotoList(result: PhotoSearchResult) -> PhotoSearchStatus{
 
         return (result.photos?.photo.count == 0) ?
             PhotoSearchStatus.noData : PhotoSearchStatus.normal
