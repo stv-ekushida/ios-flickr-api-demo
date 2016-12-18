@@ -28,15 +28,8 @@ final class PhotoSearchAPI {
             switch response {
             case .Success(let result):
 
-                var status: PhotoSearchStatus?
-
-                if result.photo.count == 0 {
-                    status = PhotoSearchStatus.noData
-                } else {
-                    status = PhotoSearchStatus.done
-                }
-
-                self?.loadable?.setStatus(status: status!)
+                let status = self?.hasData(result: result) ?? PhotoSearchStatus.noData
+                self?.loadable?.setStatus(status: status)
                 self?.loadable?.completed(result: result)
 
             case .Failure( _):
@@ -44,5 +37,11 @@ final class PhotoSearchAPI {
             }
             self?.isLoading = false
         }
+    }
+
+    fileprivate func hasData(result: PhotoSearchResult) -> PhotoSearchStatus{
+
+        return (result.photos?.photo.count == 0) ?
+            PhotoSearchStatus.noData : PhotoSearchStatus.done
     }
 }

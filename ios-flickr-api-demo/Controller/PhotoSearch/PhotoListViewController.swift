@@ -19,7 +19,7 @@ final class PhotoListViewController: UIViewController {
     @IBOutlet weak var searchButton: UIButton!
     @IBOutlet var noDataView: UIView!
 
-    fileprivate var photos = PhotoSearchResult() {
+    fileprivate var photos: [Photo] = [] {
         didSet {
             collectionView.reloadData()
         }
@@ -51,7 +51,7 @@ final class PhotoListViewController: UIViewController {
     }
 
     fileprivate func resetPage() {
-        photos.photo = []
+        photos = []
         page.resetPage()
         noDataView.removeFromSuperview()
     }
@@ -136,8 +136,10 @@ extension PhotoListViewController: PhotoSearchLoadable {
 
     func completed(result: PhotoSearchResult) {
 
-        page.updatePages(pages: result.pages)
-        appendPhoto(photos: result.photo.map {$0})
+        if let pages = result.photos?.pages, let photos = result.photos {
+            page.updatePages(pages: pages)
+            appendPhoto(photos: photos.photo.map {$0})
+        }
         scrollToTop()
     }
 
@@ -150,10 +152,10 @@ extension PhotoListViewController: PhotoSearchLoadable {
 
     fileprivate func appendPhoto(photos: [Photo]) {
 
-        for photo in photos {
-            self.photos.photo.append(photo)
+        _ = photos.map {
+            self.photos.append($0)
         }
-        dataSource.add(photos: self.photos.photo)
+        dataSource.add(photos: self.photos)
     }
 
     fileprivate func scrollToTop() {
