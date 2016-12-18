@@ -9,6 +9,5 @@
 import Foundation
 
 protocol PhotoSearchLoadable{
-    func setStatus(status: PhotoSearchStatus)
-    func completed(result: PhotoSearchResult)
+    func setStatus(status: PhotoSearchStatus, result: PhotoSearchResult?)
 }

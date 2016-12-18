@@ -9,8 +9,29 @@
 import Foundation
 
 enum PhotoSearchStatus {
+    case none
     case noData
-    case done
+    case normal
     case offline
     case error
+
+    func type() -> PhotoSearchStatusType{
+
+        switch self {
+        case .none:
+            return PhotoListNone()
+
+        case .normal:
+            return PhotoListNormal()
+
+        case .noData:
+            return PhotoListNoData()
+
+        case .offline:
+            return PhotoListOffline();
+
+        case .error:
+            fatalError("通信エラーが発生しました。")
+        }
+    }
 }
