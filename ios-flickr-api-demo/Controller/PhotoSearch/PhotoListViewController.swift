@@ -161,7 +161,7 @@ extension PhotoListViewController: PhotoSearchLoadable {
     fileprivate func scrollToTop() {
 
         if page.currentPage() == 1 {
-            collectionView.contentOffset = CGPoint(x: 0, y: -collectionView.contentInset.top)
+            collectionView.scrollToTop()
         }
     }
 }
