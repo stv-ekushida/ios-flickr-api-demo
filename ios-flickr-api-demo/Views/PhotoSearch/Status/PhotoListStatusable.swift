@@ -1,5 +1,5 @@
 //
-//  PhotoSearchStatusType.swift
+//  PhotoListStatusable.swift
 //  ios-flickr-api-demo
 //
 //  Created by Eiji Kushida on 2016/12/18.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-protocol PhotoSearchStatusType {
+protocol PhotoListStatusable {
 
     func numberOfItemsInSection(photos: [Photo]) -> Int
     func create(collectionView: UICollectionView,

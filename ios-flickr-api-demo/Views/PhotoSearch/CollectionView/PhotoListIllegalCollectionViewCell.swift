@@ -8,7 +8,7 @@
 
 import UIKit
 
-final class PhotoListIllegalCollectionViewCel: UICollectionViewCell{
+final class PhotoListIllegalCollectionViewCell: UICollectionViewCell{
 
     @IBOutlet weak var messageTextView: UITextView!
 

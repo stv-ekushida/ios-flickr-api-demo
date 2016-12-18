@@ -15,20 +15,20 @@ enum PhotoSearchStatus {
     case offline
     case error
 
-    func type() -> PhotoSearchStatusType{
+    func type() -> PhotoListStatusable{
 
         switch self {
         case .none:
-            return PhotoListNone()
+            return PhotoListStatusNone()
 
         case .normal:
-            return PhotoListNormal()
+            return PhotoListStatusNormal()
 
         case .noData:
-            return PhotoListNoData()
+            return PhotoListStatusNoData()
 
         case .offline:
-            return PhotoListOffline();
+            return PhotoListStatusOffline();
 
         case .error:
             fatalError("通信エラーが発生しました。")

@@ -10,17 +10,17 @@ import UIKit
 
 final class PhotoListCollectionView: NSObject, UICollectionViewDataSource {
 
-    var photos: [Photo] = []
-    var photoSearchStatusType: PhotoSearchStatusType?
+    fileprivate var photos: [Photo] = []
+    fileprivate var photoSearchStatusable: PhotoListStatusable?
 
-    func add(photoSearchStatusType: PhotoSearchStatusType, photos: [Photo]) {
-        self.photoSearchStatusType = photoSearchStatusType
+    func add(photoSearchStatusable: PhotoListStatusable, photos: [Photo]) {
+        self.photoSearchStatusable = photoSearchStatusable
         self.photos = photos
     }
 
     func collectionView(_ collectionView: UICollectionView,
                         numberOfItemsInSection section: Int) -> Int {
-        return photoSearchStatusType?.numberOfItemsInSection(photos: photos) ?? 0
+        return photoSearchStatusable?.numberOfItemsInSection(photos: photos) ?? 0
     }
 
     func collectionView(_ collectionView: UICollectionView,
@@ -28,7 +28,7 @@ final class PhotoListCollectionView: NSObject, UICollectionViewDataSource {
 
         let photo: Photo? = photos.count == 0 ? nil : photos[indexPath.row]
 
-        if let cell = photoSearchStatusType?.create(collectionView: collectionView,
+        if let cell = photoSearchStatusable?.create(collectionView: collectionView,
                                                     indexPath: indexPath,
                                                     photo: photo)  {
             return cell

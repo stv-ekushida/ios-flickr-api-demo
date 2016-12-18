@@ -1,5 +1,5 @@
 //
-//  PhotoListOffline.swift
+//  PhotoListStatusCommon.swift
 //  ios-flickr-api-demo
 //
 //  Created by Eiji Kushida on 2016/12/18.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-final class PhotoListOffline: PhotoSearchStatusType {
+final class PhotoListStatusCommon: PhotoListStatusable {
 
     func numberOfItemsInSection(photos: [Photo]) -> Int {
         return 1
@@ -17,13 +17,7 @@ final class PhotoListOffline: PhotoSearchStatusType {
     func create(collectionView: UICollectionView,
                 indexPath: IndexPath,
                 photo: Photo?) -> UICollectionViewCell {
-
-
-        let cell = collectionView.dequeueReusableCell(
-            withReuseIdentifier: PhotoListIllegalCollectionViewCel.identifier,
-            for: indexPath) as! PhotoListIllegalCollectionViewCel
-        cell.message = NSLocalizedString("MSG_OFFLINE", comment: "")
-        return cell
+        return UICollectionViewCell()
     }
 
     func cellSize(topOf: PhotoListViewController) -> CGSize {
@@ -38,7 +32,7 @@ final class PhotoListOffline: PhotoSearchStatusType {
 
     func updateView(result: PhotoSearchResult?, topOf: PhotoListViewController) {
 
-        topOf.dataSource.add(photoSearchStatusType: self, photos: [])
+        topOf.dataSource.add(photoSearchStatusable: topOf.photoListStatusType!, photos: [])
         topOf.collectionView.reloadData()
     }
 }

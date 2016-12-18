@@ -65,7 +65,7 @@
                                             <outlet property="photoImageView" destination="l8d-Qk-5BO" id="7PA-tt-op9"/>
                                         </connections>
                                     </collectionViewCell>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="PhotoListIllegalCollectionViewCel" reuseIdentifier="PhotoListIllegalCollectionViewCel" id="F63-qc-CRe" customClass="PhotoListIllegalCollectionViewCel" customModule="ios_flickr_api_demo" customModuleProvider="target">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="PhotoListIllegalCollectionViewCell" reuseIdentifier="PhotoListIllegalCollectionViewCell" id="F63-qc-CRe" customClass="PhotoListIllegalCollectionViewCell" customModule="ios_flickr_api_demo" customModuleProvider="target">
                                         <rect key="frame" x="247" y="0.0" width="128" height="128"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
