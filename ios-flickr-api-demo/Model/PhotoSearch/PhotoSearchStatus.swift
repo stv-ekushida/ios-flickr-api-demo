@@ -6,32 +6,97 @@
 //  Copyright © 2016年 Eiji Kushida. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 enum PhotoSearchStatus {
     case none
+    case loading
     case noData
     case normal(PhotoSearchResult)
     case offline
     case error
+    
+    func create(collectionView: UICollectionView,
+                     indexPath: IndexPath) -> UICollectionViewCell {
+    
+        switch self {
+            
+        case .normal(let result):
+            
+            let cell = collectionView.dequeueReusableCell(
+                withReuseIdentifier: PhotoListCollectionViewCell.identifier,
+                for: indexPath) as! PhotoListCollectionViewCell
+            
+            cell.photo = result.photos?.photo[indexPath.row]
+            return cell
+            
+        default:
+            
+            let cell = collectionView.dequeueReusableCell(
+                withReuseIdentifier: PhotoListIllegalCollectionViewCell.identifier,
+                for: indexPath) as! PhotoListIllegalCollectionViewCell
+            
+            cell.message = message()
+            return cell
+        }
+    }
+    
+    func numberOfItemsInSection() -> Int {
+        
+        switch self {
+            
+        case .normal(let result):            
+            return result.photos?.photo.count ?? 0
+            
+        default:
+            return 1
+        }
+    }
 
-    func type() -> PhotoListStatusable{
-
+    func message() -> String {
+        
         switch self {
         case .none:
-            return PhotoListStatusNone()
-
+            return NSLocalizedString("MSG_NONE", comment: "")
+            
+        case .loading:
+            return NSLocalizedString("MSG_LOADING", comment: "")
+            
         case .normal:
-            return PhotoListStatusNormal()
-
+            fatalError("このパターンはありません")
+            
         case .noData:
-            return PhotoListStatusNoData()
-
+            return NSLocalizedString("MSG_NODATA", comment: "")
+            
         case .offline:
-            return PhotoListStatusOffline();
-
+            return NSLocalizedString("MSG_OFFLINE", comment: "")
+            
         case .error:
             fatalError("通信エラーが発生しました。")
+        }
+    }
+    
+    func cellCeze() -> CGSize {
+
+        let topMargin = CGFloat(110)
+        let screenSize = UIScreen.main.bounds
+        
+        switch self {
+        case . normal:
+            let screenPerWidth = CGFloat(3)
+            let screenPerrHeight = CGFloat(5)
+            
+            let cellWidth = screenSize.width / screenPerWidth
+            let cellHeight = (screenSize.height - topMargin) / screenPerrHeight
+            
+            return CGSize(width: cellWidth, height: cellHeight)
+        
+        default:
+            
+            let cellWidth = screenSize.width
+            let cellHeight = (screenSize.height - topMargin)
+            
+            return CGSize(width: cellWidth, height: cellHeight)
         }
     }
 }
