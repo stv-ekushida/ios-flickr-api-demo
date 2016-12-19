@@ -161,9 +161,9 @@ class ios_flickr_api_demoTests: XCTestCase {
         XCTAssertFalse(PhotoSearchAPI().waiting())
     }
     
-    func testAPIClient() {
+    func testFlickrBaseParamBuilder() {
         
-        let params = APIClient<PhotoSearchResult>().buildFlickrBaseParams() as! [String: String]
+        let params = FlickrBaseParamBuilder.create() as! [String: String]
         XCTAssertEqual(params["method"], "flickr.photos.search")
         XCTAssertEqual(params["nojsoncallback"], "1")
         XCTAssertEqual(params["format"], "json")
