@@ -20,7 +20,7 @@ final class PhotoListStatusCommon: PhotoListStatusable {
         fatalError("このメソッドは利用できません")
     }
 
-    func cellSize(topOf: PhotoListViewController) -> CGSize {
+    func cellSize() -> CGSize {
 
         let topMargin = CGFloat(110)
         let screenSize = UIScreen.main.bounds

@@ -26,7 +26,7 @@ final class PhotoListStatusNormal: PhotoListStatusable {
         return cell
     }
 
-    func cellSize(topOf: PhotoListViewController) -> CGSize {
+    func cellSize() -> CGSize {
 
         let screenPerWidth = CGFloat(3)
         let screenPerrHeight = CGFloat(5)
