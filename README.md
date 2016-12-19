@@ -8,3 +8,9 @@
 | iOS | 10.0〜 |
 
 （※）cloneしたあとに、pod updateしてください。
+
+|ライブラリ |
+|---|
+| Alamofire |
+| AlamofireImage |
+| ObjectMapper |
