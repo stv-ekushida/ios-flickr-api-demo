@@ -1,5 +1,5 @@
 //
-//  FlickrBaseParamBuilder.swift
+//  FlickrBaseParamsBuilder.swift
 //  ios-flickr-api-demo
 //
 //  Created by Kushida　Eiji on 2016/12/19.
@@ -8,7 +8,7 @@
 
 import Foundation
 
-final class FlickrBaseParamBuilder {
+final class FlickrBaseParamsBuilder {
     
     static func create() -> [String: Any] {
         

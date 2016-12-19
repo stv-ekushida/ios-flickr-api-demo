@@ -163,7 +163,7 @@ class ios_flickr_api_demoTests: XCTestCase {
     
     func testFlickrBaseParamBuilder() {
         
-        let params = FlickrBaseParamBuilder.create() as! [String: String]
+        let params = FlickrBaseParamsBuilder.create() as! [String: String]
         XCTAssertEqual(params["method"], "flickr.photos.search")
         XCTAssertEqual(params["nojsoncallback"], "1")
         XCTAssertEqual(params["format"], "json")

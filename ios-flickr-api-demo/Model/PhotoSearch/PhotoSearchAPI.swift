@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import ObjectMapper
 
 final class PhotoSearchAPI {
 
@@ -26,15 +27,17 @@ final class PhotoSearchAPI {
         
         isLoading = true
 
-        APIClient<PhotoSearchResult>().photosSearch(
+        APIClient().request(
             params: PhotoSearchParamsBuilder.create(tags: tags, page: page)
         ) { [weak self](response) -> () in
 
             switch response {
             case .Success(let result):
-
-                let status = self?.hasPhotoList(result: result) ?? .none
-                self?.loadable?.setStatus(status: status, result: result)
+                                
+                 if let searchResult = Mapper<PhotoSearchResult>().map(JSONObject: result) {                    
+                    let status = self?.hasPhotoList(result: searchResult) ?? .none
+                    self?.loadable?.setStatus(status: status, result: searchResult)
+                 }
 
             case .Failure( _):
                 self?.loadable?.setStatus(status: .error, result: nil)

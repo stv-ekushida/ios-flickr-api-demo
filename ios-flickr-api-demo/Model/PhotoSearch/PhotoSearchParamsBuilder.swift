@@ -14,7 +14,7 @@ final class PhotoSearchParamsBuilder {
 
     static func create(tags: String, page: Int) -> [String: Any]{
 
-        var params = FlickrBaseParamBuilder.create()
+        var params = FlickrBaseParamsBuilder.create()
         params["page"] = "\(page)"
         params["per_page"] = "\(perPage)"
         params["tags"] = tags
