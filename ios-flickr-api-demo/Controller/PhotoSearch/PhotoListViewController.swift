@@ -10,21 +10,16 @@ import UIKit
 
 final class PhotoListViewController: UIViewController {
 
-    let photoSearchAPI = PhotoSearchAPI()
-    let dataSource = PhotoListCollectionView()
+    fileprivate let photoSearchAPI = PhotoSearchAPI()
+    fileprivate let dataSource = PhotoListCollectionView()
 
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var tagsTextField: UITextField!
     @IBOutlet weak var searchButton: UIButton!
 
-    var photos: [Photo] = [] {
-        didSet {
-            collectionView.reloadData()
-        }
-    }
-    var photoListStatusType: PhotoListStatusable?
-    var page = PhotoListPage()
-    var tags = ""
+    fileprivate var photoListStatusType: PhotoListStatusable?
+    fileprivate var page = PhotoListPage()
+    fileprivate var tags = ""
 
     //MARK:-LifeCycle
     override func viewDidLoad() {
@@ -49,11 +44,10 @@ final class PhotoListViewController: UIViewController {
         collectionView.dataSource = dataSource
         tagsTextField.delegate = self
         searchButton.isEnabled = false
-        photoListStatusType?.updateView(result: nil, topOf: self)
+        updateView(result: nil)
     }
 
     fileprivate func resetPage() {
-        photos = []
         page.resetPage()
     }
 
@@ -70,20 +64,16 @@ extension PhotoListViewController: UICollectionViewDelegate {
 
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
 
-        guard hasExsistPhotoList() else{
-            return
-        }
+        guard hasLoadMore() else{ return }
         updatePage()
     }
 
-    fileprivate func hasExsistPhotoList() -> Bool{
+    fileprivate func hasLoadMore() -> Bool{
 
         if collectionView.contentOffset.y >=
             (collectionView.contentSize.height - collectionView.bounds.size.height) {
 
-            if photoSearchAPI.waiting(){
-                return false
-            }
+            if photoSearchAPI.waiting(){ return false }
 
             if page.total() > page.currentPage() * PhotoSearchParamsBuilder.perPage {
                 return true
@@ -130,8 +120,37 @@ extension PhotoListViewController: UITextFieldDelegate {
 //MARK:- PhotoSearchLoadable
 extension PhotoListViewController: PhotoSearchLoadable {
 
-    func setStatus(status: PhotoSearchStatus, result: PhotoSearchResult?) {
+    func setStatus(status: PhotoSearchStatus) {
         photoListStatusType = status.type()
-        photoListStatusType?.updateView(result: result, topOf: self)
+        
+        switch status {
+        case .normal(let result):
+            updateView(result: result)
+            
+        default:
+            updateView(result: nil)
+            break
+        }
+    }
+    
+    fileprivate func updateView(result: PhotoSearchResult?) {
+        
+        if let pages = result?.photos?.pages, let photos = result?.photos {
+            page.updatePages(pages: pages)
+            dataSource.append(photoSearchStatusable: photoListStatusType!,
+                              photos: photos.photo.map {$0})
+        } else {
+            dataSource.add(photoSearchStatusable: photoListStatusType!, photos: [])
+        }
+        collectionView.reloadData()
+        scrollToTop()
+    }
+    
+    
+    fileprivate func scrollToTop() {
+        
+        if page.currentPage() == 1 {
+           collectionView.scrollToTop()
+        }
     }
 }

@@ -37,29 +37,5 @@ final class PhotoListStatusNormal: PhotoListStatusable {
         let cellHeight = (screenSize.height - topMargin) / screenPerrHeight
 
         return CGSize(width: cellWidth, height: cellHeight)
-    }
-
-    func updateView(result: PhotoSearchResult?, topOf: PhotoListViewController) {
-
-        if let pages = result?.photos?.pages, let photos = result?.photos {
-            topOf.page.updatePages(pages: pages)
-            appendPhoto(photos: photos.photo.map {$0}, topOf: topOf)
-        }
-        scrollToTop(topOf: topOf)
-    }
-
-    fileprivate func appendPhoto(photos: [Photo], topOf: PhotoListViewController) {
-
-        _ = photos.map {
-            topOf.photos.append($0)
-        }
-        topOf.dataSource.add(photoSearchStatusable: self, photos: topOf.photos)
-    }
-
-    fileprivate func scrollToTop(topOf: PhotoListViewController) {
-
-        if topOf.page.currentPage() == 1 {
-            topOf.collectionView.scrollToTop()
-        }
-    }
+    }    
 }

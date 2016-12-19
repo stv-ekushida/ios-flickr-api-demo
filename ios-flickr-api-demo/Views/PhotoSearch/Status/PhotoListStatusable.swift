@@ -15,6 +15,4 @@ protocol PhotoListStatusable {
                 indexPath: IndexPath,
                 photo: Photo?) -> UICollectionViewCell
     func cellSize(topOf: PhotoListViewController) -> CGSize
-    func updateView(result: PhotoSearchResult?,
-                    topOf: PhotoListViewController)
 }
