@@ -10,6 +10,11 @@
 import Foundation
 import Alamofire
 
+enum Result {
+    case Success(Any)
+    case Failure(Error)
+}
+
 final class APIClient {
 
     func request(params : [String: Any],

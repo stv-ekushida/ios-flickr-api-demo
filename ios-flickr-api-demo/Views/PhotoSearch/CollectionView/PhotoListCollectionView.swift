@@ -20,7 +20,7 @@ final class PhotoListCollectionView: NSObject, UICollectionViewDataSource {
 
     func append(photoSearchStatusable: PhotoListStatusable, photos: [Photo]) {
         self.photoSearchStatusable = photoSearchStatusable
-        
+            
         _ = photos.map {
             self.photos.append($0)
         }

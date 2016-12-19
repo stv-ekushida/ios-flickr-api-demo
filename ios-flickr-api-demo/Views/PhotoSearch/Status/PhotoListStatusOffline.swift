@@ -30,7 +30,7 @@ final class PhotoListStatusOffline: PhotoListStatusable {
         return cell
     }
 
-    func cellSize(topOf: PhotoListViewController) -> CGSize {
-        return commonStatusable.cellSize(topOf: topOf)
+    func cellSize() -> CGSize {
+        return commonStatusable.cellSize()
     }
 }
