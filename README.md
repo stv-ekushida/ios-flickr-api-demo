@@ -7,10 +7,10 @@
 | Cocoa Pods | 1.1.1 |
 | iOS | 10.0〜 |
 
-## 利用ライブラリ
+## Usage Library
 git cloneしたあとに、pod updateしてください。
 
-|ライブラリ | 説明 |
+| Library | Description |
 |---|---|
 | Alamofire | 通信 |
 | AlamofireImage | 画像取得 |
