@@ -71,7 +71,7 @@ class ios_flickr_api_demoTests: XCTestCase {
         }
     }
     
-    func testPhotos() {
+    func testPhotosResult() {
         
         let json = try! JSONSerialization.data(withJSONObject: photosResultDic,
                                                options: [])
@@ -87,7 +87,7 @@ class ios_flickr_api_demoTests: XCTestCase {
         }
     }
     
-    func testPhotosResult() {
+    func testPhotos() {
         
         let json = try! JSONSerialization.data(withJSONObject: photosDic,
                                                options: [])
@@ -147,8 +147,13 @@ class ios_flickr_api_demoTests: XCTestCase {
         let typeNone = PhotoSearchStatus.none.type()
         XCTAssertTrue(typeNone is PhotoListStatusNone)
         
-        let typeNormal = PhotoSearchStatus.normal.type()
-        XCTAssertTrue(typeNormal is PhotoListStatusNormal)
+        let json = try! JSONSerialization.data(withJSONObject: photosResultDic,
+                                               options: [])
+        
+        if let photo = Mapper<PhotoSearchResult>().map(JSONObject: json) {
+            let typeNormal = PhotoSearchStatus.normal(photo).type()
+            XCTAssertTrue(typeNormal is PhotoListStatusNormal)
+        }
         
         let typeNoData = PhotoSearchStatus.noData.type()
         XCTAssertTrue(typeNoData is PhotoListStatusNoData)
@@ -167,6 +172,65 @@ class ios_flickr_api_demoTests: XCTestCase {
         XCTAssertEqual(params["method"], "flickr.photos.search")
         XCTAssertEqual(params["nojsoncallback"], "1")
         XCTAssertEqual(params["format"], "json")
+    }
+    
+    func testPhotoListStatusNormal() {
         
+        let status = PhotoListStatusNormal()
+        
+        let json = try! JSONSerialization.data(withJSONObject: photoDic,
+                                               options: [])
+        
+        if let photo = Mapper<Photo>().map(JSONObject: json) {
+            XCTAssertEqual(status.numberOfItemsInSection(photos: [photo]), 1)
+        }
+        
+        let size = status.cellSize(topOf: PhotoListViewController())
+        XCTAssertEqual(size.height, (UIScreen.main.bounds.height - 110) / 5)
+        XCTAssertEqual(size.width, UIScreen.main.bounds.width / 3)
+
+    }
+    
+    func testPhotoListStatusCommon() {
+        
+        let status = PhotoListStatusCommon()
+        XCTAssertEqual(status.numberOfItemsInSection(photos: []), 1)
+        
+        let size = status.cellSize(topOf: PhotoListViewController())
+        XCTAssertEqual(size.height, UIScreen.main.bounds.height - 110)
+        XCTAssertEqual(size.width, UIScreen.main.bounds.width)
+    }
+    
+    func testPhotoListStatusNoData() {
+        
+        let status = PhotoListStatusNoData()
+        XCTAssertEqual(status.numberOfItemsInSection(photos: []), 1)
+        XCTAssertEqual(status.message, "該当する写真がありません。\n検索ワードを変更してお試しください。")
+        
+        let size = status.cellSize(topOf: PhotoListViewController())
+        XCTAssertEqual(size.height, UIScreen.main.bounds.height - 110)
+        XCTAssertEqual(size.width, UIScreen.main.bounds.width)
+    }
+
+    func testPhotoListStatusNone() {
+        
+        let status = PhotoListStatusNone()
+        XCTAssertEqual(status.numberOfItemsInSection(photos: []), 1)
+        XCTAssertEqual(status.message, "キーワードを入力し、写真を検索してみましょう！")
+        
+        let size = status.cellSize(topOf: PhotoListViewController())
+        XCTAssertEqual(size.height, UIScreen.main.bounds.height - 110)
+        XCTAssertEqual(size.width, UIScreen.main.bounds.width)
+    }
+    
+    func testPhotoListStatusOffline() {
+        
+        let status = PhotoListStatusOffline()
+        XCTAssertEqual(status.numberOfItemsInSection(photos: []), 1)
+        XCTAssertEqual(status.message, "ネットワーク環境の良い環境で再度お試しください。")
+        
+        let size = status.cellSize(topOf: PhotoListViewController())
+        XCTAssertEqual(size.height, UIScreen.main.bounds.height - 110)
+        XCTAssertEqual(size.width, UIScreen.main.bounds.width)
     }
 }

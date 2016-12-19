@@ -10,6 +10,8 @@ import UIKit
 
 final class PhotoListStatusOffline: PhotoListStatusable {
 
+    let message = NSLocalizedString("MSG_OFFLINE",
+                                    comment: "オフライン時のメッセージ")
     let commonStatusable = PhotoListStatusCommon()
 
     func numberOfItemsInSection(photos: [Photo]) -> Int {
@@ -24,8 +26,7 @@ final class PhotoListStatusOffline: PhotoListStatusable {
             withReuseIdentifier: PhotoListIllegalCollectionViewCell.identifier,
             for: indexPath) as! PhotoListIllegalCollectionViewCell
 
-        cell.message = NSLocalizedString("MSG_OFFLINE",
-                                         comment: "オフライン時のメッセージ")
+        cell.message = message
         return cell
     }
 
