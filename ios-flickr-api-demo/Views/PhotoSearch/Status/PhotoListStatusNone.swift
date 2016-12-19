@@ -10,6 +10,8 @@ import UIKit
 
 final class PhotoListStatusNone: PhotoListStatusable {
 
+    let message = NSLocalizedString("MSG_NONE",
+                                    comment: "初回起動時のメッセージ")
     let commonStatusable = PhotoListStatusCommon()
 
     func numberOfItemsInSection(photos: [Photo]) -> Int {
@@ -24,8 +26,7 @@ final class PhotoListStatusNone: PhotoListStatusable {
             withReuseIdentifier: PhotoListIllegalCollectionViewCell.identifier,
             for: indexPath) as! PhotoListIllegalCollectionViewCell
         
-        cell.message = NSLocalizedString("MSG_NONE",
-                                         comment: "初回起動時のメッセージ")
+        cell.message = message
         return cell
     }
 

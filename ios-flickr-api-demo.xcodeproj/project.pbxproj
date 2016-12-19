@@ -162,7 +162,6 @@
 				C5552B821E05500E0003488F /* Controller */,
 				C5552B8A1E05500E0003488F /* Model */,
 				C5552B971E05500E0003488F /* Ohter */,
-				C5552B9A1E05500E0003488F /* Util */,
 				C5552B9D1E05500E0003488F /* Views */,
 				C5552B6E1E054FE30003488F /* Info.plist */,
 			);
@@ -255,12 +254,14 @@
 				C5552BB71E061DB10003488F /* NetworkManager.swift */,
 				C5552B9C1E05500E0003488F /* Router.swift */,
 			);
-			path = Util;
+			name = Util;
+			path = ../Util;
 			sourceTree = "<group>";
 		};
 		C5552B9D1E05500E0003488F /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				C5552B9A1E05500E0003488F /* Util */,
 				C5552BBB1E0622C60003488F /* PhotoSearch */,
 			);
 			path = Views;
