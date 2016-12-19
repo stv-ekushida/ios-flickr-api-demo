@@ -9,23 +9,20 @@
 
 import Foundation
 import Alamofire
-import ObjectMapper
 
-final class APIClient<T> {
+final class APIClient {
 
-    func photosSearch(params : [String: Any],
-                      completionHandler: @escaping (Result<T>) -> () = {_ in}) {
+    func request(params : [String: Any],
+                      completionHandler: @escaping (Result) -> () = {_ in}) {
 
         Alamofire.request(Router.PhotosSearch(params)).responseJSON  { response in
             switch response.result {
-            case .success(let value):
-                if let resp = Mapper<PhotoSearchResult>().map(JSONObject: value) {
-                    completionHandler(Result<T>.Success((resp as? T)!))
-                }
+            case .success(let value):                
+                completionHandler(Result.Success(value))
                 break
 
             case .failure:
-                completionHandler(Result<T>.Failure(response.result.error!))
+                completionHandler(Result.Failure(response.result.error!))
                 break
             }
         }
