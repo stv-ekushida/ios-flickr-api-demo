@@ -32,8 +32,4 @@ final class PhotoListStatusNoData: PhotoListStatusable {
     func cellSize(topOf: PhotoListViewController) -> CGSize {
         return commonStatusable.cellSize(topOf: topOf)
     }
-
-    func updateView(result: PhotoSearchResult?, topOf: PhotoListViewController) {
-        commonStatusable.updateView(result: result, topOf: topOf)
-    }
 }

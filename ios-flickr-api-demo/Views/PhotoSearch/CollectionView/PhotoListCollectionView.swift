@@ -18,6 +18,14 @@ final class PhotoListCollectionView: NSObject, UICollectionViewDataSource {
         self.photos = photos
     }
 
+    func append(photoSearchStatusable: PhotoListStatusable, photos: [Photo]) {
+        self.photoSearchStatusable = photoSearchStatusable
+        
+        _ = photos.map {
+            self.photos.append($0)
+        }
+    }
+    
     func collectionView(_ collectionView: UICollectionView,
                         numberOfItemsInSection section: Int) -> Int {
         return photoSearchStatusable?.numberOfItemsInSection(photos: photos) ?? 0

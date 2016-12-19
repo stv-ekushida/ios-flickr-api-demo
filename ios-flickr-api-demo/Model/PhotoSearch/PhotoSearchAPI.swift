@@ -21,7 +21,7 @@ final class PhotoSearchAPI {
     func load(tags: String, page: Int) {
 
         guard NetworkManager.isAvailable() else {
-            self.loadable?.setStatus(status: .offline, result: nil)
+            self.loadable?.setStatus(status: .offline)
             return
         }
         
@@ -36,11 +36,11 @@ final class PhotoSearchAPI {
                                 
                  if let searchResult = Mapper<PhotoSearchResult>().map(JSONObject: result) {                    
                     let status = self?.hasPhotoList(result: searchResult) ?? .none
-                    self?.loadable?.setStatus(status: status, result: searchResult)
+                    self?.loadable?.setStatus(status: status)
                  }
 
             case .Failure( _):
-                self?.loadable?.setStatus(status: .error, result: nil)
+                self?.loadable?.setStatus(status: .error)
             }
             self?.isLoading = false
         }
@@ -49,6 +49,6 @@ final class PhotoSearchAPI {
     fileprivate func hasPhotoList(result: PhotoSearchResult) -> PhotoSearchStatus{
 
         return (result.photos?.photo.count == 0) ?
-            PhotoSearchStatus.noData : PhotoSearchStatus.normal
+            PhotoSearchStatus.noData : PhotoSearchStatus.normal(result)
     }
 }

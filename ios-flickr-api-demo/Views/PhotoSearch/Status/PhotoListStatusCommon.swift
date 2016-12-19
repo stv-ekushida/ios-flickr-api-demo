@@ -17,7 +17,7 @@ final class PhotoListStatusCommon: PhotoListStatusable {
     func create(collectionView: UICollectionView,
                 indexPath: IndexPath,
                 photo: Photo?) -> UICollectionViewCell {
-        return UICollectionViewCell()
+        fatalError("このメソッドは利用できません")
     }
 
     func cellSize(topOf: PhotoListViewController) -> CGSize {
@@ -28,11 +28,5 @@ final class PhotoListStatusCommon: PhotoListStatusable {
         let cellHeight = (screenSize.height - topMargin)
 
         return CGSize(width: cellWidth, height: cellHeight)
-    }
-
-    func updateView(result: PhotoSearchResult?, topOf: PhotoListViewController) {
-
-        topOf.dataSource.add(photoSearchStatusable: topOf.photoListStatusType!, photos: [])
-        topOf.collectionView.reloadData()
     }
 }

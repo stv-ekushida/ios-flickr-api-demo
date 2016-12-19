@@ -11,7 +11,7 @@ import Foundation
 enum PhotoSearchStatus {
     case none
     case noData
-    case normal
+    case normal(PhotoSearchResult)
     case offline
     case error
 
