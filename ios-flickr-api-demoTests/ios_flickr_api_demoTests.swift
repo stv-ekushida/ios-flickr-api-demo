@@ -76,14 +76,14 @@ class ios_flickr_api_demoTests: XCTestCase {
         let json = try! JSONSerialization.data(withJSONObject: photosResultDic,
                                                options: [])
         
-        if let photo = Mapper<PhotoSearchResult>().map(JSONObject: json) {
-            XCTAssertEqual(photo.photos?.page, 100)
-            XCTAssertEqual(photo.photos?.pages, 1000)
-            XCTAssertEqual(photo.photos?.perpage, 100)
-            XCTAssertEqual(photo.photos?.photo.first?.farm, 123)
-            XCTAssertEqual(photo.photos?.photo.first?.server, "123abc")
-            XCTAssertEqual(photo.photos?.photo.first?.id, "456def")
-            XCTAssertEqual(photo.photos?.photo.first?.secret, "789ghi")
+        if let photosResult = Mapper<PhotoSearchResult>().map(JSONObject: json) {
+            XCTAssertEqual(photosResult.photos?.page, 100)
+            XCTAssertEqual(photosResult.photos?.pages, 1000)
+            XCTAssertEqual(photosResult.photos?.perpage, 100)
+            XCTAssertEqual(photosResult.photos?.photo.first?.farm, 123)
+            XCTAssertEqual(photosResult.photos?.photo.first?.server, "123abc")
+            XCTAssertEqual(photosResult.photos?.photo.first?.id, "456def")
+            XCTAssertEqual(photosResult.photos?.photo.first?.secret, "789ghi")
         }
     }
     
@@ -92,14 +92,14 @@ class ios_flickr_api_demoTests: XCTestCase {
         let json = try! JSONSerialization.data(withJSONObject: photosDic,
                                                options: [])
         
-        if let photo = Mapper<Photos>().map(JSONObject: json) {
-            XCTAssertEqual(photo.page, 1)
-            XCTAssertEqual(photo.pages, 100)
-            XCTAssertEqual(photo.perpage, 50)
-            XCTAssertEqual(photo.photo.first?.farm, 111)
-            XCTAssertEqual(photo.photo.first?.server, "abc")
-            XCTAssertEqual(photo.photo.first?.id, "def")
-            XCTAssertEqual(photo.photo.first?.secret, "ghi")
+        if let photos = Mapper<Photos>().map(JSONObject: json) {
+            XCTAssertEqual(photos.page, 1)
+            XCTAssertEqual(photos.pages, 100)
+            XCTAssertEqual(photos.perpage, 50)
+            XCTAssertEqual(photos.photo.first?.farm, 111)
+            XCTAssertEqual(photos.photo.first?.server, "abc")
+            XCTAssertEqual(photos.photo.first?.id, "def")
+            XCTAssertEqual(photos.photo.first?.secret, "ghi")
         }
     }
     
@@ -152,5 +152,74 @@ class ios_flickr_api_demoTests: XCTestCase {
         XCTAssertEqual(params["method"], "flickr.photos.search")
         XCTAssertEqual(params["nojsoncallback"], "1")
         XCTAssertEqual(params["format"], "json")
+    }
+
+    func testPhotoSearchStatusNone() {
+
+        let status = PhotoSearchStatus.none
+
+        XCTAssertEqual(status.numberOfItemsInSection(), 1)
+        XCTAssertEqual(status.message(), "キーワードを入力し、写真を検索してみましょう！")
+
+        let size = status.cellCeze()
+        let screen = UIScreen.main.bounds
+        XCTAssertEqual(size.width, screen.width)
+        XCTAssertEqual(size.height, screen.height - 110)
+    }
+
+    func testPhotoSearchStatusLoading() {
+
+        let status = PhotoSearchStatus.loading
+
+        XCTAssertEqual(status.numberOfItemsInSection(), 1)
+        XCTAssertEqual(status.message(), "読み込み中...")
+
+        let size = status.cellCeze()
+        let screen = UIScreen.main.bounds
+        XCTAssertEqual(size.width, screen.width)
+        XCTAssertEqual(size.height, screen.height - 110)
+    }
+
+    func testPhotoSearchStatusNormal() {
+
+        let json = try! JSONSerialization.data(withJSONObject: photosResultDic,
+                                               options: [])
+
+        if let photo = Mapper<PhotoSearchResult>().map(JSONObject: json) {
+
+            let status = PhotoSearchStatus.normal(photo)
+            XCTAssertEqual(status.numberOfItemsInSection(), 1)
+
+            let size = status.cellCeze()
+            let screen = UIScreen.main.bounds
+            XCTAssertEqual(size.width, screen.width)
+            XCTAssertEqual(size.height, screen.height - 110)
+       }
+    }
+
+    func testPhotoSearchStatusNoData() {
+
+        let status = PhotoSearchStatus.noData
+
+        XCTAssertEqual(status.numberOfItemsInSection(), 1)
+        XCTAssertEqual(status.message(), "該当する写真がありません。\n検索ワードを変更してお試しください。")
+
+        let size = status.cellCeze()
+        let screen = UIScreen.main.bounds
+        XCTAssertEqual(size.width, screen.width)
+        XCTAssertEqual(size.height, screen.height - 110)
+    }
+
+    func testPhotoSearchStatusOffline() {
+
+        let status = PhotoSearchStatus.offline
+
+        XCTAssertEqual(status.numberOfItemsInSection(), 1)
+        XCTAssertEqual(status.message(), "ネットワーク環境の良い環境で再度お試しください。")
+
+        let size = status.cellCeze()
+        let screen = UIScreen.main.bounds
+        XCTAssertEqual(size.width, screen.width)
+        XCTAssertEqual(size.height, screen.height - 110)
     }
 }
