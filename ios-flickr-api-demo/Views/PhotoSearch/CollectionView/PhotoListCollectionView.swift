@@ -28,12 +28,23 @@ final class PhotoListCollectionView: NSObject, UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView,
                         numberOfItemsInSection section: Int) -> Int {
-        return status!.numberOfItemsInSection()
+        
+        if let status = status {
+            return status.numberOfItemsInSection(photos: self.photos)
+        } else {
+            fatalError("ステータスが設定されていない")
+        }
     }
 
     func collectionView(_ collectionView: UICollectionView,
                         cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
 
-        return status!.create(collectionView: collectionView, indexPath: indexPath)
+        if let status = status {
+            return status.create(collectionView: collectionView,
+                                 indexPath: indexPath,
+                                 photos: self.photos)
+        } else {
+            fatalError("ステータスが設定されていない")
+        }
     }
 }

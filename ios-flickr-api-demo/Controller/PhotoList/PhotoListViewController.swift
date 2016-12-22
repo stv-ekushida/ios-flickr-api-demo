@@ -73,10 +73,7 @@ extension PhotoListViewController: UICollectionViewDelegate {
             (collectionView.contentSize.height - collectionView.bounds.size.height) {
 
             if photoSearchAPI.waiting(){ return false }
-
-            if page.total() > page.currentPage() * PhotoSearchParamsBuilder.perPage {
-                return true
-            }
+            return page.isLastpage()
         }
         return false
     }
@@ -140,7 +137,6 @@ extension PhotoListViewController: PhotoSearchLoadable {
         collectionView.reloadData()
         scrollToTop()
     }
-    
     
     fileprivate func scrollToTop() {
         

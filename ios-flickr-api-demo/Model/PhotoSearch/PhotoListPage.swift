@@ -17,10 +17,6 @@ final class PhotoListPage {
         return page
     }
 
-    func total() -> Int {
-        return pages
-    }
-
     func resetPage() {
         page = 1
     }
@@ -31,5 +27,9 @@ final class PhotoListPage {
 
     func updatePages(pages: Int) {
         self.pages = pages
+    }
+    
+    func isLastpage() -> Bool{
+        return pages > page * PhotoSearchParamsBuilder.perPage
     }
 }
