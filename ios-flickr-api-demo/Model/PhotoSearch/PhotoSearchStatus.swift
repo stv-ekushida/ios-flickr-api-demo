@@ -17,17 +17,18 @@ enum PhotoSearchStatus {
     case error
     
     func create(collectionView: UICollectionView,
-                     indexPath: IndexPath) -> UICollectionViewCell {
+                     indexPath: IndexPath,
+                     photos: [Photo]) -> UICollectionViewCell {
     
         switch self {
             
-        case .normal(let result):
+        case .normal:
             
             let cell = collectionView.dequeueReusableCell(
                 withReuseIdentifier: PhotoListCollectionViewCell.identifier,
                 for: indexPath) as! PhotoListCollectionViewCell
             
-            cell.photo = result.photos?.photo[indexPath.row]
+            cell.photo = photos[indexPath.row]
             return cell
             
         default:
@@ -41,12 +42,12 @@ enum PhotoSearchStatus {
         }
     }
     
-    func numberOfItemsInSection() -> Int {
+    func numberOfItemsInSection(photos: [Photo]) -> Int {
         
         switch self {
             
-        case .normal(let result):            
-            return result.photos?.photo.count ?? 0
+        case .normal:
+            return photos.count
             
         default:
             return 1
