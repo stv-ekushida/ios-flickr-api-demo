@@ -24,11 +24,14 @@ final class APIClient {
             switch response.result {
             case .success(let value):                
                 completionHandler(Result.Success(value))
-                break
 
             case .failure:
-                completionHandler(Result.Failure(response.result.error!))
-                break
+                
+                if let error = response.result.error {
+                    completionHandler(Result.Failure(error))
+                } else {
+                    fatalError("エラーのインスタンスがnil")
+                }
             }
         }
     }

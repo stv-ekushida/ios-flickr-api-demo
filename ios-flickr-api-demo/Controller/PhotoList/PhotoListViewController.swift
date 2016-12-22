@@ -10,15 +10,14 @@ import UIKit
 
 final class PhotoListViewController: UIViewController {
 
-    fileprivate let photoSearchAPI = PhotoSearchAPI()
-    fileprivate let dataSource = PhotoListCollectionView()
-
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var tagsTextField: UITextField!
     @IBOutlet weak var searchButton: UIButton!
 
+    fileprivate let photoSearchAPI = PhotoSearchAPI()
+    fileprivate let dataSource = PhotoListCollectionView()
     fileprivate var photoListStatusType = PhotoSearchStatus.none
-    fileprivate var page = PhotoListPage()
+    fileprivate var reqCount = PhotoSearchRequestCount()
     fileprivate var tags = ""
 
     //MARK:-LifeCycle
@@ -34,8 +33,7 @@ final class PhotoListViewController: UIViewController {
     }
 
     //MARK:-Private
-
-    fileprivate func setupView() {
+    private func setupView() {
         collectionView.delegate = self
         collectionView.dataSource = dataSource
         tagsTextField.delegate = self
@@ -45,16 +43,16 @@ final class PhotoListViewController: UIViewController {
 
     fileprivate func resetPage(status: PhotoSearchStatus) {
 
-        page.resetPage()
+        reqCount.reset()
         dataSource.add(status: status, photos: [])
         collectionView.reloadData()
     }
 
-    fileprivate func loadPhotoSearch(tags: String) {
+    private func loadPhotoSearch(tags: String) {
 
         self.tags = tags
         photoSearchAPI.loadable = self
-        photoSearchAPI.load(tags: tags, page: page.currentPage())
+        photoSearchAPI.load(tags: tags, page: reqCount.current())
     }
 }
 
@@ -63,24 +61,24 @@ extension PhotoListViewController: UICollectionViewDelegate {
 
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
 
-        guard hasLoadMore() else{ return }
+        guard hasMorePhotoList() else{ return }
         updatePage()
     }
 
-    fileprivate func hasLoadMore() -> Bool{
+    private func hasMorePhotoList() -> Bool{
 
         if collectionView.contentOffset.y >=
             (collectionView.contentSize.height - collectionView.bounds.size.height) {
 
             if photoSearchAPI.waiting(){ return false }
-            return page.isLastpage()
+            return reqCount.moreRequest()
         }
         return false
     }
 
-    fileprivate func updatePage() {
-        page.incementPage()
-        photoSearchAPI.load(tags: tags, page: page.currentPage())
+    private func updatePage() {
+        reqCount.incement()
+        photoSearchAPI.load(tags: tags, page: reqCount.current())
     }
 }
 
@@ -127,10 +125,10 @@ extension PhotoListViewController: PhotoSearchLoadable {
         }
     }
     
-    fileprivate func updateView(result: PhotoSearchResult?) {
+    private func updateView(result: PhotoSearchResult?) {
         
         if let pages = result?.photos?.pages, let photos = result?.photos {
-            page.updatePages(pages: pages)
+            reqCount.updateTotal(total: pages)
             dataSource.append(status: photoListStatusType,
                               photos: photos.photo.map {$0})
         }
@@ -138,9 +136,9 @@ extension PhotoListViewController: PhotoSearchLoadable {
         scrollToTop()
     }
     
-    fileprivate func scrollToTop() {
+    private func scrollToTop() {
         
-        if page.currentPage() == 1 {
+        if reqCount.current() == 1 {
            collectionView.scrollToTop()
         }
     }

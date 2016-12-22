@@ -46,7 +46,7 @@ final class PhotoSearchAPI {
         }
     }
 
-    fileprivate func hasPhotoList(result: PhotoSearchResult) -> PhotoSearchStatus{
+    private func hasPhotoList(result: PhotoSearchResult) -> PhotoSearchStatus{
 
         return (result.photos?.photo.count == 0) ?
             PhotoSearchStatus.noData : PhotoSearchStatus.normal(result)
