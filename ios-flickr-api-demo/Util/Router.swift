@@ -24,9 +24,12 @@ enum Router: URLRequestConvertible {
             }
         }()
 
-        let url = URL(string: Router.baseURLString)
-        var urlRequest = URLRequest(url: url!.appendingPathComponent(path))
-        urlRequest.httpMethod = method.rawValue
-        return try Alamofire.URLEncoding.default.encode(urlRequest, with: parameters)
+        if let url = URL(string: Router.baseURLString) {
+            var urlRequest = URLRequest(url: url.appendingPathComponent(path))
+            urlRequest.httpMethod = method.rawValue
+            return try Alamofire.URLEncoding.default.encode(urlRequest, with: parameters)
+        } else {
+            fatalError("URLがnil")
+        }
     }
 }

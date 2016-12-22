@@ -21,7 +21,6 @@ enum PhotoSearchStatus {
                      photos: [Photo]) -> UICollectionViewCell {
     
         switch self {
-            
         case .normal:
             
             let cell = collectionView.dequeueReusableCell(
@@ -45,7 +44,6 @@ enum PhotoSearchStatus {
     func numberOfItemsInSection(photos: [Photo]) -> Int {
         
         switch self {
-            
         case .normal:
             return photos.count
             
@@ -89,7 +87,7 @@ enum PhotoSearchStatus {
             
             let cellWidth = screenSize.width / screenPerWidth
             let cellHeight = (screenSize.height - topMargin) / screenPerrHeight
-            
+
             return CGSize(width: cellWidth, height: cellHeight)
         
         default:
