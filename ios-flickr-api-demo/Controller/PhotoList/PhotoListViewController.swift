@@ -71,7 +71,7 @@ extension PhotoListViewController: UICollectionViewDelegate {
             (collectionView.contentSize.height - collectionView.bounds.size.height) {
 
             if photoSearchAPI.waiting(){ return false }
-            return reqCount.moreRequest()
+            return reqCount.isMoreRequest()
         }
         return false
     }
