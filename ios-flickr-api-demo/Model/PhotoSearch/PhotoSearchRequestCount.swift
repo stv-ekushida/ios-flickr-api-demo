@@ -29,10 +29,7 @@ final class PhotoSearchRequestCount {
         self.totalCount = total
     }
     
-    func moreRequest() -> Bool{
-        print(totalCount)
-        print(requestCount * PhotoSearchParamsBuilder.perPage)
-
+    func isMoreRequest() -> Bool{
         return totalCount > requestCount * PhotoSearchParamsBuilder.perPage
     }
 }
