@@ -1,6 +1,6 @@
 # ios-flickr-api-demo
 
-|category | Version| 
+|Category | Version| 
 |---|---|
 | Swift | 3.0.2 |
 | XCode | 8.2.1 |
