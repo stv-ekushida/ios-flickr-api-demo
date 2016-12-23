@@ -27,21 +27,23 @@ final class PhotoListViewController: UIViewController {
     }
 
     @IBAction func searchDidTap(_ sender: UIButton) {
-        resetPage(status: .loading)
+        
+        resetPhotoList(status: .loading)
         loadPhotoSearch(tags: tagsTextField.text ?? "")
         tagsTextField.resignFirstResponder()
     }
 
     //MARK:-Private
     private func setupView() {
+        
         collectionView.delegate = self
         collectionView.dataSource = dataSource
         tagsTextField.delegate = self
         searchButton.isEnabled = false
-        resetPage(status: .none)
+        resetPhotoList(status: .none)
     }
 
-    fileprivate func resetPage(status: PhotoSearchStatus) {
+    fileprivate func resetPhotoList(status: PhotoSearchStatus) {
 
         reqCount.reset()
         dataSource.add(status: status, photos: [])
@@ -89,7 +91,7 @@ extension PhotoListViewController: UICollectionViewDelegateFlowLayout {
                         layout collectionViewLayout: UICollectionViewLayout,
                         sizeForItemAt indexPath: IndexPath) -> CGSize {
 
-        return photoListStatusType.cellCeze()
+        return photoListStatusType.cellCize()
     }
 }
 
@@ -118,14 +120,14 @@ extension PhotoListViewController: PhotoSearchLoadable {
         
         switch status {
         case .normal(let result):
-            updateView(result: result)
+            updatePhotoList(result: result)
             
         default:
-            resetPage(status: status)
+            resetPhotoList(status: status)
         }
     }
     
-    private func updateView(result: PhotoSearchResult?) {
+    private func updatePhotoList(result: PhotoSearchResult?) {
         
         if let pages = result?.photos?.pages, let photos = result?.photos {
             reqCount.updateTotal(total: pages)
