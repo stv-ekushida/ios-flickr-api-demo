@@ -75,7 +75,7 @@ enum PhotoSearchStatus {
         }
     }
     
-    func cellCeze() -> CGSize {
+    func cellCize() -> CGSize {
 
         let topMargin = CGFloat(110)
         let screenSize = UIScreen.main.bounds
