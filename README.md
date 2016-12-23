@@ -8,7 +8,7 @@
 | iOS | 10.0〜 |
 
 ## Usage Library
-git cloneしたあとに、pod updateしてください。
+git cloneしたあとに、pod installしてください。
 
 | Library | Description |
 |---|---|
