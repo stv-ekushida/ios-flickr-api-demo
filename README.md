@@ -12,6 +12,6 @@ git cloneしたあとに、pod installしてください。
 
 | Library | Description |
 |---|---|
-| Alamofire | 通信 |
-| AlamofireImage | 画像取得 |
-| ObjectMapper | JSONデータマッピング |
+| Alamofire | HTTP networking library |
+| AlamofireImage | Image component library |
+| ObjectMapper | JSON Object Mapping library |
