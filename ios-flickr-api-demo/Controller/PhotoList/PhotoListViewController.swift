@@ -26,6 +26,7 @@ final class PhotoListViewController: UIViewController {
         setupView()
     }
 
+    //MARK:-Actions
     @IBAction func searchDidTap(_ sender: UIButton) {
         
         resetPhotoList(status: .loading)
@@ -64,7 +65,7 @@ extension PhotoListViewController: UICollectionViewDelegate {
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
 
         guard hasMorePhotoList() else{ return }
-        updatePage()
+        nextloadPhotoList()
     }
 
     private func hasMorePhotoList() -> Bool{
@@ -78,7 +79,7 @@ extension PhotoListViewController: UICollectionViewDelegate {
         return false
     }
 
-    private func updatePage() {
+    private func nextloadPhotoList() {
         reqCount.incement()
         photoSearchAPI.load(tags: tags, page: reqCount.current())
     }
