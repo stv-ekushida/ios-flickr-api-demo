@@ -30,8 +30,8 @@ git cloneしたあとに、pod installしてください。
 |              |             | PhotoImageURLBuilder               | 画像のURLを作成するクラス                       |
 |              | Common      | FlickrBaseParamsBuilder            | Flickr APIの共通パラメタを作成するクラス           |
 | View         | PhotoSearch | PhotoListCollectionView            | CollectinViewを作成するクラス                   |
-|              |             | PhotoListCollectionViewCell        | CollectionViewCellを作成するクラス（通常）         |
-|              |             | PhotoListIllegalCollectionViewCell | CollectionViewCellを作成するクラス              |
+|              |             | PhotoListCollectionViewCell        | CollectionViewCellを作成するクラス（正常系）        |
+|              |             | PhotoListIllegalCollectionViewCell | CollectionViewCellを作成するクラス(例外系）  |
 | Controller   | PhotoList   | PhotoListViewController            | 写真一覧画面クラス                              |
 | Util         |             | APIClient                          | APIクライアントクラス                           |
 |              |             | NetworkManager                     | ネットワークの状態を管理するクラス              |
