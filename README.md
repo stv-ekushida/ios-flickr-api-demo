@@ -21,7 +21,7 @@ git cloneしたあとに、pod installしてください。
 | Directory |             | Naming                               | Description                                      |
 |--------------|-------------|------------------------------------|-------------------------------------------------|
 | Model        | PhotoSearch | PhotoSearchAPI                     | 写真検索APIを送信するクラス                     |
-|              |             | PhotoSearchLoadable                | 写真検索APIの検索結果を通知するプロトコル          |
+|              |             | PhotoSearchLoadable                | 写真検索APIの検索結果を通知するプロトコル          |
 |              |             | PhotoSearchParamsBuilder           | 写真検索APIのリクエストパラメタを作成するクラス       |
 |              |             | PhotoSearchStatus                  | 写真検索結果取得後の状態クラス                  |
 |              |             | PhotoSearchResults                 | 写真検索APIのレスポンスデータ（第一階層）           |
