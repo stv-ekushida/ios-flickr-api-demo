@@ -25,12 +25,12 @@ git cloneしたあとに、pod installしてください。
 |              |             | PhotoSearchParamsBuilder           | 写真検索APIのリクエストパラメタを作成するクラス       |
 |              |             | PhotoSearchStatus                  | 写真検索結果取得後の状態クラス                  |
 |              |             | PhotoSearchResults                 | 写真検索APIのレスポンスデータ（第一階層）           |
-|              |             | Photos                             | 写真検索APIのレスポンスデータ（第二階層）           |
-|              |             | Photo                              | 写真検索APIのレスポンスデータ（第三階層）           |
+|              |             | Photos                             | 写真検索APIのレスポンスデータ（第二階層）           |
+|              |             | Photo                              | 写真検索APIのレスポンスデータ（第三階層）           |
 |              |             | PhotoImageURLBuilder               | 画像のURLを作成するクラス                       |
 |              | Common      | FlickrBaseParamsBuilder            | Flickr APIの共通パラメタを作成するクラス           |
 | View         | PhotoSearch | PhotoListCollectionView            | CollectinViewを作成するクラス                   |
-|              |             | PhotoListCollectionViewCell        | CollectionViewCellを作成するクラス（正常系）        |
+|              |             | PhotoListCollectionViewCell        | CollectionViewCellを作成するクラス（正常系）  |
 |              |             | PhotoListIllegalCollectionViewCell | CollectionViewCellを作成するクラス(例外系）  |
 | Controller   | PhotoList   | PhotoListViewController            | 写真一覧画面クラス                              |
 | Util         |             | APIClient                          | APIクライアントクラス                           |
