@@ -165,12 +165,13 @@ class ios_flickr_api_demoTests: XCTestCase {
 
     func testPhotoSearchStatusNone() {
 
-        let status = PhotoSearchStatus.none
-        XCTAssertEqual(status.numberOfItemsInSection(photos: []), 1)
+        let factory = PhotoListFactory()
+        factory.setStatus(status: PhotoListStatus.none)
+        XCTAssertEqual(factory.numberOfItemsInSection(photos: []), 1)
     
-        XCTAssertEqual(status.message(), "キーワードを入力し、写真を検索してみましょう！")
+        XCTAssertEqual(factory.message(), "キーワードを入力し、写真を検索してみましょう！")
 
-        let size = status.cellSize()
+        let size = factory.cellSize()
         let screen = UIScreen.main.bounds
         XCTAssertEqual(size.width, screen.width)
         XCTAssertEqual(size.height, screen.height - 110)
@@ -178,11 +179,13 @@ class ios_flickr_api_demoTests: XCTestCase {
 
     func testPhotoSearchStatusLoading() {
 
-        let status = PhotoSearchStatus.loading
-        XCTAssertEqual(status.numberOfItemsInSection(photos: []), 1)
-        XCTAssertEqual(status.message(), "読み込み中...")
+        let factory = PhotoListFactory()
+        factory.setStatus(status: PhotoListStatus.loading)
 
-        let size = status.cellSize()
+        XCTAssertEqual(factory.numberOfItemsInSection(photos: []), 1)
+        XCTAssertEqual(factory.message(), "読み込み中...")
+
+        let size = factory.cellSize()
         let screen = UIScreen.main.bounds
         XCTAssertEqual(size.width, screen.width)
         XCTAssertEqual(size.height, screen.height - 110)
@@ -193,10 +196,12 @@ class ios_flickr_api_demoTests: XCTestCase {
         if let photosResult = self.photosResult,
             let photo = photosResult.photos?.photo {
 
-            let status = PhotoSearchStatus.normal(photosResult)
-            XCTAssertEqual(status.numberOfItemsInSection(photos: photo), 100)
+            let factory = PhotoListFactory()
+            factory.setStatus(status: PhotoListStatus.normal(photosResult))
 
-            let size = status.cellSize()
+            XCTAssertEqual(factory.numberOfItemsInSection(photos: photo), 100)
+
+            let size = factory.cellSize()
             let screen = UIScreen.main.bounds
             XCTAssertEqual(size.width, screen.width / 3)
             XCTAssertEqual(size.height, (screen.height - 110) / 5)
@@ -205,12 +210,13 @@ class ios_flickr_api_demoTests: XCTestCase {
 
     func testPhotoSearchStatusNoData() {
 
-        let status = PhotoSearchStatus.noData
+        let factory = PhotoListFactory()
+        factory.setStatus(status: PhotoListStatus.noData)
 
-        XCTAssertEqual(status.numberOfItemsInSection(photos: []), 1)
-        XCTAssertEqual(status.message(), "該当する写真がありません。\n検索ワードを変更してお試しください。")
+        XCTAssertEqual(factory.numberOfItemsInSection(photos: []), 1)
+        XCTAssertEqual(factory.message(), "該当する写真がありません。\n検索ワードを変更してお試しください。")
 
-        let size = status.cellSize()
+        let size = factory.cellSize()
         let screen = UIScreen.main.bounds
         XCTAssertEqual(size.width, screen.width)
         XCTAssertEqual(size.height, screen.height - 110)
@@ -218,12 +224,13 @@ class ios_flickr_api_demoTests: XCTestCase {
 
     func testPhotoSearchStatusOffline() {
 
-        let status = PhotoSearchStatus.offline
+        let factory = PhotoListFactory()
+        factory.setStatus(status: PhotoListStatus.offline)
 
-        XCTAssertEqual(status.numberOfItemsInSection(photos: []), 1)
-        XCTAssertEqual(status.message(), "ネットワーク環境の良い環境で再度お試しください。")
+        XCTAssertEqual(factory.numberOfItemsInSection(photos: []), 1)
+        XCTAssertEqual(factory.message(), "ネットワーク環境の良い環境で再度お試しください。")
 
-        let size = status.cellSize()
+        let size = factory.cellSize()
         let screen = UIScreen.main.bounds
         XCTAssertEqual(size.width, screen.width)
         XCTAssertEqual(size.height, screen.height - 110)

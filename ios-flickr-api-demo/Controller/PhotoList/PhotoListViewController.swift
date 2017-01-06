@@ -16,7 +16,7 @@ final class PhotoListViewController: UIViewController {
 
     fileprivate let photoSearchAPI = PhotoSearchAPI()
     fileprivate let dataSource = PhotoListCollectionView()
-    fileprivate var photoListStatusType = PhotoSearchStatus.none
+    fileprivate var photoListStatusType = PhotoListStatus.none
     fileprivate var reqCount = PhotoSearchRequestCount()
     fileprivate var tags = ""
 
@@ -44,7 +44,7 @@ final class PhotoListViewController: UIViewController {
         resetPhotoList(status: .none)
     }
 
-    fileprivate func resetPhotoList(status: PhotoSearchStatus) {
+    fileprivate func resetPhotoList(status: PhotoListStatus) {
 
         reqCount.reset()
         dataSource.add(status: status, photos: [])
@@ -92,7 +92,7 @@ extension PhotoListViewController: UICollectionViewDelegateFlowLayout {
                         layout collectionViewLayout: UICollectionViewLayout,
                         sizeForItemAt indexPath: IndexPath) -> CGSize {
 
-        return photoListStatusType.cellSize()
+        return dataSource.view().cellSize()
     }
 }
 
@@ -116,7 +116,7 @@ extension PhotoListViewController: UITextFieldDelegate {
 //MARK:- PhotoSearchLoadable
 extension PhotoListViewController: PhotoSearchLoadable {
 
-    func setStatus(status: PhotoSearchStatus) {
+    func setStatus(status: PhotoListStatus) {
         photoListStatusType = status
         
         switch status {
