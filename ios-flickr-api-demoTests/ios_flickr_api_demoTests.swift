@@ -107,6 +107,7 @@ class ios_flickr_api_demoTests: XCTestCase {
         let photosResult = self.photosResult
 
         XCTAssertEqual(photosResult?.stat, "ok")
+        XCTAssertNotNil(photosResult?.photos)
     }
     
     func testPhotoImageURLBuilder() {
