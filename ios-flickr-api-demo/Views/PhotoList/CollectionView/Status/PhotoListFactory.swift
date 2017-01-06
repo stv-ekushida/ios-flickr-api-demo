@@ -10,25 +10,25 @@ import UIKit
 
 final class PhotoListFactory: NSObject {
 
-    private var statusType: PhotoListStatusType?
+    private var viewType: PhotoListStatusType?
 
     func setStatus(status: PhotoListStatus) {
 
         switch status {
         case .none:
-            statusType = PhotoListStatusNone()
+            viewType = PhotoListStatusNone()
 
         case .loading:
-            statusType = PhotoListStatusLoading()
+            viewType = PhotoListStatusLoading()
 
         case .normal:
-            statusType = PhotoListStatusNormal()
+            viewType = PhotoListStatusNormal()
 
         case .noData:
-            statusType = PhotoListStatusNoData()
+            viewType = PhotoListStatusNoData()
 
         case .offline:
-            statusType = PhotoListStatusOffline()
+            viewType = PhotoListStatusOffline()
 
         default:
             fatalError("NGパターンです")
@@ -39,19 +39,19 @@ final class PhotoListFactory: NSObject {
                 indexPath: IndexPath,
                 photos: [Photo]) -> UICollectionViewCell {
 
-        return statusType?.create(collectionView: collectionView,
+        return viewType?.create(collectionView: collectionView,
                               indexPath: indexPath,
                               photos: photos) ?? UICollectionViewCell()
     }
 
     func numberOfItemsInSection(photos: [Photo]) -> Int {
-        return statusType?.numberOfItemsInSection(photos: photos) ?? 0
+        return viewType?.numberOfItemsInSection(photos: photos) ?? 0
     }
 
     func message() -> String {
-        return statusType?.message() ?? ""
+        return viewType?.message() ?? ""
     }
     func cellSize() -> CGSize {
-        return statusType?.cellSize() ?? CGSize.zero
+        return viewType?.cellSize() ?? CGSize.zero
     }
 }
