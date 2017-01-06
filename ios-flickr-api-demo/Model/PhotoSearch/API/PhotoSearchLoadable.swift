@@ -9,5 +9,5 @@
 import Foundation
 
 protocol PhotoSearchLoadable{
-    func setStatus(status: PhotoSearchStatus)
+    func setStatus(status: PhotoListStatus)
 }
