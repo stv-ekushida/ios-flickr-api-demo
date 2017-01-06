@@ -28,7 +28,7 @@ git cloneしたあとに、pod installしてください。
 |              |             | PhotoSearchParamsBuilder           | 写真検索APIのリクエストパラメタを作成するクラス |
 |              |             | PhotoImageURLBuilder               | 画像のURLを作成するクラス |
 |              | Common      | FlickrBaseParamsBuilder            | Flickr APIの共通パラメタを作成するクラス |
-| View         | PhotoList   | PhotoListCollectionView            | CollectinViewを作成するクラス |
+| View         | PhotoList   | PhotoListCollectionView            | CollectionViewを作成するクラス |
 |              |             | PhotoListCollectionViewCell        | CollectionViewCellを作成するクラス（正常系） |
 |              |             | PhotoListIllegalCollectionViewCell | CollectionViewCellを作成するクラス（例外系） |
 |              |             | PhotoListStatus                    | 写真一覧の状態(enum) |
