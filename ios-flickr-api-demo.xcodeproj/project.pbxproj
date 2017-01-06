@@ -330,8 +330,6 @@ fi
 			</array>
 			<key>isa</key>
 			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Status</string>
 			<key>path</key>
 			<string>Status</string>
 			<key>sourceTree</key>
@@ -347,8 +345,6 @@ fi
 			</array>
 			<key>isa</key>
 			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Response</string>
 			<key>path</key>
 			<string>Response</string>
 			<key>sourceTree</key>
@@ -366,8 +362,6 @@ fi
 			</array>
 			<key>isa</key>
 			<string>PBXGroup</string>
-			<key>name</key>
-			<string>API</string>
 			<key>path</key>
 			<string>API</string>
 			<key>sourceTree</key>
@@ -437,31 +431,15 @@ fi
 		<dict>
 			<key>children</key>
 			<array>
+				<string>C5552B9E1E05500E0003488F</string>
 				<string>C5552B9F1E05500E0003488F</string>
 				<string>C5552BBC1E0624B10003488F</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>CollectionViewCell</string>
-			<key>path</key>
-			<string>CollectionViewCell</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>C54357B11E1F42A900CB2080</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>C5552B9E1E05500E0003488F</string>
 				<string>C5552BB51E061B4E0003488F</string>
 			</array>
 			<key>isa</key>
 			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Other</string>
 			<key>path</key>
-			<string>Other</string>
+			<string>CollectionViewCell</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
@@ -473,8 +451,6 @@ fi
 			<string>PBXFileReference</string>
 			<key>lastKnownFileType</key>
 			<string>sourcecode.swift</string>
-			<key>name</key>
-			<string>PhotoListFactory.swift</string>
 			<key>path</key>
 			<string>PhotoListFactory.swift</string>
 			<key>sourceTree</key>
@@ -1601,6 +1577,8 @@ fi
 			<string>PBXFileReference</string>
 			<key>lastKnownFileType</key>
 			<string>sourcecode.swift</string>
+			<key>name</key>
+			<string>PhotoListCollectionView.swift</string>
 			<key>path</key>
 			<string>PhotoListCollectionView.swift</string>
 			<key>sourceTree</key>
@@ -1766,6 +1744,8 @@ fi
 			<string>PBXFileReference</string>
 			<key>lastKnownFileType</key>
 			<string>sourcecode.swift</string>
+			<key>name</key>
+			<string>UICollectionView+ScrollToTop.swift</string>
 			<key>path</key>
 			<string>UICollectionView+ScrollToTop.swift</string>
 			<key>sourceTree</key>
@@ -1806,8 +1786,6 @@ fi
 			</array>
 			<key>isa</key>
 			<string>PBXGroup</string>
-			<key>name</key>
-			<string>PhotoList</string>
 			<key>path</key>
 			<string>PhotoList</string>
 			<key>sourceTree</key>
@@ -1838,7 +1816,6 @@ fi
 			<key>children</key>
 			<array>
 				<string>C54357B01E1F429700CB2080</string>
-				<string>C54357B11E1F42A900CB2080</string>
 				<string>C54357A11E1F39C100CB2080</string>
 			</array>
 			<key>isa</key>
