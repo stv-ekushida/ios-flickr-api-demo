@@ -10,6 +10,7 @@
 		41D7965D8B2286B026C4FA97 /* Pods_ios_flickr_api_demoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AA7993E701D915F502E7CE4 /* Pods_ios_flickr_api_demoTests.framework */; };
 		46E872D252F8714A2808F658 /* Pods_ios_flickr_api_demo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5EA7893CB2D5EFBEDF683711 /* Pods_ios_flickr_api_demo.framework */; };
 		BC6432091E080C31006AE21D /* FlickrBaseParamsBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC6432081E080C31006AE21D /* FlickrBaseParamsBuilder.swift */; };
+		C543579E1E1F217000CB2080 /* flickr.json in Resources */ = {isa = PBXBuildFile; fileRef = C543579D1E1F217000CB2080 /* flickr.json */; };
 		C5552B781E054FE30003488F /* ios_flickr_api_demoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5552B771E054FE30003488F /* ios_flickr_api_demoTests.swift */; };
 		C5552BA01E05500E0003488F /* PhotoListViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C5552B841E05500E0003488F /* PhotoListViewController.storyboard */; };
 		C5552BA11E05500E0003488F /* PhotoListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5552B861E05500E0003488F /* PhotoListViewController.swift */; };
@@ -52,6 +53,7 @@
 		74C6190DC7A0F91140BF47AE /* Pods-ios-flickr-api-demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ios-flickr-api-demo.release.xcconfig"; path = "Pods/Target Support Files/Pods-ios-flickr-api-demo/Pods-ios-flickr-api-demo.release.xcconfig"; sourceTree = "<group>"; };
 		838CF5D0AD381C6CA2648C1F /* Pods-ios-flickr-api-demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ios-flickr-api-demo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ios-flickr-api-demo/Pods-ios-flickr-api-demo.debug.xcconfig"; sourceTree = "<group>"; };
 		BC6432081E080C31006AE21D /* FlickrBaseParamsBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlickrBaseParamsBuilder.swift; sourceTree = "<group>"; };
+		C543579D1E1F217000CB2080 /* flickr.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = flickr.json; sourceTree = "<group>"; };
 		C5552B5F1E054FE30003488F /* ios-flickr-api-demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ios-flickr-api-demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5552B6E1E054FE30003488F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C5552B731E054FE30003488F /* ios-flickr-api-demoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ios-flickr-api-demoTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -158,6 +160,7 @@
 		C5552B761E054FE30003488F /* ios-flickr-api-demoTests */ = {
 			isa = PBXGroup;
 			children = (
+				C543579D1E1F217000CB2080 /* flickr.json */,
 				C5552B791E054FE30003488F /* Info.plist */,
 				C5552B771E054FE30003488F /* ios_flickr_api_demoTests.swift */,
 			);
@@ -321,7 +324,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0810;
-				LastUpgradeCheck = 0810;
+				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = "Eiji Kushida";
 				TargetAttributes = {
 					C5552B5E1E054FE30003488F = {
@@ -371,6 +374,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C543579E1E1F217000CB2080 /* flickr.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -564,6 +568,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -614,6 +619,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -642,6 +648,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 838CF5D0AD381C6CA2648C1F /* Pods-ios-flickr-api-demo.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = UE5DCQPTRB;
 				INFOPLIST_FILE = "ios-flickr-api-demo/Info.plist";
@@ -657,6 +664,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 74C6190DC7A0F91140BF47AE /* Pods-ios-flickr-api-demo.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = UE5DCQPTRB;
 				INFOPLIST_FILE = "ios-flickr-api-demo/Info.plist";

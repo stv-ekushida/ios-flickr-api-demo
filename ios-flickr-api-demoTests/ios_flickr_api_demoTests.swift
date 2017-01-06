@@ -10,122 +10,111 @@ import XCTest
 import ObjectMapper
 @testable import ios_flickr_api_demo
 
+//テストデータ (100件）
+//{
+//    "photos": {
+//        "page": 1,
+//        "pages": 4168,
+//        "perpage": 100,
+//        "photo": [
+//            {
+//                "farm": 6,
+//                "id": "32011675501",
+//                "isfamily": 0,
+//                "isfriend": 0,
+//                "ispublic": 1,
+//                "owner": "136944338@N05",
+//                "secret": "9c9ef7045f",
+//                "server": "5696",
+//                "title": "Miracle Niki - Change clothing CODE RPG - Android & iOS apps - Free"
+//            },
+//            {
+//                "farm": 1,
+//                "id": "31318948623",
+//                "isfamily": 0,
+//                "isfriend": 0,
+//                "ispublic": 1,
+//                "owner": "96227749@N06",
+//                "secret": "e7cac8dc3c",
+//                "server": "624",
+//                "title": "New photo added to "Польша""
+//            },
+//        ],
+//        "total": "416709"
+//    },
+//    "stat": "ok"
+//}
+
 class ios_flickr_api_demoTests: XCTestCase {
-    
-    let photoDic: [String: Any] = [
-        "photo": [
-            "farm": 100,
-            "server": "22222",
-            "id": "33333",
-            "secret": "44444"
-        ]
-    ]
-    
-    let photosDic: [String: Any] = [
-        "page": 1,
-        "pages" : 100,
-        "perpage" : 50,
-        "photo": [
-            "farm": 111,
-            "server": "abc",
-            "id": "def",
-            "secret": "ghi"
-        ]
-    ]
-    
-    let photosResultDic: [String: Any] = [
-        
-        "stat": "ok",
-        "photos": [
-            "page": 100,
-            "pages" : 1000,
-            "perpage" : 100,
-            "photo": [
-                "farm": 123,
-                "server": "123abc",
-                "id": "456def",
-                "secret": "789ghi"
-            ]
-        ]
-    ]
-    
-    var photo: Photo?
-    var photos: Photos?
+
     var photosResult: PhotoSearchResult?
     
     override func setUp() {
         super.setUp()
-        
-        let jsonPhoto = try! JSONSerialization.data(withJSONObject: photoDic,
-                                               options: [])
-        
-        if let photo = Mapper<Photo>().map(JSONObject: jsonPhoto) {
-            self.photo = photo
-        }
-        
-        let jsonPhotos = try! JSONSerialization.data(withJSONObject: photosDic,
-                                               options: [])
-        
-        if let photos = Mapper<Photos>().map(JSONObject: jsonPhotos) {
-            self.photos = photos
-        }
-        
-        let jsonPhotosResult = try! JSONSerialization.data(withJSONObject: photosResultDic,
-                                               options: [])
-        
-        if let photosResult = Mapper<PhotoSearchResult>().map(JSONObject: jsonPhotosResult) {
-            self.photosResult = photosResult
-        }
+        setupTestData()
     }
     
     override func tearDown() {
         super.tearDown()
     }
+
+    private func setupTestData() {
+
+        let bundle = Bundle(for: type(of: self))
+        let path = bundle.path(forResource: "flickr", ofType: "json")
+        if let path = path {
+
+            let fileHandle = FileHandle(forReadingAtPath: path)
+            let jsonData = fileHandle?.readDataToEndOfFile()
+
+            if let jsonData = jsonData {
+
+                let json = String(data: jsonData,
+                                  encoding: String.Encoding.utf8)
+
+                if let json = json {
+
+                    if let searchResult = Mapper<PhotoSearchResult>().map(JSONString: json) {
+                        self.photosResult = searchResult
+                    }
+                }
+            }
+        }
+    }
     
     func testPhoto() {
+
+        let photo = self.photosResult?.photos?.photo.first
         
-        if let photo = self.photo {
-            XCTAssertEqual(photo.farm, 100)
-            XCTAssertEqual(photo.server, "22222")
-            XCTAssertEqual(photo.id, "33333")
-            XCTAssertEqual(photo.secret, "44444")
-        }
+        XCTAssertEqual(photo?.farm, 6)
+        XCTAssertEqual(photo?.server, "5696")
+        XCTAssertEqual(photo?.id, "32011675501")
+        XCTAssertEqual(photo?.secret, "9c9ef7045f")
     }
     
     func testPhotos() {
-        
-        if let photos = self.photos {
-            XCTAssertEqual(photos.page, 1)
-            XCTAssertEqual(photos.pages, 100)
-            XCTAssertEqual(photos.perpage, 50)
-            XCTAssertEqual(photos.photo.first?.farm, 111)
-            XCTAssertEqual(photos.photo.first?.server, "abc")
-            XCTAssertEqual(photos.photo.first?.id, "def")
-            XCTAssertEqual(photos.photo.first?.secret, "ghi")
-        }
+
+        let photos = self.photosResult?.photos
+
+        XCTAssertEqual(photos?.page, 1)
+        XCTAssertEqual(photos?.pages, 4168)
+        XCTAssertEqual(photos?.perpage, 100)
+        XCTAssertNotNil(photos?.photo.first)
     }
 
-    
     func testPhotosResult() {
-        
-        if let photosResult = self.photosResult {
-            XCTAssertEqual(photosResult.photos?.page, 100)
-            XCTAssertEqual(photosResult.photos?.pages, 1000)
-            XCTAssertEqual(photosResult.photos?.perpage, 100)
-            XCTAssertEqual(photosResult.photos?.photo.first?.farm, 123)
-            XCTAssertEqual(photosResult.photos?.photo.first?.server, "123abc")
-            XCTAssertEqual(photosResult.photos?.photo.first?.id, "456def")
-            XCTAssertEqual(photosResult.photos?.photo.first?.secret, "789ghi")
-        }
+
+        let photosResult = self.photosResult
+
+        XCTAssertEqual(photosResult?.stat, "ok")
     }
     
     func testPhotoImageURLBuilder() {
         
-        if let photo = self.photo {
+        let photo = self.photosResult?.photos?.photo.first
             
-            XCTAssertEqual(PhotoImageURLBuilder.create(photo: photo),
-                           "https://farm100.staticflickr.com/22222/33333_44444.jpg")
-        }
+        XCTAssertEqual(PhotoImageURLBuilder.create(photo: photo!),
+                       "https://farm6.staticflickr.com/5696/32011675501_9c9ef7045f.jpg")
     }
     
     func testPhotoSearchRequestCount() {
@@ -142,13 +131,13 @@ class ios_flickr_api_demoTests: XCTestCase {
         XCTAssertEqual(count.current(), 1)
         
         count.updateTotal(total: 150)
-        XCTAssertTrue(count.moreRequest())   // 50
+        XCTAssertTrue(count.isMoreRequest())   // 50
         
         count.incement()
-        XCTAssertTrue(count.moreRequest())   // 100
+        XCTAssertTrue(count.isMoreRequest())   // 100
 
         count.incement()
-        XCTAssertFalse(count.moreRequest())    //150
+        XCTAssertFalse(count.isMoreRequest())    //150
     }
     
     func testPhotoSearchParamsBuilder() {
@@ -181,7 +170,7 @@ class ios_flickr_api_demoTests: XCTestCase {
     
         XCTAssertEqual(status.message(), "キーワードを入力し、写真を検索してみましょう！")
 
-        let size = status.cellCeze()
+        let size = status.cellSize()
         let screen = UIScreen.main.bounds
         XCTAssertEqual(size.width, screen.width)
         XCTAssertEqual(size.height, screen.height - 110)
@@ -193,7 +182,7 @@ class ios_flickr_api_demoTests: XCTestCase {
         XCTAssertEqual(status.numberOfItemsInSection(photos: []), 1)
         XCTAssertEqual(status.message(), "読み込み中...")
 
-        let size = status.cellCeze()
+        let size = status.cellSize()
         let screen = UIScreen.main.bounds
         XCTAssertEqual(size.width, screen.width)
         XCTAssertEqual(size.height, screen.height - 110)
@@ -201,15 +190,16 @@ class ios_flickr_api_demoTests: XCTestCase {
 
     func testPhotoSearchStatusNormal() {
 
-        if let photosResult = self.photosResult {
+        if let photosResult = self.photosResult,
+            let photo = photosResult.photos?.photo {
 
             let status = PhotoSearchStatus.normal(photosResult)
-            XCTAssertEqual(status.numberOfItemsInSection(photos: []), 1)
+            XCTAssertEqual(status.numberOfItemsInSection(photos: photo), 100)
 
-            let size = status.cellCeze()
+            let size = status.cellSize()
             let screen = UIScreen.main.bounds
-            XCTAssertEqual(size.width, screen.width)
-            XCTAssertEqual(size.height, screen.height - 110)
+            XCTAssertEqual(size.width, screen.width / 3)
+            XCTAssertEqual(size.height, (screen.height - 110) / 5)
        }
     }
 
@@ -220,7 +210,7 @@ class ios_flickr_api_demoTests: XCTestCase {
         XCTAssertEqual(status.numberOfItemsInSection(photos: []), 1)
         XCTAssertEqual(status.message(), "該当する写真がありません。\n検索ワードを変更してお試しください。")
 
-        let size = status.cellCeze()
+        let size = status.cellSize()
         let screen = UIScreen.main.bounds
         XCTAssertEqual(size.width, screen.width)
         XCTAssertEqual(size.height, screen.height - 110)
@@ -233,7 +223,7 @@ class ios_flickr_api_demoTests: XCTestCase {
         XCTAssertEqual(status.numberOfItemsInSection(photos: []), 1)
         XCTAssertEqual(status.message(), "ネットワーク環境の良い環境で再度お試しください。")
 
-        let size = status.cellCeze()
+        let size = status.cellSize()
         let screen = UIScreen.main.bounds
         XCTAssertEqual(size.width, screen.width)
         XCTAssertEqual(size.height, screen.height - 110)

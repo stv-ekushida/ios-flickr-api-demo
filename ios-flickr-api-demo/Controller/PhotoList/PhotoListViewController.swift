@@ -92,7 +92,7 @@ extension PhotoListViewController: UICollectionViewDelegateFlowLayout {
                         layout collectionViewLayout: UICollectionViewLayout,
                         sizeForItemAt indexPath: IndexPath) -> CGSize {
 
-        return photoListStatusType.cellCize()
+        return photoListStatusType.cellSize()
     }
 }
 
