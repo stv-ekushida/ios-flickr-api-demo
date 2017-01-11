@@ -56,32 +56,9 @@ class ios_flickr_api_demoTests: XCTestCase {
     
     override func tearDown() {
         super.tearDown()
+        self.photosResult = nil
     }
 
-    private func setupTestData() {
-
-        let bundle = Bundle(for: type(of: self))
-        let path = bundle.path(forResource: "flickr", ofType: "json")
-        if let path = path {
-
-            let fileHandle = FileHandle(forReadingAtPath: path)
-            let jsonData = fileHandle?.readDataToEndOfFile()
-
-            if let jsonData = jsonData {
-
-                let json = String(data: jsonData,
-                                  encoding: String.Encoding.utf8)
-
-                if let json = json {
-
-                    if let searchResult = Mapper<PhotoSearchResult>().map(JSONString: json) {
-                        self.photosResult = searchResult
-                    }
-                }
-            }
-        }
-    }
-    
     func testPhoto() {
 
         let photo = self.photosResult?.photos?.photo.first
@@ -99,7 +76,9 @@ class ios_flickr_api_demoTests: XCTestCase {
         XCTAssertEqual(photos?.page, 1)
         XCTAssertEqual(photos?.pages, 4168)
         XCTAssertEqual(photos?.perpage, 100)
+        XCTAssertEqual(photos?.photo.count, 100)
         XCTAssertNotNil(photos?.photo.first)
+        XCTAssertNotNil(photos?.photo.last)
     }
 
     func testPhotosResult() {
@@ -235,5 +214,30 @@ class ios_flickr_api_demoTests: XCTestCase {
         let screen = UIScreen.main.bounds
         XCTAssertEqual(size.width, screen.width)
         XCTAssertEqual(size.height, screen.height - 110)
+    }
+
+    //MARK:- private Method
+    private func setupTestData() {
+
+        let bundle = Bundle(for: type(of: self))
+        let path = bundle.path(forResource: "flickr", ofType: "json")
+        if let path = path {
+
+            let fileHandle = FileHandle(forReadingAtPath: path)
+            let jsonData = fileHandle?.readDataToEndOfFile()
+
+            if let jsonData = jsonData {
+
+                let json = String(data: jsonData,
+                                  encoding: String.Encoding.utf8)
+
+                if let json = json {
+
+                    if let searchResult = Mapper<PhotoSearchResult>().map(JSONString: json) {
+                        self.photosResult = searchResult
+                    }
+                }
+            }
+        }
     }
 }
