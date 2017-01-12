@@ -38,6 +38,16 @@
                ReferencedContainer = "container:ios-flickr-api-demo.xcodeproj">
             </BuildableReference>
          </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "C54357F41E262CEA00CB2080"
+               BuildableName = "ios-flickr-api-demoUITests.xctest"
+               BlueprintName = "ios-flickr-api-demoUITests"
+               ReferencedContainer = "container:ios-flickr-api-demo.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
