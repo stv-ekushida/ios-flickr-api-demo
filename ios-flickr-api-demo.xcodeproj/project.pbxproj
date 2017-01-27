@@ -10,6 +10,20 @@
 		41D7965D8B2286B026C4FA97 /* Pods_ios_flickr_api_demoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AA7993E701D915F502E7CE4 /* Pods_ios_flickr_api_demoTests.framework */; };
 		46E872D252F8714A2808F658 /* Pods_ios_flickr_api_demo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5EA7893CB2D5EFBEDF683711 /* Pods_ios_flickr_api_demo.framework */; };
 		BC6432091E080C31006AE21D /* FlickrBaseParamsBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC6432081E080C31006AE21D /* FlickrBaseParamsBuilder.swift */; };
+		BC8C48571E3AE255005845A7 /* FlickrBaseParamsBuilderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8C48561E3AE255005845A7 /* FlickrBaseParamsBuilderTests.swift */; };
+		BC8C48591E3AE2E3005845A7 /* PhotoImageURLBuilderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8C48581E3AE2E3005845A7 /* PhotoImageURLBuilderTests.swift */; };
+		BC8C485B1E3AE35E005845A7 /* MocPhotoList.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8C485A1E3AE35E005845A7 /* MocPhotoList.swift */; };
+		BC8C485D1E3AE558005845A7 /* PhotoSearchAPITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8C485C1E3AE558005845A7 /* PhotoSearchAPITests.swift */; };
+		BC8C485F1E3AE5B9005845A7 /* PhotoSearchParamsBuilderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8C485E1E3AE5B9005845A7 /* PhotoSearchParamsBuilderTests.swift */; };
+		BC8C48611E3AE607005845A7 /* PhotoSearchRequestCountTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8C48601E3AE607005845A7 /* PhotoSearchRequestCountTests.swift */; };
+		BC8C48641E3AE6AB005845A7 /* PhotoListStatusNoneTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8C48631E3AE6AB005845A7 /* PhotoListStatusNoneTests.swift */; };
+		BC8C48661E3AE708005845A7 /* PhotoListStatusLoadingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8C48651E3AE708005845A7 /* PhotoListStatusLoadingTests.swift */; };
+		BC8C48681E3AE763005845A7 /* PhotoListStatusNormalTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8C48671E3AE763005845A7 /* PhotoListStatusNormalTests.swift */; };
+		BC8C486A1E3AE7A6005845A7 /* PhotoListStatusNoDataTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8C48691E3AE7A6005845A7 /* PhotoListStatusNoDataTests.swift */; };
+		BC8C486C1E3AE7E9005845A7 /* PhotoListStatusOfflineTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8C486B1E3AE7E9005845A7 /* PhotoListStatusOfflineTests.swift */; };
+		BC8C48701E3AE91C005845A7 /* PhotoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8C486F1E3AE91C005845A7 /* PhotoTests.swift */; };
+		BC8C48741E3AE96F005845A7 /* PhotosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8C48731E3AE96F005845A7 /* PhotosTests.swift */; };
+		BC8C48761E3AE9BB005845A7 /* PhotoSearchResultTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8C48751E3AE9BB005845A7 /* PhotoSearchResultTests.swift */; };
 		C543579E1E1F217000CB2080 /* flickr.json in Resources */ = {isa = PBXBuildFile; fileRef = C543579D1E1F217000CB2080 /* flickr.json */; };
 		C54357A01E1F37CD00CB2080 /* PhotoListStatusType.swift in Sources */ = {isa = PBXBuildFile; fileRef = C543579F1E1F37CD00CB2080 /* PhotoListStatusType.swift */; };
 		C54357A51E1F3A2600CB2080 /* PhotoListStatusNormal.swift in Sources */ = {isa = PBXBuildFile; fileRef = C54357A41E1F3A2600CB2080 /* PhotoListStatusNormal.swift */; };
@@ -71,6 +85,20 @@
 		74C6190DC7A0F91140BF47AE /* Pods-ios-flickr-api-demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ios-flickr-api-demo.release.xcconfig"; path = "Pods/Target Support Files/Pods-ios-flickr-api-demo/Pods-ios-flickr-api-demo.release.xcconfig"; sourceTree = "<group>"; };
 		838CF5D0AD381C6CA2648C1F /* Pods-ios-flickr-api-demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ios-flickr-api-demo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ios-flickr-api-demo/Pods-ios-flickr-api-demo.debug.xcconfig"; sourceTree = "<group>"; };
 		BC6432081E080C31006AE21D /* FlickrBaseParamsBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlickrBaseParamsBuilder.swift; sourceTree = "<group>"; };
+		BC8C48561E3AE255005845A7 /* FlickrBaseParamsBuilderTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FlickrBaseParamsBuilderTests.swift; path = FlickrBaseParamsBuilderTests.swift; sourceTree = "<group>"; };
+		BC8C48581E3AE2E3005845A7 /* PhotoImageURLBuilderTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PhotoImageURLBuilderTests.swift; path = PhotoImageURLBuilderTests.swift; sourceTree = "<group>"; };
+		BC8C485A1E3AE35E005845A7 /* MocPhotoList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MocPhotoList.swift; path = MocPhotoList.swift; sourceTree = "<group>"; };
+		BC8C485C1E3AE558005845A7 /* PhotoSearchAPITests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PhotoSearchAPITests.swift; path = PhotoSearchAPITests.swift; sourceTree = "<group>"; };
+		BC8C485E1E3AE5B9005845A7 /* PhotoSearchParamsBuilderTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PhotoSearchParamsBuilderTests.swift; path = PhotoSearchParamsBuilderTests.swift; sourceTree = "<group>"; };
+		BC8C48601E3AE607005845A7 /* PhotoSearchRequestCountTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PhotoSearchRequestCountTests.swift; path = PhotoSearchRequestCountTests.swift; sourceTree = "<group>"; };
+		BC8C48631E3AE6AB005845A7 /* PhotoListStatusNoneTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PhotoListStatusNoneTests.swift; path = PhotoListStatusNoneTests.swift; sourceTree = "<group>"; };
+		BC8C48651E3AE708005845A7 /* PhotoListStatusLoadingTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PhotoListStatusLoadingTests.swift; path = PhotoListStatusLoadingTests.swift; sourceTree = "<group>"; };
+		BC8C48671E3AE763005845A7 /* PhotoListStatusNormalTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PhotoListStatusNormalTests.swift; path = PhotoListStatusNormalTests.swift; sourceTree = "<group>"; };
+		BC8C48691E3AE7A6005845A7 /* PhotoListStatusNoDataTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PhotoListStatusNoDataTests.swift; path = PhotoListStatusNoDataTests.swift; sourceTree = "<group>"; };
+		BC8C486B1E3AE7E9005845A7 /* PhotoListStatusOfflineTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PhotoListStatusOfflineTests.swift; path = PhotoListStatusOfflineTests.swift; sourceTree = "<group>"; };
+		BC8C486F1E3AE91C005845A7 /* PhotoTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PhotoTests.swift; path = PhotoTests.swift; sourceTree = "<group>"; };
+		BC8C48731E3AE96F005845A7 /* PhotosTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PhotosTests.swift; path = PhotosTests.swift; sourceTree = "<group>"; };
+		BC8C48751E3AE9BB005845A7 /* PhotoSearchResultTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PhotoSearchResultTests.swift; path = PhotoSearchResultTests.swift; sourceTree = "<group>"; };
 		C543579D1E1F217000CB2080 /* flickr.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = flickr.json; sourceTree = "<group>"; };
 		C543579F1E1F37CD00CB2080 /* PhotoListStatusType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoListStatusType.swift; sourceTree = "<group>"; };
 		C54357A41E1F3A2600CB2080 /* PhotoListStatusNormal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoListStatusNormal.swift; sourceTree = "<group>"; };
@@ -160,6 +188,54 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		BC8C48551E3AE220005845A7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				BC8C486D1E3AE8CF005845A7 /* API */,
+				BC8C486E1E3AE8E4005845A7 /* Response */,
+				BC8C485A1E3AE35E005845A7 /* MocPhotoList.swift */,
+			);
+			name = Model;
+			path = Model;
+			sourceTree = "<group>";
+		};
+		BC8C48621E3AE681005845A7 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				BC8C48651E3AE708005845A7 /* PhotoListStatusLoadingTests.swift */,
+				BC8C48691E3AE7A6005845A7 /* PhotoListStatusNoDataTests.swift */,
+				BC8C48631E3AE6AB005845A7 /* PhotoListStatusNoneTests.swift */,
+				BC8C48671E3AE763005845A7 /* PhotoListStatusNormalTests.swift */,
+				BC8C486B1E3AE7E9005845A7 /* PhotoListStatusOfflineTests.swift */,
+			);
+			name = View;
+			path = View;
+			sourceTree = "<group>";
+		};
+		BC8C486D1E3AE8CF005845A7 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				BC8C48561E3AE255005845A7 /* FlickrBaseParamsBuilderTests.swift */,
+				BC8C48581E3AE2E3005845A7 /* PhotoImageURLBuilderTests.swift */,
+				BC8C485C1E3AE558005845A7 /* PhotoSearchAPITests.swift */,
+				BC8C485E1E3AE5B9005845A7 /* PhotoSearchParamsBuilderTests.swift */,
+				BC8C48601E3AE607005845A7 /* PhotoSearchRequestCountTests.swift */,
+			);
+			name = API;
+			path = API;
+			sourceTree = "<group>";
+		};
+		BC8C486E1E3AE8E4005845A7 /* Response */ = {
+			isa = PBXGroup;
+			children = (
+				BC8C48751E3AE9BB005845A7 /* PhotoSearchResultTests.swift */,
+				BC8C486F1E3AE91C005845A7 /* PhotoTests.swift */,
+				BC8C48731E3AE96F005845A7 /* PhotosTests.swift */,
+			);
+			name = Response;
+			path = Response;
+			sourceTree = "<group>";
+		};
 		C54357A11E1F39C100CB2080 /* Status */ = {
 			isa = PBXGroup;
 			children = (
@@ -211,8 +287,8 @@
 		C54357F61E262CEA00CB2080 /* ios-flickr-api-demoUITests */ = {
 			isa = PBXGroup;
 			children = (
-				C54357F71E262CEA00CB2080 /* ios_flickr_api_demoUITests.swift */,
 				C54357F91E262CEA00CB2080 /* Info.plist */,
+				C54357F71E262CEA00CB2080 /* ios_flickr_api_demoUITests.swift */,
 			);
 			path = "ios-flickr-api-demoUITests";
 			sourceTree = "<group>";
@@ -221,11 +297,11 @@
 			isa = PBXGroup;
 			children = (
 				BB7C672E0C9063FDE18BCC7A /* Frameworks */,
+				A2E40E9A3564D6282E928582 /* Pods */,
+				C5552B601E054FE30003488F /* Products */,
 				C5552B611E054FE30003488F /* ios-flickr-api-demo */,
 				C5552B761E054FE30003488F /* ios-flickr-api-demoTests */,
 				C54357F61E262CEA00CB2080 /* ios-flickr-api-demoUITests */,
-				A2E40E9A3564D6282E928582 /* Pods */,
-				C5552B601E054FE30003488F /* Products */,
 			);
 			sourceTree = "<group>";
 		};
@@ -255,6 +331,8 @@
 		C5552B761E054FE30003488F /* ios-flickr-api-demoTests */ = {
 			isa = PBXGroup;
 			children = (
+				BC8C48551E3AE220005845A7 /* Model */,
+				BC8C48621E3AE681005845A7 /* View */,
 				C5552B791E054FE30003488F /* Info.plist */,
 				C543579D1E1F217000CB2080 /* flickr.json */,
 				C5552B771E054FE30003488F /* ios_flickr_api_demoTests.swift */,
@@ -638,7 +716,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BC8C485F1E3AE5B9005845A7 /* PhotoSearchParamsBuilderTests.swift in Sources */,
+				BC8C48661E3AE708005845A7 /* PhotoListStatusLoadingTests.swift in Sources */,
+				BC8C48611E3AE607005845A7 /* PhotoSearchRequestCountTests.swift in Sources */,
+				BC8C48591E3AE2E3005845A7 /* PhotoImageURLBuilderTests.swift in Sources */,
+				BC8C48681E3AE763005845A7 /* PhotoListStatusNormalTests.swift in Sources */,
 				C5552B781E054FE30003488F /* ios_flickr_api_demoTests.swift in Sources */,
+				BC8C48741E3AE96F005845A7 /* PhotosTests.swift in Sources */,
+				BC8C48701E3AE91C005845A7 /* PhotoTests.swift in Sources */,
+				BC8C486A1E3AE7A6005845A7 /* PhotoListStatusNoDataTests.swift in Sources */,
+				BC8C485B1E3AE35E005845A7 /* MocPhotoList.swift in Sources */,
+				BC8C486C1E3AE7E9005845A7 /* PhotoListStatusOfflineTests.swift in Sources */,
+				BC8C485D1E3AE558005845A7 /* PhotoSearchAPITests.swift in Sources */,
+				BC8C48641E3AE6AB005845A7 /* PhotoListStatusNoneTests.swift in Sources */,
+				BC8C48761E3AE9BB005845A7 /* PhotoSearchResultTests.swift in Sources */,
+				BC8C48571E3AE255005845A7 /* FlickrBaseParamsBuilderTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
