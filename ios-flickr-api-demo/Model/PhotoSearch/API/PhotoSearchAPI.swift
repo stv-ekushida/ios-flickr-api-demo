@@ -13,12 +13,14 @@ final class PhotoSearchAPI {
 
     var loadable: PhotoSearchLoadable?
     fileprivate var isLoading = false
+    private var requestCount = 1
+    private var totalCount = 1
 
     func waiting() -> Bool {
         return isLoading
     }
 
-    func load(tags: String, page: Int) {
+    func load(tags: String) {
 
         guard NetworkManager.isAvailable() else {
             self.loadable?.setStatus(status: .offline)
@@ -28,7 +30,7 @@ final class PhotoSearchAPI {
         isLoading = true
 
         APIClient().request(
-            params: PhotoSearchParamsBuilder.create(tags: tags, page: page)
+            params: PhotoSearchParamsBuilder.create(tags: tags, page: current())
         ) { [weak self](response) -> () in
 
             switch response {
@@ -50,5 +52,26 @@ final class PhotoSearchAPI {
 
         return (result.photos?.photo.count == 0) ?
             PhotoListStatus.noData : PhotoListStatus.normal(result)
+    }
+    
+    //MARK:- リクエスト回数の管理
+    func current() -> Int {
+        return requestCount
+    }
+    
+    func reset() {
+        requestCount = 1
+    }
+    
+    func incement() {
+        requestCount += 1
+    }
+    
+    func updateTotal(total: Int) {
+        self.totalCount = total
+    }
+    
+    func isMoreRequest() -> Bool{
+        return totalCount > requestCount * PhotoSearchParamsBuilder.perPage
     }
 }

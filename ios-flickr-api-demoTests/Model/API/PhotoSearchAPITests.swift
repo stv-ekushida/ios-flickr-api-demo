@@ -22,4 +22,27 @@ class PhotoSearchAPITests: XCTestCase {
     func testPhotoSearchAPI() {
         XCTAssertFalse(PhotoSearchAPI().waiting())
     }
+    
+    func testPhotoSearchRequestCount() {
+        
+        let count = PhotoSearchAPI()
+        XCTAssertEqual(count.current(), 1)
+        
+        for _ in 0..<2 {
+            count.incement()
+        }
+        XCTAssertEqual(count.current(), 3)
+        
+        count.reset()
+        XCTAssertEqual(count.current(), 1)
+        
+        count.updateTotal(total: 150)
+        XCTAssertTrue(count.isMoreRequest())   // 50
+        
+        count.incement()
+        XCTAssertTrue(count.isMoreRequest())   // 100
+        
+        count.incement()
+        XCTAssertFalse(count.isMoreRequest())    //150
+    }
 }

@@ -48,7 +48,7 @@ class PhotoListIllegalCollectionViewCellTests: XCTestCase {
     
     func testSetCollectionViewCellMessageTextView() {
         cell.message = "あいうえお"
-        XCTAssertEqual(cell.messageTextView.text, "あいういえお")
+        XCTAssertEqual(cell.messageTextView.text!, "あいうえお")
     }
 }
 
