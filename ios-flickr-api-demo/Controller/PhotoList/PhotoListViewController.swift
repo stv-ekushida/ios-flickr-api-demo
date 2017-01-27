@@ -17,7 +17,6 @@ final class PhotoListViewController: UIViewController {
     fileprivate let photoSearchAPI = PhotoSearchAPI()
     fileprivate let dataSource = PhotoListCollectionView()
     fileprivate var photoListStatusType = PhotoListStatus.none
-    fileprivate var reqCount = PhotoSearchRequestCount()
     fileprivate var tags = ""
 
     //MARK:-LifeCycle
@@ -46,7 +45,7 @@ final class PhotoListViewController: UIViewController {
 
     fileprivate func resetPhotoList(status: PhotoListStatus) {
 
-        reqCount.reset()
+        photoSearchAPI.reset()
         dataSource.add(status: status, photos: [])
         collectionView.reloadData()
     }
@@ -55,7 +54,7 @@ final class PhotoListViewController: UIViewController {
 
         self.tags = tags
         photoSearchAPI.loadable = self
-        photoSearchAPI.load(tags: tags, page: reqCount.current())
+        photoSearchAPI.load(tags: tags)
     }
 }
 
@@ -74,14 +73,14 @@ extension PhotoListViewController: UICollectionViewDelegate {
             (collectionView.contentSize.height - collectionView.bounds.size.height) {
 
             if photoSearchAPI.waiting(){ return false }
-            return reqCount.isMoreRequest()
+            return photoSearchAPI.isMoreRequest()
         }
         return false
     }
 
     private func nextloadPhotoList() {
-        reqCount.incement()
-        photoSearchAPI.load(tags: tags, page: reqCount.current())
+        photoSearchAPI.incement()
+        photoSearchAPI.load(tags: tags)
     }
 }
 
@@ -131,7 +130,7 @@ extension PhotoListViewController: PhotoSearchLoadable {
     private func updatePhotoList(result: PhotoSearchResult?) {
         
         if let pages = result?.photos?.pages, let photos = result?.photos {
-            reqCount.updateTotal(total: pages)
+            photoSearchAPI.updateTotal(total: pages)
             dataSource.append(status: photoListStatusType,
                               photos: photos.photo.map {$0})
         }
@@ -141,7 +140,7 @@ extension PhotoListViewController: PhotoSearchLoadable {
     
     private func scrollToTop() {
         
-        if reqCount.current() == 1 {
+        if photoSearchAPI.current() == 1 {
            collectionView.scrollToTop()
         }
     }
