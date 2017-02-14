@@ -17,10 +17,10 @@ enum Result {
 
 final class APIClient {
 
-    func request(params : [String: Any],
+    func request(router : Router,
                       completionHandler: @escaping (Result) -> () = {_ in}) {
 
-        Alamofire.request(Router.PhotosSearch(params)).responseJSON  { response in
+        Alamofire.request(router).responseJSON  { response in
             switch response.result {
             case .success(let value):                
                 completionHandler(Result.Success(value))
