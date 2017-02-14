@@ -29,9 +29,10 @@ final class PhotoSearchAPI {
         
         isLoading = true
 
-        APIClient().request(
-            params: PhotoSearchParamsBuilder.create(tags: tags, page: current())
-        ) { [weak self](response) -> () in
+        let router = Router.PhotosSearch(
+            PhotoSearchParamsBuilder.create(tags: tags, page: current()))
+        
+        APIClient().request(router:router) { [weak self](response) -> () in
 
             switch response {
             case .Success(let result):
