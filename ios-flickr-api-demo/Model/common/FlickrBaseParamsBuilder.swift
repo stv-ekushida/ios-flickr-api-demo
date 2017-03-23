@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import Keys
 
 final class FlickrBaseParamsBuilder {
     
@@ -14,7 +15,7 @@ final class FlickrBaseParamsBuilder {
         
         return [
             "method" : "flickr.photos.search",
-            "api_key" : "10ba93bbe49a6480d765ce486673954a",
+            "api_key" : IosFlickrApiDemoKeys().api_key,
             "nojsoncallback" : "1",
             "format": "json"]
     }

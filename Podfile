@@ -10,3 +10,9 @@ end
 target 'ios-flickr-api-demoTests' do
 pod 'ObjectMapper', '~> 2.2'
 end
+
+plugin 'cocoapods-keys', {
+  :project => "ios-flickr-api-demo",
+  :keys => [
+    "api_key"
+]}
